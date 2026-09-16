@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM 流程 16 · 离职交接（CRM段）| 销售管理办法 V13</title>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:"Microsoft YaHei","Noto Sans SC",Arial,sans-serif;color:#333;background:#f5f6f8;line-height:1.7}
+.container{max-width:1200px;margin:0 auto;padding:0 40px}
+@media(max-width:1199px){.container{padding:0 24px}}
+@media(max-width:767px){.container{padding:0 16px}}
+.hero{background:linear-gradient(135deg,#0d3b6b,#185FA5);color:#fff;padding:56px 0 48px;text-align:center}
+.hero h1{font-size:30px;font-weight:bold;margin-bottom:10px}
+.hero p{font-size:16px;color:rgba(255,255,255,0.9);max-width:800px;margin:0 auto}
+.hero .crumb{display:inline-block;margin-top:16px;padding:4px 14px;border:1px solid rgba(255,255,255,0.5);border-radius:20px;font-size:13px;color:rgba(255,255,255,0.92)}
+@media(max-width:767px){.hero{padding:44px 0 36px}.hero h1{font-size:22px}.hero p{font-size:14px}}
+.nav{background:#0d3b6b;padding:10px 0;position:sticky;top:0;z-index:10}
+.nav .container{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center}
+.nav a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:13px;font-weight:bold}
+.nav a:hover{color:#fff;text-decoration:underline}
+@media(max-width:767px){.nav a{font-size:12px}}
+.section{padding:48px 0}
+.section:nth-child(even){background:#fff}
+.section h2{font-size:24px;font-weight:bold;margin-bottom:16px;color:#185FA5;padding-left:12px;border-left:4px solid #185FA5}
+.section h3{font-size:18px;font-weight:bold;margin:20px 0 10px;color:#444}
+.section p{font-size:15px;line-height:1.8;margin-bottom:12px;color:#555}
+@media(max-width:767px){.section{padding:32px 0}.section h2{font-size:20px}}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:8px}
+.meta-item{background:#fff;border:1px solid #e8e8e8;border-left:4px solid #185FA5;border-radius:8px;padding:14px 16px}
+.meta-item .k{font-size:13px;color:#888;margin-bottom:4px}
+.meta-item .v{font-size:15px;font-weight:bold;color:#333}
+.pill{display:inline-block;padding:2px 10px;border-radius:12px;font-size:13px;font-weight:bold;white-space:nowrap}
+.pill.line{background:#e6f4ea;color:#1e7e34}
+.pill.p0{background:#e6f4ea;color:#1e7e34}
+.pill.p1{background:#fff4d6;color:#a6790a}
+.pill.p2{background:#eef0f2;color:#5a5d61}
+.table-wrap{overflow-x:auto;margin-bottom:16px;background:#fff;border-radius:8px;border:1px solid #e8e8e8}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:680px}
+th{background:#185FA5;color:#fff;padding:10px 14px;text-align:left;font-weight:bold;white-space:nowrap}
+td{padding:10px 14px;border-bottom:1px solid #e8e8e8;color:#555;vertical-align:top}
+tr:nth-child(even) td{background:#f8f9fa}
+tr:last-child td{border-bottom:none}
+.raci{display:inline-block;min-width:26px;text-align:center;padding:1px 7px;border-radius:6px;font-size:12px;font-weight:bold}
+.raci.r{background:#fdecea;color:#c0392b}
+.raci.a{background:#fff4d6;color:#a6790a}
+.raci.c{background:#e6f4ea;color:#1e7e34}
+.raci.i{background:#eef0f2;color:#5a5d61}
+.svg-box{background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:20px;margin-bottom:16px;overflow-x:auto}
+.svg-box .fig-title{font-size:14px;font-weight:bold;color:#333;margin-bottom:12px;text-align:center}
+.svg-box svg{display:block;margin:0 auto;min-width:760px;max-width:100%}
+.card-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:8px}
+.card{background:#fff;border-radius:10px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06);border:1px solid #e8e8e8;border-top:4px solid #185FA5}
+.card h3{font-size:17px;font-weight:bold;color:#185FA5;margin:0 0 8px}
+.card p{font-size:14px;color:#555;line-height:1.6;margin-bottom:0}
+.callout{background:linear-gradient(135deg,#E6F1FB,#f0f6fd);border-left:4px solid #185FA5;border-radius:8px;padding:16px 20px;margin-bottom:16px;font-size:14px;color:#333}
+.callout.warn{background:#fff8e6;border-left-color:#e0a800}
+.callout.red{background:#fdecea;border-left-color:#c0392b}
+.callout p{margin-bottom:6px;font-size:14px;color:#333}
+.callout p:last-child{margin-bottom:0}
+.callout b{color:#185FA5}
+.ul-list{margin:8px 0;padding-left:20px}
+.ul-list li{margin-bottom:8px;font-size:14px;color:#555}
+.ul-list li b{color:#333}
+.footer{background:#0d3b6b;color:rgba(255,255,255,0.6);text-align:center;padding:22px 0;font-size:13px}</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <h1>CRM 流程 · 离职交接（CRM 段）</h1>
+    <p>确认离职 → 客户清单整理 → 交接承接人 → 签字确认 → 归属变更 → 无进度商机释放公海</p>
+    <span class="crumb">销售管理办法 V13 · 6.5 · P2 · flow-16</span>
+  </div>
+</section>
+
+<nav class="nav">
+  <div class="container">
+    <a href="#meta">元信息</a>
+    <a href="#goal">流程目标</a>
+    <a href="#io">输入输出</a>
+    <a href="#steps">详细步骤</a>
+    <a href="#flow">流程图</a>
+    <a href="#boundary">边界与断点</a>
+    <a href="#exception">异常分支</a>
+    <a href="#control">关键控制点</a>
+    <a href="index.html">&#8592; 返回索引</a>
+  </div>
+</nav>
+
+
+<!-- 1. 元信息 -->
+<section class="section" id="meta">
+  <div class="container">
+    <h2>1. 元信息</h2>
+    <div class="meta-grid">
+      <div class="meta-item"><div class="k">流程名称</div><div class="v">离职交接（CRM 段）</div></div>
+      <div class="meta-item"><div class="k">V13 条款编号</div><div class="v">6.5</div></div>
+      <div class="meta-item"><div class="k">层级</div><div class="v"><span class="pill p2">P2</span></div></div>
+      <div class="meta-item"><div class="k">是否触外部系统</div><div class="v">部分：OA 签字/账单系统联动留线下·人工回填</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. 流程目标 -->
+<section class="section" id="goal">
+  <div class="container">
+    <h2>2. 流程目标</h2>
+    <p>销售离职时，客户资产与系统归属须按既定流程完成交接，任何环节未完成不得视为交接完毕。CRM 一期覆盖离职交接的 CRM 内部段——商机/客户归属变更、无推进进度商机释放公海、未决问题清单确认；OA 系统签字确认、账单系统归属变更等外部环节留线下断点，不建系统间实时接口。</p>
+    <p>离职交接同时触发公海流转（3.8）：销售离职时已认领但无推进进度的商机全部进入公海；已完成交接、由其他销售继续跟进的商机不受影响。云从认证为离职硬约束：试用期内未通过云从不予转正，正式销售 6 个月内必须通过。</p>
+  </div>
+</section>
+
+<!-- 3. 输入输出 -->
+<section class="section" id="io">
+  <div class="container">
+    <h2>3. 输入输出</h2>
+    <div class="table-wrap"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody>
+      <tr><td><b>触发条件</b></td><td>销售确认离职（提交离职申请）</td></tr>
+      <tr><td><b>上游流程</b></td><td>员工离职申请（HR/OA 触发）→ 进入 CRM 交接流程；商机追踪看板（flow-08）→ 提供在跟商机清单与进度状态</td></tr>
+      <tr><td><b>下游流程</b></td><td>公海流转与认领（flow-02）→ 无推进进度商机释放公海；客户归属分层（flow-14）→ 客户层归属变更登记；业绩归属变更（flow-09）→ 跨期业绩切分</td></tr>
+      <tr><td><b>产出物</b></td><td>客户清单（经销售确认）、未决问题清单（书面确认）、CRM 系统归属变更记录、公海释放记录、交接确认签字</td></tr>
+      <tr><td><b>关键字段</b></td><td>离职销售、承接销售、交接时间、客户清单、商机清单、未决问题清单、归属变更记录、公海释放标记</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- 4. 详细步骤 -->
+<section class="section" id="steps">
+  <div class="container">
+    <h2>4. 详细步骤（泳道表 · RACI）</h2>
+    <div class="table-wrap"><table><thead><tr><th>步骤</th><th>动作</th><th>离职销售</th><th>运营组</th><th>销售负责人</th><th>承接销售</th></tr></thead><tbody>
+      <tr><td>4.1</td><td>销售确认离职</td><td><span class="raci r">R</span></td><td><span class="raci i">I</span></td><td><span class="raci i">I</span></td><td>&mdash;</td></tr>
+      <tr><td>4.2</td><td>运营整理客户清单，交销售确认历史情况</td><td><span class="raci c">C</span></td><td><span class="raci a">A</span></td><td><span class="raci i">I</span></td><td>&mdash;</td></tr>
+      <tr><td>4.3</td><td>销售负责人交接给承接人，确认历史问题</td><td><span class="raci c">C</span></td><td><span class="raci i">I</span></td><td><span class="raci r">R</span></td><td><span class="raci c">C</span></td></tr>
+      <tr><td>4.4</td><td>承接销售签字 / OA 系统确认</td><td>&mdash;</td><td><span class="raci i">I</span></td><td><span class="raci a">A</span></td><td><span class="raci r">R</span></td></tr>
+      <tr><td>4.5</td><td>运营负责人发起内部记录，同步修改台账、系统归属；联动账单系统完成客户归属变更</td><td>&mdash;</td><td><span class="raci a">A</span></td><td><span class="raci i">I</span></td><td><span class="raci i">I</span></td></tr>
+      <tr><td>4.6</td><td>无推进进度商机自动释放公海</td><td>&mdash;</td><td><span class="raci a">A</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+    </tbody></table></div>
+    <p class="note" style="font-size:13px;color:#888">R=决策 A=审批 C=执行 I=知会</p>
+    <h3>交接时限</h3>
+    <div class="table-wrap"><table><thead><tr><th>情形</th><th>时限</th></tr></thead><tbody>
+      <tr><td>转正前离职</td><td>发起离职后 <b>3 个工作日内</b>完成客户清单整理；<b>5 个工作日内</b>完成交接确认（承接销售签字/运营签字/OA 权限关闭）</td></tr>
+      <tr><td>正式员工离职</td><td>原则上 <b>1 个月内</b>完成交接；提前完成可申请提前离职</td></tr>
+      <tr><td>历史问题确认</td><td>以书面「未决问题清单」确认为准，OA 系统留痕</td></tr>
+      <tr><td>云从红线</td><td>试用期未通过云从<b>不予转正</b>（需特批）；正式销售自办法发布起 <b>6 个月内必须通过</b>，未通过下调考核等级并通报</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- 5. 流程图 -->
+<section class="section" id="flow">
+  <div class="container">
+    <h2>5. 流程图</h2>
+    <div class="svg-box">
+      <div class="fig-title">离职交接（CRM 段）泳道图</div>
+      <svg viewBox="0 0 1000 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="离职交接CRM段泳道图">
+        <defs>
+          <marker id="arrow16" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#5a5d61"/>
+          </marker>
+          <style>
+            .sw16{fill:#f2f5f9;stroke:#cdd6e2;stroke-width:1}
+            .lane16{fill:#eef2f7;stroke:#cdd6e2;stroke-width:1}
+            .lbl16{font-size:13px;font-weight:bold;fill:#0d3b6b}
+            .box16{fill:#fff;stroke:#185FA5;stroke-width:1.5;rx:6}
+            .end16{fill:#e6f4ea;stroke:#1e7e34;stroke-width:1.5;rx:16}
+            .txt16{font-size:12px;fill:#333}
+            .edge16{stroke:#5a5d61;stroke-width:1.5;fill:none;marker-end:url(#arrow16)}
+            .off16{fill:#fdecea;stroke:#c0392b;stroke-width:1.5;rx:6}
+          </style>
+        </defs>
+        <!-- 泳道背景 -->
+        <rect x="0" y="0" width="1000" height="100" class="sw16"/>
+        <rect x="0" y="100" width="1000" height="120" class="lane16"/>
+        <rect x="0" y="220" width="1000" height="120" class="lane16"/>
+        <rect x="0" y="340" width="1000" height="120" class="lane16"/>
+        <text x="20" y="60" class="lbl16">离职销售</text>
+        <text x="20" y="170" class="lbl16">运营组</text>
+        <text x="20" y="290" class="lbl16">销售负责人</text>
+        <text x="20" y="410" class="lbl16">承接销售</text>
+        <!-- 节点 -->
+        <rect x="120" y="30" width="140" height="40" class="box16"/><text x="190" y="55" class="txt16" text-anchor="middle">确认离职</text>
+                <rect x="540" y="30" width="160" height="40" class="box16"/><text x="620" y="55" class="txt16" text-anchor="middle">确认历史情况</text>
+        <rect x="540" y="250" width="160" height="40" class="box16"/><text x="620" y="275" class="txt16" text-anchor="middle">交接给承接人</text>
+        <rect x="600" y="370" width="160" height="40" class="box16"/><text x="680" y="395" class="txt16" text-anchor="middle">签字/OA确认</text>
+        <rect x="320" y="130" width="160" height="40" class="box16"/><text x="400" y="155" class="txt16" text-anchor="middle">整理客户清单</text>
+        <rect x="800" y="130" width="160" height="40" class="box16"/><text x="880" y="148" class="txt16" text-anchor="middle">修改台账/系统归属</text>
+        <text x="880" y="163" class="txt16" text-anchor="middle" fill="#888">（账单系统留线下）</text>
+        <rect x="800" y="250" width="160" height="40" class="off16"/><text x="880" y="275" class="txt16" text-anchor="middle">无进度商机 -> 公海</text>
+        <rect x="810" y="370" width="140" height="40" class="end16"/><text x="880" y="395" class="txt16" text-anchor="middle">交接完毕</text>
+        <!-- 连线 -->
+        <path d="M260 50 L290 50 L290 150 L320 150" class="edge16"/>
+        <path d="M480 150 L520 150 L520 50 L540 50" class="edge16"/>
+        <path d="M620 70 L620 250" class="edge16"/>
+        <path d="M620 290 L620 330 L680 330 L680 370" class="edge16" style="stroke-dasharray:5,3"/>
+        <path d="M680 410 L680 440 L980 440 L980 150 L960 150" class="edge16" style="stroke-dasharray:5,3"/>
+        <path d="M880 170 L880 250" class="edge16"/>
+        <path d="M880 290 L880 370" class="edge16"/>
+      </svg>
+    </div>
+    <div class="callout warn">
+      <p><b>边界说明：</b>步骤 4.4（OA 签字确认）与步骤 4.5 中账单系统归属变更为线下断点，CRM 一期不建系统间接口。承接销售在 OA 完成签字后，由运营负责人将结果回填 CRM 并修改台账归属。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6. 边界与断点 -->
+<section class="section" id="boundary">
+  <div class="container">
+    <h2>6. 边界与断点</h2>
+    <div class="table-wrap"><table><thead><tr><th>环节</th><th>处理方式</th><th>说明</th></tr></thead><tbody>
+      <tr><td>承接销售 OA 签字确认</td><td>留线下 / 人工回填</td><td>CRM 与 OA 暂不对接；承接销售在 OA 完成签字后，运营负责人回填 CRM</td></tr>
+      <tr><td>账单系统客户归属变更</td><td>留线下 / 人工回填</td><td>运营负责人联动账单系统完成归属变更，CRM 一期不建接口</td></tr>
+      <tr><td>OA 权限关闭</td><td>留线下</td><td>离职销售的系统权限关闭由 OA/IT 执行，CRM 同步标记离职状态</td></tr>
+      <tr><td>未决问题清单</td><td>书面确认 + OA 留痕</td><td>以书面「未决问题清单」确认为准，OA 系统留痕</td></tr>
+      <tr><td>无进度商机释放公海</td><td>CRM 内自动/人工执行</td><td>CRM 上线后系统自动释放；上线前由运营依据台账人工执行（见 3.8）</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- 7. 异常分支 -->
+<section class="section" id="exception">
+  <div class="container">
+    <h2>7. 异常分支</h2>
+    <ul class="ul-list">
+      <li><b>承接销售拒绝签字</b>：交接未完成，由销售负责人协调；协调不成报事业部负责人裁定，不得视为交接完毕。</li>
+      <li><b>历史问题存疑（离职销售不配合确认）</b>：以运营整理的客户清单与台账记录为依据，书面记录存疑事项，销售负责人签字确认后可推进交接。</li>
+      <li><b>试用期未通过云从</b>：不予转正（需特批，入职时须说明情况）；正式销售 6 个月内未通过云从的，下调当期考核等级并全公司通报，不影响提成核算。</li>
+      <li><b>交接超时</b>：转正前离职超 5 个工作日未完成交接的，由运营负责人提报销售负责人催办；正式员工超 1 个月的，报事业部负责人处理。</li>
+      <li><b>已交接商机后续争议</b>：已完成交接、由其他销售继续跟进的商机不受离职影响；如出现归属争议，按 3.12.2 撞单判定规则处理。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 8. 关键控制点 -->
+<section class="section" id="control">
+  <div class="container">
+    <h2>8. 关键控制点</h2>
+    <div class="table-wrap"><table><thead><tr><th>类型</th><th>控制点</th><th>动作/后果</th></tr></thead><tbody>
+      <tr><td>红线</td><td>交接未完成不得视为完毕</td><td>任何环节未完成（签字/归属变更/清单确认）均不得标记交接完毕</td></tr>
+      <tr><td>时限</td><td>转正前 5 工作日 / 正式员工 1 个月</td><td>超时由运营负责人提报催办，报事业部负责人处理</td></tr>
+      <tr><td>留痕</td><td>未决问题清单书面确认</td><td>以书面清单确认为准，OA 系统留痕；口头确认无效</td></tr>
+      <tr><td>关联</td><td>无进度商机释放公海</td><td>离职触发 3.8 公海规则：已认领但无推进进度的商机全部进入公海</td></tr>
+      <tr><td>认证</td><td>云从红线</td><td>试用期未通过不予转正；正式销售 6 个月内须通过，未通过下调考核等级+通报</td></tr>
+    </tbody></table></div>
+    <div class="callout warn">
+      <p><b>【待 V13 定稿确认】</b>6.5 离职交接条款为 V13 沿用条款，CRM 内部段的字段定义与 OA/账单断点回填机制须待 V13 正式定稿后同步回溯。</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>VeryCloud 云端智慧事业部 · CRM 流程扩写 · 基于《销售管理办法》V13 初稿（2026-09-14）</p>
+  </div>
+</footer>
+
+</body>
+</html>

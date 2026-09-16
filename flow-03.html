@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM 流程 · 续签管理 | 销售管理办法 V13</title>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:"Microsoft YaHei","Noto Sans SC",Arial,sans-serif;color:#333;background:#f5f6f8;line-height:1.7}
+.container{max-width:1200px;margin:0 auto;padding:0 40px}
+@media(max-width:1199px){.container{padding:0 24px}}
+@media(max-width:767px){.container{padding:0 16px}}
+.hero{background:linear-gradient(135deg,#0d3b6b,#185FA5);color:#fff;padding:56px 0 48px;text-align:center}
+.hero h1{font-size:30px;font-weight:bold;margin-bottom:10px}
+.hero p{font-size:16px;color:rgba(255,255,255,0.9);max-width:800px;margin:0 auto}
+.hero .crumb{display:inline-block;margin-top:16px;padding:4px 14px;border:1px solid rgba(255,255,255,0.5);border-radius:20px;font-size:13px;color:rgba(255,255,255,0.92)}
+@media(max-width:767px){.hero{padding:44px 0 36px}.hero h1{font-size:22px}.hero p{font-size:14px}}
+.nav{background:#0d3b6b;padding:10px 0;position:sticky;top:0;z-index:10}
+.nav .container{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center}
+.nav a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:13px;font-weight:bold}
+.nav a:hover{color:#fff;text-decoration:underline}
+@media(max-width:767px){.nav a{font-size:12px}}
+.section{padding:48px 0}
+.section:nth-child(even){background:#fff}
+.section h2{font-size:24px;font-weight:bold;margin-bottom:16px;color:#185FA5;padding-left:12px;border-left:4px solid #185FA5}
+.section h3{font-size:18px;font-weight:bold;margin:20px 0 10px;color:#444}
+.section p{font-size:15px;line-height:1.8;margin-bottom:12px;color:#555}
+@media(max-width:767px){.section{padding:32px 0}.section h2{font-size:20px}}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:8px}
+.meta-item{background:#fff;border:1px solid #e8e8e8;border-left:4px solid #185FA5;border-radius:8px;padding:14px 16px}
+.meta-item .k{font-size:13px;color:#888;margin-bottom:4px}
+.meta-item .v{font-size:15px;font-weight:bold;color:#333}
+.pill{display:inline-block;padding:2px 10px;border-radius:12px;font-size:13px;font-weight:bold;white-space:nowrap}
+.pill.line{background:#e6f4ea;color:#1e7e34}
+.pill.p0{background:#e6f4ea;color:#1e7e34}
+.pill.p1{background:#fff4d6;color:#a6790a}
+.pill.p2{background:#eef0f2;color:#5a5d61}
+.table-wrap{overflow-x:auto;margin-bottom:16px;background:#fff;border-radius:8px;border:1px solid #e8e8e8}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:680px}
+th{background:#185FA5;color:#fff;padding:10px 14px;text-align:left;font-weight:bold;white-space:nowrap}
+td{padding:10px 14px;border-bottom:1px solid #e8e8e8;color:#555;vertical-align:top}
+tr:nth-child(even) td{background:#f8f9fa}
+tr:last-child td{border-bottom:none}
+.raci{display:inline-block;min-width:26px;text-align:center;padding:1px 7px;border-radius:6px;font-size:12px;font-weight:bold}
+.raci.r{background:#fdecea;color:#c0392b}
+.raci.a{background:#fff4d6;color:#a6790a}
+.raci.c{background:#e6f4ea;color:#1e7e34}
+.raci.i{background:#eef0f2;color:#5a5d61}
+.svg-box{background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:20px;margin-bottom:16px;overflow-x:auto}
+.svg-box .fig-title{font-size:14px;font-weight:bold;color:#333;margin-bottom:12px;text-align:center}
+.svg-box svg{display:block;margin:0 auto;min-width:760px;max-width:100%}
+.card-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:8px}
+.card{background:#fff;border-radius:10px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06);border:1px solid #e8e8e8;border-top:4px solid #185FA5}
+.card h3{font-size:17px;font-weight:bold;color:#185FA5;margin:0 0 8px}
+.card p{font-size:14px;color:#555;line-height:1.6;margin-bottom:0}
+.callout{background:linear-gradient(135deg,#E6F1FB,#f0f6fd);border-left:4px solid #185FA5;border-radius:8px;padding:16px 20px;margin-bottom:16px;font-size:14px;color:#333}
+.callout.warn{background:#fff8e6;border-left-color:#e0a800}
+.callout.red{background:#fdecea;border-left-color:#c0392b}
+.callout p{margin-bottom:6px;font-size:14px;color:#333}
+.callout p:last-child{margin-bottom:0}
+.callout b{color:#185FA5}
+.ul-list{margin:8px 0;padding-left:20px}
+.ul-list li{margin-bottom:8px;font-size:14px;color:#555}
+.ul-list li b{color:#333}
+.footer{background:#0d3b6b;color:rgba(255,255,255,0.6);text-align:center;padding:22px 0;font-size:13px}</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <h1>CRM 流程 · 续签管理</h1>
+    <p>3.9</p>
+    <span class="crumb">销售管理办法 V13 · 3.9 · P0</span>
+  </div>
+</section>
+
+<nav class="nav">
+  <div class="container">
+    <a href="#meta">元信息</a>
+    <a href="#goal">流程目标</a>
+    <a href="#io">输入输出</a>
+    <a href="#steps">详细步骤</a>
+    <a href="#flow">流程图</a>
+    <a href="#boundary">边界与断点</a>
+    <a href="#exception">异常分支</a>
+    <a href="#control">关键控制点</a>
+    <a href="index.html">← 返回索引</a>
+  </div>
+</nav>
+
+<section class="section" id="meta">
+  <div class="container">
+    <h2>1. 元信息</h2>
+    <div class="meta-grid">
+      <div class="meta-item"><div class="k">流程名称</div><div class="v">续签管理</div></div>
+      <div class="meta-item"><div class="k">V13 条款编号</div><div class="v">3.9</div></div>
+      <div class="meta-item"><div class="k">层级</div><div class="v"><span class="pill p0">P0</span></div></div>
+      <div class="meta-item"><div class="k">是否触外部系统</div><div class="v">否（CRM 内闭环）</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="goal">
+  <div class="container">
+    <h2>2. 流程目标</h2>
+    <p>续签管理覆盖各业务线存量客户的合同到期续签流程。销售须在合同到期前 90 天启动续签跟进，至少完成 2 次客户沟通。到期前 30 天仍未反馈续签意向的视为不续签。Cloudflare 有原厂强制规则（提前标记流失风险、自动建档 CIO）。</p>
+  </div>
+</section>
+
+<section class="section" id="io">
+  <div class="container">
+    <h2>3. 输入输出</h2>
+    <div class="table-wrap"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody>
+      <tr><td><b>触发条件</b></td><td>合同到期前 90 天（系统/数据运营触发提醒）</td></tr>
+      <tr><td><b>上游流程</b></td><td>签约与追踪（flow-01-4）→ 服务中商机到期提醒</td></tr>
+      <tr><td><b>下游流程</b></td><td>续签成功 → 重新进入服务中；不续签 → 运营按不续签口径处理</td></tr>
+      <tr><td><b>产出物</b></td><td>续签意向记录、续签合同（如成功）、不续签标记（如失败）</td></tr>
+      <tr><td><b>关键字段</b></td><td>合同到期日、续签启动时间、沟通次数、续签意向、流失风险标记</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<section class="section" id="steps">
+  <div class="container">
+    <h2>4. 详细步骤（泳道表 · RACI）</h2>
+    <div class="table-wrap"><table><thead><tr>
+<th>步骤</th>
+<th>销售</th>
+<th>运营组</th>
+<th>销售负责人</th>
+</tr></thead><tbody>
+      <tr>
+<td>1.1 合同到期清单维护</td>
+<td><span class="raci c">C</span></td>
+<td><span class="raci i">I</span></td>
+<td>—</td>
+</tr>
+      <tr>
+<td>1.2 到期前 90 天启动续签跟进</td>
+<td><span class="raci c">C</span></td>
+<td><span class="raci i">I</span></td>
+<td>—</td>
+</tr>
+      <tr>
+<td>1.3 至少 2 次客户沟通</td>
+<td><span class="raci c">C</span></td>
+<td>—</td>
+<td>—</td>
+</tr>
+      <tr>
+<td>1.4 到期前 30 天判定续签意向</td>
+<td><span class="raci c">C</span></td>
+<td><span class="raci a">A</span></td>
+<td><span class="raci r">R</span></td>
+</tr>
+      <tr>
+<td>1.5 CF: 原厂标记流失风险 → 运营转达</td>
+<td>—</td>
+<td><span class="raci c">C</span></td>
+<td>—</td>
+</tr>
+      <tr>
+<td>1.6 续签成功/不续签处理</td>
+<td><span class="raci c">C</span></td>
+<td><span class="raci a">A</span></td>
+<td><span class="raci i">I</span></td>
+</tr>
+    </tbody></table></div>
+    <p class="note">R=决策 A=审批 C=执行 I=知会</p>
+  </div>
+</section>
+
+<section class="section" id="flow">
+  <div class="container">
+    <h2>5. 流程图</h2>
+    <div class="svg-box">
+      <div class="fig-title">续签管理</div>
+      <svg viewBox="0 0 1000 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="续签管理">
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#5a5d61"/>
+          </marker>
+          <style>
+            .sw{fill:#f2f5f9;stroke:#cdd6e2;stroke-width:1}
+            .lane{fill:#eef2f7;stroke:#cdd6e2;stroke-width:1}
+            .lbl{font-size:13px;font-weight:bold;fill:#0d3b6b}
+            .box{fill:#fff;stroke:#185FA5;stroke-width:1.5;rx:6}
+            .diamond{fill:#fff8e6;stroke:#e0a800;stroke-width:1.5}
+            .end{fill:#e6f4ea;stroke:#1e7e34;stroke-width:1.5;rx:16}
+            .txt{font-size:12px;fill:#333}
+            .brl{font-size:12px;fill:#a6790a;font-weight:bold}
+            .edge{stroke:#5a5d61;stroke-width:1.5;fill:none;marker-end:url(#arrow)}
+          </style>
+        </defs>
+        <!-- 泳道背景 -->
+        <rect x="0" y="0" width="1000" height="80" class="sw"/>
+        <rect x="0" y="80" width="1000" height="100" class="lane"/>
+        <rect x="0" y="180" width="1000" height="100" class="lane"/>
+        <!-- 泳道标签 -->
+        <text x="20" y="50" class="lbl">销售</text>
+        <text x="20" y="140" class="lbl">运营组</text>
+        <text x="20" y="240" class="lbl">销售负责人</text>
+        <!-- 节点 -->
+        <rect x="80" y="25" width="140" height="36" class="box"/><text x="150" y="47" class="txt" text-anchor="middle">到期清单维护</text>
+        <rect x="280" y="25" width="140" height="36" class="box"/><text x="350" y="47" class="txt" text-anchor="middle">90天前启动跟进</text>
+        <rect x="480" y="25" width="140" height="36" class="box"/><text x="550" y="47" class="txt" text-anchor="middle">2次客户沟通</text>
+        <polygon points="700,25 751.5,43 700,61 648.5,43" class="diamond"/><text x="700" y="47" class="txt" text-anchor="middle">30天前有意向?</text>
+        <rect x="820" y="25" width="140" height="36" class="end"/><text x="890" y="47" class="txt" text-anchor="middle">续签成功</text>
+        <rect x="820" y="105" width="140" height="36" class="box"/><text x="890" y="127" class="txt" text-anchor="middle">不续签处理</text>
+        <rect x="470" y="112" width="160" height="36" class="box"/><text x="550" y="134" class="txt" text-anchor="middle">CF流失风险转达</text>
+        <!-- 连线 -->
+        <path d="M220 43 L280 43" class="edge"/>
+        <path d="M420 43 L480 43" class="edge"/>
+        <path d="M620 43 L648.5 43" class="edge"/>
+        <path d="M751.5 43 L820 43" class="edge"/><text x="786" y="36" class="brl" text-anchor="middle">是</text>
+        <path d="M700 61 L700 123 L820 123" class="edge"/><text x="708" y="80" class="brl">否</text>
+        <path d="M550 61 L550 112" class="edge"/>
+      </svg>
+    </div>
+    <div class="callout"><b>图注：</b>矩形为步骤节点，菱形为判定节点，绿色圆角为终止节点。箭头表示流向。</div>
+  </div>
+</section>
+
+<section class="section" id="boundary">
+  <div class="container">
+    <h2>6. 边界与断点</h2>
+    <div class="table-wrap"><table><thead><tr><th>环节</th><th>处理方式</th><th>说明</th></tr></thead><tbody>
+      <tr><td>续签细则</td><td>由销售负责人补充发布</td><td>细则发布前按 V13 条款执行【待 V13 定稿确认】</td></tr>
+      <tr><td>CF 续签提前期调整</td><td>30天 → 90天调整中</td><td>精确更新以销售负责人发布续签细则为准</td></tr>
+      <tr><td>CRM 上线后续签流程</td><td>系统自动配置执行</td><td>到期提醒与续签流程在 CRM 上线后按规则系统自动配置</td></tr>
+      <tr><td>必须留痕节点</td><td>系统留痕</td><td>续签启动时间、沟通记录、续签意向判定均须留痕</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<section class="section" id="exception">
+  <div class="container">
+    <h2>7. 异常分支</h2>
+    <ul class="ul-list">
+      <li><b>到期前 30 天无反馈</b>：视为不续签，运营按不续签口径处理（CF: 默认按不续签回复原厂）。</li>
+      <li><b>CF 原厂未提前通知流失风险</b>：按原条款自动续约。</li>
+      <li><b>AWS 续约</b>：须重新核定单价与超量单价，对外口径须与内部一致。</li>
+      <li><b>框架协议类（如阿里框架协议）</b>：续签须先经法务审核。</li>
+      <li><b>CF 续签商机</b>：由原厂自动建档、默认按 CIO 处理，报备后由原厂关联为 PIO。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="control">
+  <div class="container">
+    <h2>8. 关键控制点</h2>
+    <div class="table-wrap"><table><thead><tr><th>类型</th><th>控制点</th><th>动作/后果</th></tr></thead><tbody>
+      <tr><td>可核查</td><td>到期前 90 天启动续签跟进</td><td>至少完成 2 次客户沟通</td></tr>
+      <tr><td>可核查</td><td>合同到期清单维护</td><td>区别于商机有效期，销售须维护所辖客户到期清单</td></tr>
+      <tr><td>可核查</td><td>续签成功/不续签记录</td><td>续签结果须留痕，不续签由运营按口径处理</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>VeryCloud 云端智慧事业部 · CRM 流程扩写 · 基于销售管理办法 V13 初稿（2026-09-14）</p>
+  </div>
+</footer>
+
+</body>
+</html>

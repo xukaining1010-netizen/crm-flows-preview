@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM 流程 18 · 欠款/回款标记（只读）| 销售管理办法 V13</title>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:"Microsoft YaHei","Noto Sans SC",Arial,sans-serif;color:#333;background:#f5f6f8;line-height:1.7}
+.container{max-width:1200px;margin:0 auto;padding:0 40px}
+@media(max-width:1199px){.container{padding:0 24px}}
+@media(max-width:767px){.container{padding:0 16px}}
+.hero{background:linear-gradient(135deg,#0d3b6b,#185FA5);color:#fff;padding:56px 0 48px;text-align:center}
+.hero h1{font-size:30px;font-weight:bold;margin-bottom:10px}
+.hero p{font-size:16px;color:rgba(255,255,255,0.9);max-width:800px;margin:0 auto}
+.hero .crumb{display:inline-block;margin-top:16px;padding:4px 14px;border:1px solid rgba(255,255,255,0.5);border-radius:20px;font-size:13px;color:rgba(255,255,255,0.92)}
+@media(max-width:767px){.hero{padding:44px 0 36px}.hero h1{font-size:22px}.hero p{font-size:14px}}
+.nav{background:#0d3b6b;padding:10px 0;position:sticky;top:0;z-index:10}
+.nav .container{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center}
+.nav a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:13px;font-weight:bold}
+.nav a:hover{color:#fff;text-decoration:underline}
+@media(max-width:767px){.nav a{font-size:12px}}
+.section{padding:48px 0}
+.section:nth-child(even){background:#fff}
+.section h2{font-size:24px;font-weight:bold;margin-bottom:16px;color:#185FA5;padding-left:12px;border-left:4px solid #185FA5}
+.section h3{font-size:18px;font-weight:bold;margin:20px 0 10px;color:#444}
+.section p{font-size:15px;line-height:1.8;margin-bottom:12px;color:#555}
+@media(max-width:767px){.section{padding:32px 0}.section h2{font-size:20px}}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:8px}
+.meta-item{background:#fff;border:1px solid #e8e8e8;border-left:4px solid #185FA5;border-radius:8px;padding:14px 16px}
+.meta-item .k{font-size:13px;color:#888;margin-bottom:4px}
+.meta-item .v{font-size:15px;font-weight:bold;color:#333}
+.pill{display:inline-block;padding:2px 10px;border-radius:12px;font-size:13px;font-weight:bold;white-space:nowrap}
+.pill.line{background:#e6f4ea;color:#1e7e34}
+.pill.p0{background:#e6f4ea;color:#1e7e34}
+.pill.p1{background:#fff4d6;color:#a6790a}
+.pill.p2{background:#eef0f2;color:#5a5d61}
+.table-wrap{overflow-x:auto;margin-bottom:16px;background:#fff;border-radius:8px;border:1px solid #e8e8e8}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:680px}
+th{background:#185FA5;color:#fff;padding:10px 14px;text-align:left;font-weight:bold;white-space:nowrap}
+td{padding:10px 14px;border-bottom:1px solid #e8e8e8;color:#555;vertical-align:top}
+tr:nth-child(even) td{background:#f8f9fa}
+tr:last-child td{border-bottom:none}
+.raci{display:inline-block;min-width:26px;text-align:center;padding:1px 7px;border-radius:6px;font-size:12px;font-weight:bold}
+.raci.r{background:#fdecea;color:#c0392b}
+.raci.a{background:#fff4d6;color:#a6790a}
+.raci.c{background:#e6f4ea;color:#1e7e34}
+.raci.i{background:#eef0f2;color:#5a5d61}
+.svg-box{background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:20px;margin-bottom:16px;overflow-x:auto}
+.svg-box .fig-title{font-size:14px;font-weight:bold;color:#333;margin-bottom:12px;text-align:center}
+.svg-box svg{display:block;margin:0 auto;min-width:760px;max-width:100%}
+.card-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:8px}
+.card{background:#fff;border-radius:10px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06);border:1px solid #e8e8e8;border-top:4px solid #185FA5}
+.card h3{font-size:17px;font-weight:bold;color:#185FA5;margin:0 0 8px}
+.card p{font-size:14px;color:#555;line-height:1.6;margin-bottom:0}
+.callout{background:linear-gradient(135deg,#E6F1FB,#f0f6fd);border-left:4px solid #185FA5;border-radius:8px;padding:16px 20px;margin-bottom:16px;font-size:14px;color:#333}
+.callout.warn{background:#fff8e6;border-left-color:#e0a800}
+.callout.red{background:#fdecea;border-left-color:#c0392b}
+.callout p{margin-bottom:6px;font-size:14px;color:#333}
+.callout p:last-child{margin-bottom:0}
+.callout b{color:#185FA5}
+.ul-list{margin:8px 0;padding-left:20px}
+.ul-list li{margin-bottom:8px;font-size:14px;color:#555}
+.ul-list li b{color:#333}
+.footer{background:#0d3b6b;color:rgba(255,255,255,0.6);text-align:center;padding:22px 0;font-size:13px}</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <h1>CRM 流程 · 欠款/回款标记（只读展示）</h1>
+    <p>财务数据导入 · CRM 只读展示 · 回款率+欠款预警+坏账标记 · 不建财务实时接口</p>
+    <span class="crumb">销售管理办法 V13 · 4.x / 5.5 · P2 · flow-18</span>
+  </div>
+</section>
+
+<nav class="nav">
+  <div class="container">
+    <a href="#meta">元信息</a>
+    <a href="#goal">流程目标</a>
+    <a href="#io">输入输出</a>
+    <a href="#steps">详细步骤</a>
+    <a href="#flow">流程图</a>
+    <a href="#boundary">边界与断点</a>
+    <a href="#exception">异常分支</a>
+    <a href="#control">关键控制点</a>
+    <a href="index.html">&#8592; 返回索引</a>
+  </div>
+</nav>
+
+
+<!-- 1. 元信息 -->
+<section class="section" id="meta">
+  <div class="container">
+    <h2>1. 元信息</h2>
+    <div class="meta-grid">
+      <div class="meta-item"><div class="k">流程名称</div><div class="v">欠款/回款标记（只读展示）</div></div>
+      <div class="meta-item"><div class="k">V13 条款编号</div><div class="v">4.x / 5.5</div></div>
+      <div class="meta-item"><div class="k">层级</div><div class="v"><span class="pill p2">P2</span></div></div>
+      <div class="meta-item"><div class="k">是否触外部系统</div><div class="v">部分：财务对接排除，CRM 仅做只读标记/预警展示</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. 流程目标 -->
+<section class="section" id="goal">
+  <div class="container">
+    <h2>2. 流程目标</h2>
+    <p>欠款/回款标记为 CRM 一期的只读展示能力（P2）。财务系统对接排除，但 CRM 可留欠款标记与回款预警展示位，数据由财务导入或人工维护。展示范围覆盖第四章应收管理（到款核销 4.1、付款纪律 4.2、欠款追责 4.3、坏账处理 4.4、退款冲销 4.5）与第五章 5.5 回款考核的相关标记与状态。</p>
+    <p>核心定位：CRM 不做财务计算与核销，仅做状态展示与预警提醒——展示各商机/合同的回款状态、欠款标记、坏账标记，为销售提供可视化跟进依据；回款率等考核指标数据由运营与财务核定后导入。</p>
+  </div>
+</section>
+
+<!-- 3. 输入输出 -->
+<section class="section" id="io">
+  <div class="container">
+    <h2>3. 输入输出</h2>
+    <div class="table-wrap"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody>
+      <tr><td><b>触发条件</b></td><td>财务导入到款/欠款/坏账数据；或运营人工维护回款状态</td></tr>
+      <tr><td><b>上游流程</b></td><td>到款核销（4.1，财务侧）→ 财务确认到款后数据导入；合同归档与签约（flow-01-4）→ 签约后进入回款周期；测试资源与合同流程 → 产出应收账款记录</td></tr>
+      <tr><td><b>下游流程</b></td><td>回款考核（5.5）→ 回款率数据纳入个人考核；行为红线（6.1/flow-17）→ 欠款逾期不结清且拒不整改触发红线；离职交接（flow-16）→ 离职时欠款状态须在未决问题清单中确认</td></tr>
+      <tr><td><b>产出物</b></td><td>回款状态展示面板、欠款标记与预警、坏账标记、单项目回款预警</td></tr>
+      <tr><td><b>关键字段</b></td><td>商机/合同ID、回款状态（已回/未回/部分回）、欠款金额、欠款时长、坏账标记、整体回款率、单项目回款率</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- 4. 详细步骤 -->
+<section class="section" id="steps">
+  <div class="container">
+    <h2>4. 详细步骤</h2>
+    <h3>回款标记与展示（5.5）</h3>
+    <div class="table-wrap"><table><thead><tr><th>步骤</th><th>动作</th><th>数据来源</th><th>CRM 能力</th></tr></thead><tbody>
+      <tr><td>4.1 数据导入</td><td>到款核销数据由财务导入或运营人工维护</td><td>财务系统/人工</td><td>只读展示</td></tr>
+      <tr><td>4.2 回款率展示</td><td>展示销售个人整体回款率（统计口径由运营与财务核定）</td><td>运营/财务</td><td>只读展示面板</td></tr>
+      <tr><td>4.3 单项目预警</td><td>个人整体回款率达标但单项目存在逾期风险的，触发预警</td><td>系统检测</td><td>预警标记+提醒</td></tr>
+      <tr><td>4.4 预付抵扣</td><td>客户/项目的预付款可抵扣该销售应付未付项目的回款考核额</td><td>运营/财务</td><td>只读展示</td></tr>
+    </tbody></table></div>
+    <h3>欠款标记与追责（4.3）</h3>
+    <div class="table-wrap"><table><thead><tr><th>步骤</th><th>动作</th><th>数据来源</th><th>CRM 能力</th></tr></thead><tbody>
+      <tr><td>4.5 欠款标记</td><td>标记欠款状态与金额，影响报销与提成核算</td><td>财务导入</td><td>只读展示+标记</td></tr>
+      <tr><td>4.6 结清时限</td><td>上月欠款须于本月第三周结清</td><td>系统检测</td><td>时限预警</td></tr>
+      <tr><td>4.7 追责标记</td><td>逾期未结清且未报备的，对应销售及销售负责人被追责</td><td>运营提报</td><td>追责标记留痕</td></tr>
+      <tr><td>4.8 长期欠款</td><td>纳入考核管理，按绩效等级与 PIP 机制执行</td><td>运营/HR</td><td>只读展示</td></tr>
+    </tbody></table></div>
+    <h3>坏账标记（4.4）</h3>
+    <div class="table-wrap"><table><thead><tr><th>步骤</th><th>动作</th><th>数据来源</th><th>CRM 能力</th></tr></thead><tbody>
+      <tr><td>4.9 坏账标记</td><td>标记逾期且确认无法收回的款项为坏账</td><td>财务/运营</td><td>坏账标记展示</td></tr>
+      <tr><td>4.10 不计提成</td><td>坏账不计入提成核算</td><td>财务</td><td>只读展示</td></tr>
+      <tr><td>4.11 6 个月抵扣</td><td>6 个月后回款不影响提成；不回款从其他正毛利客户收入中抵扣</td><td>财务</td><td>只读展示</td></tr>
+      <tr><td>4.12 瞒报标记</td><td>销售/运营瞒报坏账的，按 6.1 红线处理</td><td>运营提报</td><td>红线关联标记</td></tr>
+    </tbody></table></div>
+    <h3>退款与冲销标记（4.5）</h3>
+    <div class="table-wrap"><table><thead><tr><th>步骤</th><th>动作</th><th>数据来源</th><th>CRM 能力</th></tr></thead><tbody>
+      <tr><td>4.13 退款冲销标记</td><td>发生退款或冲销的，对应业绩按同一口径同步回退</td><td>财务/运营</td><td>只读标记展示</td></tr>
+      <tr><td>4.14 提成调整</td><td>提成按《绩效考核及激励指导办法》相应调整</td><td>HR/财务</td><td>只读展示</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- 5. 流程图 -->
+<section class="section" id="flow">
+  <div class="container">
+    <h2>5. 流程图</h2>
+    <div class="svg-box">
+      <div class="fig-title">欠款/回款标记（只读）展示架构</div>
+      <svg viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="欠款回款标记展示架构">
+        <defs>
+          <marker id="arrow18" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#5a5d61"/>
+          </marker>
+          <style>
+            .box18{fill:#fff;stroke:#185FA5;stroke-width:1.5;rx:6}
+            .sub18{fill:#eef2f7;stroke:#cdd6e2;stroke-width:1;rx:4}
+            .lbl18{font-size:13px;font-weight:bold;fill:#0d3b6b}
+            .txt18{font-size:12px;fill:#333}
+            .dash18{stroke:#5a5d61;stroke-width:1.5;fill:none;stroke-dasharray:5,3;marker-end:url(#arrow18)}
+          </style>
+        </defs>
+        <!-- 数据源层（财务侧）：5 路并列，以 x=450 为轴左右对称 -->
+        <rect x="30" y="10" width="840" height="70" class="sub18"/>
+        <text x="50" y="35" class="lbl18">数据源（财务侧 · 留线下）</text>
+        <rect x="60" y="45" width="140" height="30" class="box18"/><text x="130" y="64" class="txt18" text-anchor="middle">到款核销（4.1）</text>
+        <rect x="220" y="45" width="140" height="30" class="box18"/><text x="290" y="64" class="txt18" text-anchor="middle">欠款数据（4.3）</text>
+        <rect x="380" y="45" width="140" height="30" class="box18"/><text x="450" y="64" class="txt18" text-anchor="middle">坏账数据（4.4）</text>
+        <rect x="540" y="45" width="140" height="30" class="box18"/><text x="610" y="64" class="txt18" text-anchor="middle">退款冲销（4.5）</text>
+        <rect x="700" y="45" width="140" height="30" class="box18"/><text x="770" y="64" class="txt18" text-anchor="middle">人工维护</text>
+        <!-- 导入层 -->
+        <rect x="280" y="180" width="340" height="40" class="box18"/><text x="450" y="205" class="txt18" text-anchor="middle">数据导入 / 人工维护（留线下 · 无实时接口）</text>
+        <!-- CRM 只读展示层 -->
+        <rect x="30" y="280" width="840" height="160" class="sub18"/>
+        <text x="50" y="305" class="lbl18">CRM 只读展示层</text>
+        <rect x="55" y="320" width="180" height="50" class="box18"/><text x="145" y="343" class="txt18" text-anchor="middle">回款状态面板</text>
+        <text x="145" y="358" class="txt18" text-anchor="middle" fill="#888">整体回款率+单项目</text>
+        <rect x="265" y="320" width="180" height="50" class="box18"/><text x="355" y="343" class="txt18" text-anchor="middle">欠款标记与预警</text>
+        <text x="355" y="358" class="txt18" text-anchor="middle" fill="#888">时限+追责标记</text>
+        <rect x="475" y="320" width="180" height="50" class="box18"/><text x="565" y="343" class="txt18" text-anchor="middle">坏账标记</text>
+        <text x="565" y="358" class="txt18" text-anchor="middle" fill="#888">不计提成+6月抵扣</text>
+        <rect x="685" y="320" width="160" height="50" class="box18"/><text x="765" y="343" class="txt18" text-anchor="middle">退款冲销标记</text>
+        <text x="765" y="358" class="txt18" text-anchor="middle" fill="#888">业绩同步回退</text>
+        <rect x="200" y="390" width="500" height="30" class="box18"/><text x="450" y="410" class="txt18" text-anchor="middle">关联：回款考核（5.5）· 行为红线（6.1）· 离职交接（6.5）</text>
+        <!-- 上行：5 路数据源 → 导入层。坏账数据与导入层同轴，零折线直连；其余四路共用汇聚母线 y=127 -->
+        <path d="M130 75 L130 127 L450 127 L450 180" class="dash18"/>
+        <path d="M290 75 L290 127 L450 127 L450 180" class="dash18"/>
+        <path d="M450 75 L450 180" class="dash18"/>
+        <path d="M610 75 L610 127 L450 127 L450 180" class="dash18"/>
+        <path d="M770 75 L770 127 L450 127 L450 180" class="dash18"/>
+        <!-- 下行：导入层 → 4 个展示模块，共用分发母线 y=270 -->
+        <path d="M450 220 L450 270 L145 270 L145 320" class="dash18"/>
+        <path d="M450 220 L450 270 L355 270 L355 320" class="dash18"/>
+        <path d="M450 220 L450 270 L565 270 L565 320" class="dash18"/>
+        <path d="M450 220 L450 270 L765 270 L765 320" class="dash18"/>
+      </svg>
+    </div>
+    <div class="callout">
+      <b>图注：</b>上层为财务侧数据源（留线下，无实时接口），中层为数据导入/人工维护，下层为 CRM 只读展示层。展示面板关联回款考核（5.5）、行为红线（6.1 欠款逾期/瞒报坏账）与离职交接（6.5 未决问题清单）。
+    </div>
+  </div>
+</section>
+
+<!-- 6. 边界与断点 -->
+<section class="section" id="boundary">
+  <div class="container">
+    <h2>6. 边界与断点</h2>
+    <div class="table-wrap"><table><thead><tr><th>环节</th><th>处理方式</th><th>说明</th></tr></thead><tbody>
+      <tr><td>到款核销数据</td><td>留线下 / 人工导入</td><td>财务确认到款后由运营邮件通知销售，数据组核销；CRM 不建财务对接接口，数据由人工导入</td></tr>
+      <tr><td>核销时限</td><td>留线下</td><td>境内当日核销、境外/跨币种 48 小时核销（4.1），由财务侧执行</td></tr>
+      <tr><td>欠款/坏账数据</td><td>人工导入 / 只读展示</td><td>CRM 仅展示欠款标记与坏账状态，不做财务计算</td></tr>
+      <tr><td>回款率统计口径</td><td>留线下</td><td>整体回款率统计口径由运营与财务核定后发布，CRM 展示核定后的数据</td></tr>
+      <tr><td>付款纪律（4.2）</td><td>留线下</td><td>严禁月后付、严禁全额预付等规则由财务执行，CRM 不建付款流程</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- 7. 异常分支 -->
+<section class="section" id="exception">
+  <div class="container">
+    <h2>7. 异常分支</h2>
+    <ul class="ul-list">
+      <li><b>数据导入延迟</b>：财务数据未及时导入时，CRM 展示状态可能滞后；销售以财务通知邮件为准跟进催收，CRM 展示为辅助参考。</li>
+      <li><b>单项目逾期预警但整体达标</b>：个人整体回款率达标但单项目存在逾期风险的，系统仍触发预警并跟进，不因整体达标而忽略单项目风险。</li>
+      <li><b>欠款逾期不结清且拒不整改</b>：纳入考核管理，按绩效等级与 PIP 机制执行；不以欠款为由直接解除劳动合同。</li>
+      <li><b>6 个月抵扣场景</b>：客户不回款的，从销售其他正毛利客户收入中抵扣；后续回款后系统自动返还抵扣金额。</li>
+      <li><b>退款/冲销业绩回退</b>：发生退款或冲销的，对应业绩按同一口径同步回退，提成相应调整；瞒报按 6.1 红线处理。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 8. 关键控制点 -->
+<section class="section" id="control">
+  <div class="container">
+    <h2>8. 关键控制点</h2>
+    <div class="table-wrap"><table><thead><tr><th>类型</th><th>控制点</th><th>动作/后果</th></tr></thead><tbody>
+      <tr><td>只读展示</td><td>CRM 不做财务计算</td><td>所有回款/欠款/坏账数据均由财务导入或人工维护，CRM 仅展示</td></tr>
+      <tr><td>预警</td><td>单项目回款逾期</td><td>整体达标但单项目逾期时仍触发预警，防止以整体掩盖单项目风险</td></tr>
+      <tr><td>时限</td><td>欠款结清时限</td><td>上月欠款须于本月第三周结清，逾期未结清且未报备触发追责</td></tr>
+      <tr><td>红线关联</td><td>瞒报坏账</td><td>销售/运营瞒报坏账按 6.1 红线处理；坏账认定以财务账单为最终依据</td></tr>
+      <tr><td>考核关联</td><td>回款纳入个人考核</td><td>回款率作为销售个人考核指标（5.5），预付款可抵扣回款考核额</td></tr>
+    </tbody></table></div>
+    <div class="callout warn">
+      <p><b>【待 V13 定稿确认】</b>4.x/5.5 涉及的回款率统计口径、欠款分级标准与坏账抵扣规则细节须待 V13 正式定稿及运营与财务核定后同步回溯。</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>VeryCloud 云端智慧事业部 · CRM 流程扩写 · 基于《销售管理办法》V13 初稿（2026-09-14）</p>
+  </div>
+</footer>
+
+</body>
+</html>

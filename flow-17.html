@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM 流程 17 · 行为红线触发与留痕 | 销售管理办法 V13</title>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:"Microsoft YaHei","Noto Sans SC",Arial,sans-serif;color:#333;background:#f5f6f8;line-height:1.7}
+.container{max-width:1200px;margin:0 auto;padding:0 40px}
+@media(max-width:1199px){.container{padding:0 24px}}
+@media(max-width:767px){.container{padding:0 16px}}
+.hero{background:linear-gradient(135deg,#0d3b6b,#185FA5);color:#fff;padding:56px 0 48px;text-align:center}
+.hero h1{font-size:30px;font-weight:bold;margin-bottom:10px}
+.hero p{font-size:16px;color:rgba(255,255,255,0.9);max-width:800px;margin:0 auto}
+.hero .crumb{display:inline-block;margin-top:16px;padding:4px 14px;border:1px solid rgba(255,255,255,0.5);border-radius:20px;font-size:13px;color:rgba(255,255,255,0.92)}
+@media(max-width:767px){.hero{padding:44px 0 36px}.hero h1{font-size:22px}.hero p{font-size:14px}}
+.nav{background:#0d3b6b;padding:10px 0;position:sticky;top:0;z-index:10}
+.nav .container{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center}
+.nav a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:13px;font-weight:bold}
+.nav a:hover{color:#fff;text-decoration:underline}
+@media(max-width:767px){.nav a{font-size:12px}}
+.section{padding:48px 0}
+.section:nth-child(even){background:#fff}
+.section h2{font-size:24px;font-weight:bold;margin-bottom:16px;color:#185FA5;padding-left:12px;border-left:4px solid #185FA5}
+.section h3{font-size:18px;font-weight:bold;margin:20px 0 10px;color:#444}
+.section p{font-size:15px;line-height:1.8;margin-bottom:12px;color:#555}
+@media(max-width:767px){.section{padding:32px 0}.section h2{font-size:20px}}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:8px}
+.meta-item{background:#fff;border:1px solid #e8e8e8;border-left:4px solid #185FA5;border-radius:8px;padding:14px 16px}
+.meta-item .k{font-size:13px;color:#888;margin-bottom:4px}
+.meta-item .v{font-size:15px;font-weight:bold;color:#333}
+.pill{display:inline-block;padding:2px 10px;border-radius:12px;font-size:13px;font-weight:bold;white-space:nowrap}
+.pill.line{background:#e6f4ea;color:#1e7e34}
+.pill.p0{background:#e6f4ea;color:#1e7e34}
+.pill.p1{background:#fff4d6;color:#a6790a}
+.pill.p2{background:#eef0f2;color:#5a5d61}
+.table-wrap{overflow-x:auto;margin-bottom:16px;background:#fff;border-radius:8px;border:1px solid #e8e8e8}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:680px}
+th{background:#185FA5;color:#fff;padding:10px 14px;text-align:left;font-weight:bold;white-space:nowrap}
+td{padding:10px 14px;border-bottom:1px solid #e8e8e8;color:#555;vertical-align:top}
+tr:nth-child(even) td{background:#f8f9fa}
+tr:last-child td{border-bottom:none}
+.raci{display:inline-block;min-width:26px;text-align:center;padding:1px 7px;border-radius:6px;font-size:12px;font-weight:bold}
+.raci.r{background:#fdecea;color:#c0392b}
+.raci.a{background:#fff4d6;color:#a6790a}
+.raci.c{background:#e6f4ea;color:#1e7e34}
+.raci.i{background:#eef0f2;color:#5a5d61}
+.svg-box{background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:20px;margin-bottom:16px;overflow-x:auto}
+.svg-box .fig-title{font-size:14px;font-weight:bold;color:#333;margin-bottom:12px;text-align:center}
+.svg-box svg{display:block;margin:0 auto;min-width:760px;max-width:100%}
+.card-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:8px}
+.card{background:#fff;border-radius:10px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06);border:1px solid #e8e8e8;border-top:4px solid #185FA5}
+.card h3{font-size:17px;font-weight:bold;color:#185FA5;margin:0 0 8px}
+.card p{font-size:14px;color:#555;line-height:1.6;margin-bottom:0}
+.callout{background:linear-gradient(135deg,#E6F1FB,#f0f6fd);border-left:4px solid #185FA5;border-radius:8px;padding:16px 20px;margin-bottom:16px;font-size:14px;color:#333}
+.callout.warn{background:#fff8e6;border-left-color:#e0a800}
+.callout.red{background:#fdecea;border-left-color:#c0392b}
+.callout p{margin-bottom:6px;font-size:14px;color:#333}
+.callout p:last-child{margin-bottom:0}
+.callout b{color:#185FA5}
+.ul-list{margin:8px 0;padding-left:20px}
+.ul-list li{margin-bottom:8px;font-size:14px;color:#555}
+.ul-list li b{color:#333}
+.footer{background:#0d3b6b;color:rgba(255,255,255,0.6);text-align:center;padding:22px 0;font-size:13px}</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <h1>CRM 流程 · 行为红线触发与留痕</h1>
+    <p>系统自动标记违规 + 先期管控 + HR 线下处分 + 处分结果回填留痕 · 禁止直接扣罚工资/奖金/提成</p>
+    <span class="crumb">销售管理办法 V13 · 6.1 · P2 · flow-17</span>
+  </div>
+</section>
+
+<nav class="nav">
+  <div class="container">
+    <a href="#meta">元信息</a>
+    <a href="#goal">流程目标</a>
+    <a href="#io">输入输出</a>
+    <a href="#steps">详细步骤</a>
+    <a href="#flow">流程图</a>
+    <a href="#boundary">边界与断点</a>
+    <a href="#exception">异常分支</a>
+    <a href="#control">关键控制点</a>
+    <a href="index.html">&#8592; 返回索引</a>
+  </div>
+</nav>
+
+
+<!-- 1. 元信息 -->
+<section class="section" id="meta">
+  <div class="container">
+    <h2>1. 元信息</h2>
+    <div class="meta-grid">
+      <div class="meta-item"><div class="k">流程名称</div><div class="v">行为红线触发与留痕</div></div>
+      <div class="meta-item"><div class="k">V13 条款编号</div><div class="v">6.1</div></div>
+      <div class="meta-item"><div class="k">层级</div><div class="v"><span class="pill p2">P2</span></div></div>
+      <div class="meta-item"><div class="k">是否触外部系统</div><div class="v">部分：HR 处分留线下（CRM 仅做违规记录留痕）</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. 流程目标 -->
+<section class="section" id="goal">
+  <div class="container">
+    <h2>2. 流程目标</h2>
+    <p>行为红线触发与留痕覆盖 V13 第 6.1 条行为红线与违规处理规则。CRM 一期能力为：系统自动标记违规行为（如测试资源超期未回收、报备数据异常等），违规记录留痕可建；HR 处分（书面警告至解除劳动合同）走线下，由公司人力资源部按《员工手册》奖惩流程实施。</p>
+    <p>处罚总则：任何岗位（销售、运营等）的违规处理，禁止直接扣罚工资、奖金、项目提成或以罚款形式处理；违规影响一律通过绩效评分、绩效等级下调等"影响绩效"形式体现。处分由人力资源部按制度实施，事业部负责提报与先期管控（如暂停资源申请、先行通报批评）。</p>
+  </div>
+</section>
+
+<!-- 3. 输入输出 -->
+<section class="section" id="io">
+  <div class="container">
+    <h2>3. 输入输出</h2>
+    <div class="table-wrap"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody>
+      <tr><td><b>触发条件</b></td><td>系统检测到违规行为（如测试资源超期、报备数据异常、折扣超授权未升级等）；或运营/销售负责人人工提报违规</td></tr>
+      <tr><td><b>上游流程</b></td><td>测试资源申请与回收（flow-11）→ 测试资源超期触发红线标记；商机采集/报备（flow-01-1）→ 报备数据造假触发红线；合同四方审核（flow-13）→ 账单系统未录入即放行触发高风险操作</td></tr>
+      <tr><td><b>下游流程</b></td><td>HR 线下处分流程（留线下断点）；绩效考核下调（通过绩效系统/人工执行）；离职交接（flow-16）→ 严重违纪触发解除劳动合同</td></tr>
+      <tr><td><b>产出物</b></td><td>违规记录（系统留痕）、通报批评记录、先期管控措施记录、HR 处分结果回填</td></tr>
+      <tr><td><b>关键字段</b></td><td>违规类型、违规时间、违规人、触发来源（系统/人工）、红线等级、先期管控措施、HR 处分结果、留痕记录</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- 4. 详细步骤 -->
+<section class="section" id="steps">
+  <div class="container">
+    <h2>4. 详细步骤</h2>
+    <h3>高风险操作（P0，一经发现将严肃处理）</h3>
+    <div class="table-wrap"><table><thead><tr><th>红线事项</th><th>触发方式</th><th>CRM 能力</th></tr></thead><tbody>
+      <tr><td>折扣超出授权范围未升级审批直接放行</td><td>系统检测/人工提报</td><td>校验折扣是否超授权，超限未升级审批的自动标记</td></tr>
+      <tr><td>合同审核时未确认账单系统已录入就放行</td><td>系统检测</td><td>合同放行前置校验：未确认账单录入不放行</td></tr>
+      <tr><td>商机状态获取后漏触发账单系统租户生成</td><td>系统检测</td><td>状态变更联动校验</td></tr>
+    </tbody></table></div>
+    <h3>高风险操作（P1，须及时处理）</h3>
+    <div class="table-wrap"><table><thead><tr><th>红线事项</th><th>触发方式</th><th>CRM 能力</th></tr></thead><tbody>
+      <tr><td>审批结束后合同归档积压不及时</td><td>系统检测</td><td>归档超时预警标记</td></tr>
+      <tr><td>款项核销滞后</td><td>人工提报</td><td>核销时限校验预警</td></tr>
+      <tr><td>商机处理时产品线归属判断错误</td><td>系统检测/人工提报</td><td>归属变更留痕与纠错</td></tr>
+    </tbody></table></div>
+    <h3>红线违规处理流程</h3>
+    <div class="table-wrap"><table><thead><tr><th>步骤</th><th>动作</th><th>系统/运营</th><th>事业部</th><th>HR</th></tr></thead><tbody>
+      <tr><td>4.1 触发标记</td><td>系统自动标记或人工提报违规行为</td><td><span class="raci a">A</span></td><td><span class="raci i">I</span></td><td>&mdash;</td></tr>
+      <tr><td>4.2 先期管控</td><td>事业部先期管控（暂停资源申请、通报批评）</td><td><span class="raci c">C</span></td><td><span class="raci r">R</span></td><td>&mdash;</td></tr>
+      <tr><td>4.3 提报 HR</td><td>事业部提报至人力资源部按《员工手册》处理</td><td><span class="raci c">C</span></td><td><span class="raci r">R</span></td><td><span class="raci a">A</span></td></tr>
+      <tr><td>4.4 HR 处分</td><td>HR 按违纪分级实施处分（书面警告至解除劳动合同）</td><td>&mdash;</td><td><span class="raci i">I</span></td><td><span class="raci r">R</span></td></tr>
+      <tr><td>4.5 结果回填</td><td>HR 处分结果回填 CRM 违规记录</td><td><span class="raci a">A</span></td><td><span class="raci i">I</span></td><td><span class="raci c">C</span></td></tr>
+    </tbody></table></div>
+    <p class="note" style="font-size:13px;color:#888">R=决策 A=审批 C=执行 I=知会</p>
+    <h3>红线事项与处分对应表</h3>
+    <div class="table-wrap"><table><thead><tr><th>红线事项</th><th>员工手册对应</th><th>处理方式</th></tr></thead><tbody>
+      <tr><td>商机/报备数据造假（含伪造客户信息、拜访记录、报备材料）</td><td>严重违纪</td><td>解除劳动合同（无经济补偿）；触刑报司法机关</td></tr>
+      <tr><td>虚构客户需求套取原厂测试资源/补贴</td><td>视损失程度：1万元+严重 / 5000-10000元重大 / 未损失一般</td><td>视情节书面警告至解除劳动合同</td></tr>
+      <tr><td>测试资源/测试账号超期未回收</td><td>一般违纪</td><td>先行通报批评；书面警告</td></tr>
+      <tr><td>违规向客户交付主账号/全局权限账号</td><td>造成损失严重 / 未造成重大</td><td>视情节书面警告至解除劳动合同</td></tr>
+      <tr><td>跨账号共享代金券</td><td>一般违纪（违反公司制度）</td><td>书面警告；情节较重升档处理</td></tr>
+      <tr><td>提前交付账号导致封号等公司损失</td><td>严重违纪（造成重大损失）</td><td>解除劳动合同</td></tr>
+      <tr><td>合同终止后账号私用</td><td>严重违纪（违反保密义务与诚信廉洁）</td><td>解除劳动合同；触刑报司法机关</td></tr>
+      <tr><td>欠款逾期不结清且拒不整改</td><td>按《员工手册》程序定性</td><td>按手册流程处理</td></tr>
+      <tr><td>销售/运营瞒报坏账</td><td>一般违纪；情节较重升档</td><td>视情节书面警告至解除劳动合同</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- 5. 流程图 -->
+<section class="section" id="flow">
+  <div class="container">
+    <h2>5. 流程图</h2>
+    <div class="svg-box">
+      <div class="fig-title">行为红线触发与留痕处理流程</div>
+      <svg viewBox="0 0 900 524" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="行为红线触发与留痕处理流程">
+        <defs>
+          <marker id="arrow17" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#5a5d61"/>
+          </marker>
+          <style>
+            .box17{fill:#fff;stroke:#185FA5;stroke-width:1.5;rx:6}
+            .dia17{fill:#fff8e6;stroke:#e0a800;stroke-width:1.5}
+            .end17{fill:#e6f4ea;stroke:#1e7e34;stroke-width:1.5;rx:16}
+            .red17{fill:#fdecea;stroke:#c0392b;stroke-width:1.5;rx:6}
+            .txt17{font-size:12px;fill:#333}
+            .edge17{stroke:#5a5d61;stroke-width:1.5;fill:none;marker-end:url(#arrow17)}
+          </style>
+        </defs>
+        <!-- 第1层 触发 -->
+        <rect x="330" y="16" width="240" height="42" class="box17"/>
+        <text x="450" y="41" class="txt17" text-anchor="middle">检测到违规行为</text>
+        <!-- 第2层 判定 -->
+        <polygon points="450,90 570,140 450,190 330,140" class="dia17"/>
+        <text x="450" y="144" class="txt17" text-anchor="middle">红线等级判定</text>
+        <!-- 第3层 三档分支（P0 与「事业部先期管控」、红线违规与「HR 处分」同轴，故下游一律直连） -->
+        <rect x="80" y="250" width="220" height="48" class="red17"/>
+        <text x="190" y="270" class="txt17" text-anchor="middle">P0 高风险</text>
+        <text x="190" y="283" class="txt17" text-anchor="middle" fill="#c0392b">严肃处理</text>
+        <rect x="350" y="250" width="200" height="48" class="box17"/>
+        <text x="450" y="270" class="txt17" text-anchor="middle">P1 须及时处理</text>
+        <text x="450" y="283" class="txt17" text-anchor="middle" fill="#e0a800">预警+纠错</text>
+        <rect x="600" y="250" width="220" height="48" class="red17"/>
+        <text x="710" y="270" class="txt17" text-anchor="middle">红线违规</text>
+        <text x="710" y="283" class="txt17" text-anchor="middle" fill="#c0392b">按员工手册处理</text>
+        <!-- 第4层 处理（P1 仅旁路接入左框右边中点，避免三线挤同一收口） -->
+        <rect x="80" y="350" width="220" height="48" class="box17"/>
+        <text x="190" y="378" class="txt17" text-anchor="middle">事业部先期管控+提报</text>
+        <rect x="600" y="350" width="220" height="48" class="box17"/>
+        <text x="710" y="370" class="txt17" text-anchor="middle">HR 处分</text>
+        <text x="710" y="383" class="txt17" text-anchor="middle" fill="#888">（留线下）</text>
+        <!-- 第5层 收口 -->
+        <rect x="330" y="460" width="240" height="48" class="end17"/>
+        <text x="450" y="488" class="txt17" text-anchor="middle">处分结果回填 CRM 留痕</text>
+        <!-- 连线：分支段「下-横-下」等长正交；正对处直连；收口走共用的汇流母线 -->
+        <path d="M450 58 L450 90" class="edge17"/>
+        <path d="M330 140 L330 200 L190 200 L190 250" class="edge17"/>
+        <path d="M450 190 L450 250" class="edge17"/>
+        <path d="M570 140 L570 200 L710 200 L710 250" class="edge17"/>
+        <path d="M190 298 L190 350" class="edge17"/>
+        <path d="M450 298 L450 374 L300 374" class="edge17" style="stroke-dasharray:5,3"/>
+        <path d="M710 298 L710 350" class="edge17"/>
+        <path d="M190 398 L190 429 L450 429 L450 460" class="edge17"/>
+        <path d="M710 398 L710 429 L450 429 L450 460" class="edge17"/>
+      </svg>
+    </div>
+    <div class="callout red">
+      <p><b>处罚总则：</b>禁止直接扣罚工资、奖金、项目提成或以罚款形式处理；违规影响一律通过绩效评分、绩效等级下调等"影响绩效"形式体现。处分由人力资源部按制度实施。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6. 边界与断点 -->
+<section class="section" id="boundary">
+  <div class="container">
+    <h2>6. 边界与断点</h2>
+    <div class="table-wrap"><table><thead><tr><th>环节</th><th>处理方式</th><th>说明</th></tr></thead><tbody>
+      <tr><td>HR 处分实施</td><td>留线下</td><td>处分由人力资源部按《员工手册》奖惩流程实施，CRM 不建 HR 对接接口</td></tr>
+      <tr><td>先期管控（暂停资源申请/通报批评）</td><td>CRM 内执行</td><td>事业部在 CRM 内标记先期管控措施，可暂停违规人的资源申请权限</td></tr>
+      <tr><td>违规记录留痕</td><td>系统留痕</td><td>CRM 记录违规类型、触发来源、红线等级、先期管控措施、HR 处分结果（回填）</td></tr>
+      <tr><td>绩效影响</td><td>线下/人工执行</td><td>违规对绩效的影响按《绩效考核及激励指导办法》执行，CRM 记录关联但不自行设定绩效等级</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- 7. 异常分支 -->
+<section class="section" id="exception">
+  <div class="container">
+    <h2>7. 异常分支</h2>
+    <ul class="ul-list">
+      <li><b>系统误标记违规</b>：运营/销售负责人核实后撤销标记，留痕记录撤销原因与操作人。</li>
+      <li><b>违规人申诉</b>：违规人可通过事业部向 HR 申诉，申诉期间先期管控措施暂不执行（严重违纪除外）。</li>
+      <li><b>连续不合格报备触发红线</b>：同一销售连续出现不合格报备的，由运营提报，先行通报批评并按 6.1 红线违规处理。</li>
+      <li><b>虚构客户指定争夺商机</b>：按 6.1 红线处理（见 3.12.5 客户指定条款）。</li>
+      <li><b>瞒报坏账</b>：销售或运营瞒报坏账的，按 6.1 红线违规处理；坏账认定以财务账单为最终依据。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 8. 关键控制点 -->
+<section class="section" id="control">
+  <div class="container">
+    <h2>8. 关键控制点</h2>
+    <div class="table-wrap"><table><thead><tr><th>类型</th><th>控制点</th><th>动作/后果</th></tr></thead><tbody>
+      <tr><td>红线</td><td>商机/报备数据造假</td><td>严重违纪，解除劳动合同（无经济补偿）；触刑报司法机关</td></tr>
+      <tr><td>红线</td><td>折扣超授权未升级审批直接放行</td><td>P0 高风险操作，一经发现严肃处理</td></tr>
+      <tr><td>红线</td><td>合同未确认账单录入即放行</td><td>P0 高风险操作，系统前置校验不放行</td></tr>
+      <tr><td>红线</td><td>测试资源超期未回收</td><td>一般违纪，先行通报批评+书面警告</td></tr>
+      <tr><td>处罚原则</td><td>禁止直接扣罚工资/奖金/提成</td><td>违规影响通过绩效评分、绩效等级下调体现</td></tr>
+      <tr><td>留痕</td><td>违规记录全程留痕</td><td>触发标记、先期管控、HR 处分结果均须在 CRM 中留痕</td></tr>
+    </tbody></table></div>
+    <div class="callout warn">
+      <p><b>【待 V13 定稿确认】</b>6.1 行为红线与违规处理条款中，红线事项与《员工手册》的对应关系以 V13 正式定稿与《员工手册》现行版本为准。</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>VeryCloud 云端智慧事业部 · CRM 流程扩写 · 基于《销售管理办法》V13 初稿（2026-09-14）</p>
+  </div>
+</footer>
+
+</body>
+</html>

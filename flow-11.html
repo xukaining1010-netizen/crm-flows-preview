@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM 流程 · 测试资源申请与回收 | 销售管理办法 V13</title>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:"Microsoft YaHei","Noto Sans SC",Arial,sans-serif;color:#333;background:#f5f6f8;line-height:1.7}
+.container{max-width:1200px;margin:0 auto;padding:0 40px}
+@media(max-width:1199px){.container{padding:0 24px}}
+@media(max-width:767px){.container{padding:0 16px}}
+.hero{background:linear-gradient(135deg,#0d3b6b,#185FA5);color:#fff;padding:56px 0 48px;text-align:center}
+.hero h1{font-size:30px;font-weight:bold;margin-bottom:10px}
+.hero p{font-size:16px;color:rgba(255,255,255,0.9);max-width:800px;margin:0 auto}
+.hero .crumb{display:inline-block;margin-top:16px;padding:4px 14px;border:1px solid rgba(255,255,255,0.5);border-radius:20px;font-size:13px;color:rgba(255,255,255,0.92)}
+@media(max-width:767px){.hero{padding:44px 0 36px}.hero h1{font-size:22px}.hero p{font-size:14px}}
+.nav{background:#0d3b6b;padding:10px 0;position:sticky;top:0;z-index:10}
+.nav .container{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center}
+.nav a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:13px;font-weight:bold}
+.nav a:hover{color:#fff;text-decoration:underline}
+@media(max-width:767px){.nav a{font-size:12px}}
+.section{padding:48px 0}
+.section:nth-child(even){background:#fff}
+.section h2{font-size:24px;font-weight:bold;margin-bottom:16px;color:#185FA5;padding-left:12px;border-left:4px solid #185FA5}
+.section h3{font-size:18px;font-weight:bold;margin:20px 0 10px;color:#444}
+.section p{font-size:15px;line-height:1.8;margin-bottom:12px;color:#555}
+@media(max-width:767px){.section{padding:32px 0}.section h2{font-size:20px}}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:8px}
+.meta-item{background:#fff;border:1px solid #e8e8e8;border-left:4px solid #185FA5;border-radius:8px;padding:14px 16px}
+.meta-item .k{font-size:13px;color:#888;margin-bottom:4px}
+.meta-item .v{font-size:15px;font-weight:bold;color:#333}
+.pill{display:inline-block;padding:2px 10px;border-radius:12px;font-size:13px;font-weight:bold;white-space:nowrap}
+.pill.line{background:#e6f4ea;color:#1e7e34}
+.pill.p0{background:#e6f4ea;color:#1e7e34}
+.pill.p1{background:#fff4d6;color:#a6790a}
+.pill.p2{background:#eef0f2;color:#5a5d61}
+.table-wrap{overflow-x:auto;margin-bottom:16px;background:#fff;border-radius:8px;border:1px solid #e8e8e8}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:680px}
+th{background:#185FA5;color:#fff;padding:10px 14px;text-align:left;font-weight:bold;white-space:nowrap}
+td{padding:10px 14px;border-bottom:1px solid #e8e8e8;color:#555;vertical-align:top}
+tr:nth-child(even) td{background:#f8f9fa}
+tr:last-child td{border-bottom:none}
+.raci{display:inline-block;min-width:26px;text-align:center;padding:1px 7px;border-radius:6px;font-size:12px;font-weight:bold}
+.raci.r{background:#fdecea;color:#c0392b}
+.raci.a{background:#fff4d6;color:#a6790a}
+.raci.c{background:#e6f4ea;color:#1e7e34}
+.raci.i{background:#eef0f2;color:#5a5d61}
+.svg-box{background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:20px;margin-bottom:16px;overflow-x:auto}
+.svg-box .fig-title{font-size:14px;font-weight:bold;color:#333;margin-bottom:12px;text-align:center}
+.svg-box svg{display:block;margin:0 auto;min-width:760px;max-width:100%}
+.card-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:8px}
+.card{background:#fff;border-radius:10px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06);border:1px solid #e8e8e8;border-top:4px solid #185FA5}
+.card h3{font-size:17px;font-weight:bold;color:#185FA5;margin:0 0 8px}
+.card p{font-size:14px;color:#555;line-height:1.6;margin-bottom:0}
+.callout{background:linear-gradient(135deg,#E6F1FB,#f0f6fd);border-left:4px solid #185FA5;border-radius:8px;padding:16px 20px;margin-bottom:16px;font-size:14px;color:#333}
+.callout.warn{background:#fff8e6;border-left-color:#e0a800}
+.callout.red{background:#fdecea;border-left-color:#c0392b}
+.callout p{margin-bottom:6px;font-size:14px;color:#333}
+.callout p:last-child{margin-bottom:0}
+.callout b{color:#185FA5}
+.ul-list{margin:8px 0;padding-left:20px}
+.ul-list li{margin-bottom:8px;font-size:14px;color:#555}
+.ul-list li b{color:#333}
+.footer{background:#0d3b6b;color:rgba(255,255,255,0.6);text-align:center;padding:22px 0;font-size:13px}</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <h1>CRM 流程 · 测试资源申请与回收</h1>
+    <p>已报备方可申请 · 2 轮上限 · 最终结论 6 种情形 · 测试结束必须回收资源 · 虚构套取按红线处理</p>
+    <span class="crumb">销售管理办法 V13 · 3.4 · P1</span>
+  </div>
+</section>
+
+<nav class="nav">
+  <div class="container">
+    <a href="#meta">元信息</a>
+    <a href="#goal">流程目标</a>
+    <a href="#io">输入输出</a>
+    <a href="#steps">详细步骤</a>
+    <a href="#flow">流程图</a>
+    <a href="#boundary">边界与断点</a>
+    <a href="#exception">异常分支</a>
+    <a href="#control">关键控制点</a>
+    <a href="index.html">← 返回索引</a>
+  </div>
+</nav>
+
+<!-- 1. 元信息 -->
+<section class="section" id="meta">
+  <div class="container">
+    <h2>1. 元信息</h2>
+    <div class="meta-grid">
+      <div class="meta-item"><div class="k">流程名称</div><div class="v">测试资源申请与回收</div></div>
+      <div class="meta-item"><div class="k">V13 条款编号</div><div class="v">3.4</div></div>
+      <div class="meta-item"><div class="k">层级</div><div class="v"><span class="pill p1">P1</span></div></div>
+      <div class="meta-item"><div class="k">是否触外部系统</div><div class="v">否（CRM 内闭环；测试环境由数据组开通，CRM 记录资源台账）</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. 流程目标 -->
+<section class="section" id="goal">
+  <div class="container">
+    <h2>2. 流程目标</h2>
+    <p>测试与售前支持阶段管理商机从测试环境开通到结果判定与资源回收的全流程。核心纪律：测试资源申请须以已通过审核的商机报备为前提，单个商机测试原则上不超过 2 轮，测试结束或商机关闭后必须回收测试资源并留痕。最终结论判定有 6 种情形（客户明确不通过/资源用尽/连续 3 周无推进/6 周无结果/客户暂缓或超有效期/测试通过），虚构客户需求套取测试资源的按 6.1 红线处理。</p>
+  </div>
+</section>
+
+<!-- 3. 输入输出 -->
+<section class="section" id="io">
+  <div class="container">
+    <h2>3. 输入输出</h2>
+    <div class="table-wrap"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody>
+      <tr><td><b>触发条件</b></td><td>已报备商机经审核流转后，工单包含技术内容并流转至架构师（SA），进入测试阶段</td></tr>
+      <tr><td><b>上游流程</b></td><td>分拣审核流转（flow-01-2）→ 工单包含技术内容的流转至架构师；商机追踪看板（flow-08）→ 商机进入测试阶段</td></tr>
+      <tr><td><b>下游流程</b></td><td>测试通过→合同审核与审批（flow-13）；最终不通过→关闭/公海（flow-02）；测试资源回收留痕</td></tr>
+      <tr><td><b>产出物</b></td><td>测试资源台账、测试结果（YES/NO）、最终结论判定记录、资源回收记录</td></tr>
+      <tr><td><b>关键字段</b></td><td>客户名称、测试场景、预计用量与周期、客户对接人、测试轮次、测试结果、最终结论、资源回收状态</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- 4. 详细步骤 -->
+<section class="section" id="steps">
+  <div class="container">
+    <h2>4. 详细步骤</h2>
+    <h3>4a. 测试最终结论判定（6 种情形）</h3>
+    <div class="table-wrap"><table><thead><tr><th>情形</th><th>判定</th><th>处理</th></tr></thead><tbody>
+      <tr><td>客户出具明确测试结论「不通过」</td><td>最终不通过</td><td>销售在 3 个工作日内手动关闭</td></tr>
+      <tr><td>测试资源（POC/测试额度）已用尽仍未通过</td><td>最终不通过</td><td>销售关闭；需再测须重新申请并说明原因</td></tr>
+      <tr><td>自最近一次进度更新起连续 3 周无推进记录</td><td>视为无实质推进</td><td>系统自动关闭（关闭前 3 个工作日提醒销售）</td></tr>
+      <tr><td>测试额度耗尽且自报备起满 6 周无实质结果、未进入合同</td><td>最终不通过</td><td>限时关闭并回收测试资源，或退回/转销售/进公海；仍需跟进须特批延期，审批人对结果负责；超期未回收按 6.1 红线处理</td></tr>
+      <tr><td>客户明确暂缓，或超过商机有效期（3 个月）无实质进展</td><td>最终不通过</td><td>销售关闭，或退回线索池</td></tr>
+      <tr><td>测试通过</td><td>通过</td><td>进入合同流程（见 3.5 / flow-13）</td></tr>
+    </tbody></table></div>
+    <h3>4b. 测试资源纪律（准入/过程/追责）</h3>
+    <div class="table-wrap"><table><thead><tr><th>管控层</th><th>措施</th></tr></thead><tbody>
+      <tr><td>准入</td><td>测试资源申请须以已通过审核的商机报备为前提，未报备的不受理；申请材料须含客户名称、测试场景、预计用量与周期、客户对接人；大额测试资源申请一律走特批（事业部/业务线负责人审批）</td></tr>
+      <tr><td>过程</td><td>数据组/架构师登记测试资源台账（申请、开通、用量、回收）；测试结束或商机关闭后必须回收测试资源并留痕</td></tr>
+      <tr><td>追责</td><td>虚构客户需求申请测试资源、挪作他用、超期未回收的，按 6.1 红线处理，先行通报批评</td></tr>
+    </tbody></table></div>
+    <h3>4c. 泳道步骤（RACI）</h3>
+    <div class="table-wrap"><table><thead><tr>
+      <th>步骤</th>
+      <th>销售</th>
+      <th>数据组</th>
+      <th>架构师(SA)</th>
+      <th>产品线运营</th>
+    </tr></thead><tbody>
+      <tr>
+        <td>1.1 测试资源申请（须已报备+材料齐全）</td>
+        <td><span class="raci c">C</span></td>
+        <td><span class="raci i">I</span></td>
+        <td>—</td>
+        <td><span class="raci i">I</span></td>
+      </tr>
+      <tr>
+        <td>1.2 准入审核（已报备?材料齐全?大额特批?）</td>
+        <td><span class="raci i">I</span></td>
+        <td><span class="raci c">C</span></td>
+        <td>—</td>
+        <td><span class="raci a">A</span></td>
+      </tr>
+      <tr>
+        <td>1.3 开通测试环境+登记资源台账</td>
+        <td><span class="raci i">I</span></td>
+        <td><span class="raci c">C</span></td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>1.4 架构师提供技术方案/PoC/答疑</td>
+        <td><span class="raci i">I</span></td>
+        <td>—</td>
+        <td><span class="raci c">C</span></td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>1.5 销售组织客户测试并反馈结果（YES/NO）</td>
+        <td><span class="raci c">C</span></td>
+        <td>—</td>
+        <td><span class="raci i">I</span></td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>1.6 最终结论判定（6 种情形）</td>
+        <td><span class="raci c">C</span></td>
+        <td><span class="raci i">I</span></td>
+        <td><span class="raci i">I</span></td>
+        <td><span class="raci a">A</span></td>
+      </tr>
+      <tr>
+        <td>1.7 通过→进入合同；不通过→关闭</td>
+        <td><span class="raci c">C</span></td>
+        <td><span class="raci i">I</span></td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>1.8 回收测试资源+留痕</td>
+        <td><span class="raci i">I</span></td>
+        <td><span class="raci c">C</span></td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>1.9 测试轮次审核（超 2 轮须审核决定）</td>
+        <td><span class="raci c">C</span></td>
+        <td>—</td>
+        <td><span class="raci i">I</span></td>
+        <td><span class="raci a">A</span></td>
+      </tr>
+    </tbody></table></div>
+    <p class="note">R=决策 A=审批 C=执行 I=知会</p>
+  </div>
+</section>
+
+<!-- 5. 流程图 -->
+<section class="section" id="flow">
+  <div class="container">
+    <h2>5. 流程图</h2>
+    <div class="svg-box">
+      <div class="fig-title">测试资源申请与回收</div>
+            <!-- diagram-type: LANE -->
+      <svg viewBox="0 0 1080 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="测试资源申请与回收">
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#5a5d61"/>
+          </marker>
+          <style>
+            .sw{fill:#f2f5f9;stroke:#cdd6e2;stroke-width:1}
+            .lane{fill:#eef2f7;stroke:#cdd6e2;stroke-width:1}
+            .lbl{font-size:13px;font-weight:bold;fill:#0d3b6b}
+            .box{fill:#fff;stroke:#185FA5;stroke-width:1.5}
+            .diamond{fill:#fff8e6;stroke:#e0a800;stroke-width:1.5}
+            .end{fill:#e6f4ea;stroke:#1e7e34;stroke-width:1.5}
+            .txt{font-size:12px;fill:#333}
+            .brl{font-size:12px;fill:#a6790a;font-weight:bold}
+            .edge{stroke:#5a5d61;stroke-width:1.5;fill:none;marker-end:url(#arrow)}
+          </style>
+        </defs>
+        <rect x="0" y="0" width="1080" height="140" class="sw"/>
+        <rect x="0" y="140" width="1080" height="160" class="lane"/>
+        <text x="20" y="20" class="lbl">测试阶段</text>
+        <text x="20" y="160" class="lbl">结论判定</text>
+        <rect x="40" y="25" width="130" height="36" class="box"/><text x="105" y="47" class="txt" text-anchor="middle">资源申请</text>
+        <polygon points="205,43 250,23 295,43 250,63" class="diamond"/><text x="250" y="47" class="txt" text-anchor="middle">已报备?</text>
+        <rect x="340" y="25" width="170" height="36" class="box"/><text x="425" y="47" class="txt" text-anchor="middle">开通测试环境+登记</text>
+        <rect x="560" y="25" width="170" height="36" class="box"/><text x="645" y="47" class="txt" text-anchor="middle">架构师方案/PoC</text>
+        <rect x="780" y="25" width="170" height="36" class="box"/><text x="865" y="47" class="txt" text-anchor="middle">客户测试+反馈</text>
+        <rect x="340" y="82" width="170" height="36" class="end"/><text x="425" y="104" class="txt" text-anchor="middle">不予受理（须先报备）</text>
+        <polygon points="185,200 250,178 315,200 250,222" class="diamond"/><text x="250" y="204" class="txt" text-anchor="middle">最终结论?</text>
+        <rect x="400" y="182" width="180" height="36" class="end"/><text x="490" y="204" class="txt" text-anchor="middle">通过→进入合同</text>
+        <rect x="400" y="237" width="180" height="36" class="box"/><text x="490" y="259" class="txt" text-anchor="middle">关闭+回收资源+留痕</text>
+        <rect x="700" y="237" width="180" height="36" class="end"/><text x="790" y="259" class="txt" text-anchor="middle">公海/退回</text>
+        <path d="M170 43 L205 43" class="edge"/>
+        <path d="M295 43 L340 43" class="edge"/><text x="305" y="36" class="brl">是</text>
+        <path d="M250 63 L250 100 L340 100" class="edge"/><text x="258" y="82" class="brl">否</text>
+        <path d="M510 43 L560 43" class="edge"/>
+        <path d="M730 43 L780 43" class="edge"/>
+        <path d="M865 61 L865 160 L250 160 L250 178" class="edge"/>
+        <path d="M315 200 L400 200" class="edge"/><text x="325" y="193" class="brl">通过</text>
+        <path d="M250 222 L250 255 L400 255" class="edge"/><text x="258" y="240" class="brl">不通过</text>
+        <path d="M580 255 L700 255" class="edge"/>
+      </svg>
+    </div>
+    <div class="callout"><b>图注：</b>上排为测试执行链路（申请→准入判定→开通→客户测试）。下排为最终结论判定——通过进入合同，不通过则关闭并回收资源。6 种最终结论情形详见 4a 表。虚构客户需求套取测试资源的按 6.1 红线处理。</div>
+  </div>
+</section>
+
+<!-- 6. 边界与断点 -->
+<section class="section" id="boundary">
+  <div class="container">
+    <h2>6. 边界与断点</h2>
+    <div class="table-wrap"><table><thead><tr><th>环节</th><th>处理方式</th><th>说明</th></tr></thead><tbody>
+      <tr><td>测试资源准入</td><td>已报备为前提</td><td>未报备的商机不受理测试资源申请；申请材料须含客户名称、测试场景、预计用量与周期、客户对接人</td></tr>
+      <tr><td>大额测试资源</td><td>特批</td><td>大额测试资源申请一律走特批（事业部/业务线负责人审批）</td></tr>
+      <tr><td>测试轮次</td><td>原则上不超过 2 轮</td><td>需增加轮次的须提交测试说明，由产品线运营审核决定</td></tr>
+      <tr><td>单次 NO vs 最终 NO</td><td>区分处理</td><td>单次测试 NO 但尚未形成最终结论的，不进入关闭流程也不进入公海</td></tr>
+      <tr><td>架构师角色</td><td>执行非决策</td><td>架构师负责执行测试并提供技术评估意见，不做测试决定</td></tr>
+      <tr><td>必须留痕节点</td><td>系统留痕</td><td>测试资源台账（申请/开通/用量/回收）、测试结果、最终结论、回收记录均须留痕</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- 7. 异常分支 -->
+<section class="section" id="exception">
+  <div class="container">
+    <h2>7. 异常分支</h2>
+    <ul class="ul-list">
+      <li><b>虚构客户需求申请测试资源</b>：按 6.1 红线处理，先行通报批评。</li>
+      <li><b>测试资源挪作他用</b>：按 6.1 红线处理，先行通报批评。</li>
+      <li><b>测试资源超期未回收</b>：按 6.1 红线处理，先行通报批评。</li>
+      <li><b>需超过 2 轮测试</b>：销售须提交测试说明（客户真实需求、未通过原因、再测价值），由产品线运营审核决定是否增加轮次。</li>
+      <li><b>6 周无结果且额度耗尽</b>：限时关闭并回收资源，或退回销售管理重新分配/转其他销售/进公海；仍需跟进须特批延期，审批人对结果负责。</li>
+      <li><b>单次 NO 未形成最终结论</b>：不进入关闭流程，不进入公海，可继续测试。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 8. 关键控制点 -->
+<section class="section" id="control">
+  <div class="container">
+    <h2>8. 关键控制点</h2>
+    <div class="table-wrap"><table><thead><tr><th>类型</th><th>控制点</th><th>动作/后果</th></tr></thead><tbody>
+      <tr><td>红线</td><td>虚构客户需求申请测试资源</td><td>按 6.1 红线处理，先行通报批评</td></tr>
+      <tr><td>红线</td><td>测试资源超期未回收</td><td>按 6.1 红线处理，先行通报批评</td></tr>
+      <tr><td>可核查</td><td>准入门槛（已报备+材料齐全）</td><td>未报备的不受理；材料须含客户名称/测试场景/用量周期/对接人</td></tr>
+      <tr><td>可核查</td><td>测试轮次上限（2 轮）</td><td>超 2 轮须产品线运营审核决定，须提交测试说明</td></tr>
+      <tr><td>可核查</td><td>最终结论 6 种情形</td><td>任一情形触发即形成最终结论，按对应处理执行</td></tr>
+      <tr><td>可核查</td><td>资源回收留痕</td><td>测试结束或商机关闭后必须回收测试资源并留痕</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>VeryCloud 云端智慧事业部 · CRM 流程扩写 · 基于销售管理办法 V13 初稿（2026-09-14）</p>
+  </div>
+</footer>
+
+</body>
+</html>

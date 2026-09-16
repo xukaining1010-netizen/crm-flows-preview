@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM 角色与权限总表 | 销售管理办法 V13</title>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:"Microsoft YaHei","Noto Sans SC",Arial,sans-serif;color:#333;background:#f5f6f8;line-height:1.7}
+.container{max-width:1200px;margin:0 auto;padding:0 40px}
+@media(max-width:1199px){.container{padding:0 24px}}
+@media(max-width:767px){.container{padding:0 16px}}
+.hero{background:linear-gradient(135deg,#0d3b6b,#185FA5);color:#fff;padding:56px 0 48px;text-align:center}
+.hero h1{font-size:30px;font-weight:bold;margin-bottom:10px}
+.hero p{font-size:16px;color:rgba(255,255,255,0.9);max-width:820px;margin:0 auto}
+.hero .crumb{display:inline-block;margin-top:16px;padding:4px 14px;border:1px solid rgba(255,255,255,0.5);border-radius:20px;font-size:13px;color:rgba(255,255,255,0.92)}
+@media(max-width:767px){.hero{padding:44px 0 36px}.hero h1{font-size:22px}.hero p{font-size:14px}}
+.nav{background:#0d3b6b;padding:10px 0;position:sticky;top:0;z-index:10}
+.nav .container{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center}
+.nav a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:13px;font-weight:bold}
+.nav a:hover{color:#fff;text-decoration:underline}
+.section{padding:48px 0}
+.section:nth-child(even){background:#fff}
+.section h2{font-size:24px;font-weight:bold;margin-bottom:16px;color:#185FA5;padding-left:12px;border-left:4px solid #185FA5}
+.section h3{font-size:18px;font-weight:bold;margin:20px 0 10px;color:#444}
+.section p{font-size:15px;line-height:1.8;margin-bottom:12px;color:#555}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:8px}
+.meta-item{background:#fff;border:1px solid #e8e8e8;border-left:4px solid #185FA5;border-radius:8px;padding:14px 16px}
+.meta-item .k{font-size:13px;color:#888;margin-bottom:4px}
+.meta-item .v{font-size:15px;font-weight:bold;color:#333}
+.table-wrap{overflow-x:auto;margin-bottom:16px;background:#fff;border-radius:8px;border:1px solid #e8e8e8}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:680px}
+th{background:#185FA5;color:#fff;padding:10px 14px;text-align:left;font-weight:bold;white-space:nowrap}
+td{padding:10px 14px;border-bottom:1px solid #e8e8e8;color:#555;vertical-align:top}
+tr:nth-child(even) td{background:#f8f9fa}
+tr:last-child td{border-bottom:none}
+td b{color:#333}
+.tier{display:inline-block;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:bold;white-space:nowrap}
+.t-decision{background:#fdecea;color:#c0392b}
+.t-mgmt{background:#fff4d6;color:#a6790a}
+.t-front{background:#e6f4ea;color:#1e7e34}
+.t-support{background:#e6f1fb;color:#185FA5}
+.t-sys{background:#eef0f2;color:#5a5d61}
+.ref{color:#9aa2ad;font-size:12px;white-space:nowrap}
+.guess{color:#b58900;font-size:12px}
+.callout{background:linear-gradient(135deg,#E6F1FB,#f0f6fd);border-left:4px solid #185FA5;border-radius:8px;padding:16px 20px;margin-bottom:16px;font-size:14px;color:#333}
+.callout.warn{background:#fff8e6;border-left-color:#e0a800}
+.callout.red{background:#fdecea;border-left-color:#c0392b}
+.callout p{margin-bottom:6px;font-size:14px;color:#333}
+.callout p:last-child{margin-bottom:0}
+.callout b{color:#185FA5}
+.ul-list{margin:8px 0;padding-left:20px}
+.ul-list li{margin-bottom:8px;font-size:14px;color:#555}
+.ul-list li b{color:#333}
+.chain{background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:18px 22px;margin-bottom:16px}
+.chain p{margin-bottom:6px;font-size:14.5px;color:#444}
+.chain b{color:#185FA5}
+.footer{background:#0d3b6b;color:rgba(255,255,255,0.6);text-align:center;padding:22px 0;font-size:13px}</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <h1>CRM 角色与权限总表</h1>
+    <p>基于《销售管理办法》V13 初稿与 19 个 CRM 流程页 RACI · 17 类角色 · 发起 / 决策 / 审批 / 执行 / 知会 · 汇报关系与数据可见性</p>
+    <span class="crumb">CRM 一期功能需求 · 权限体系输入</span>
+  </div>
+</section>
+
+<nav class="nav">
+  <div class="container">
+    <a href="#note">说明</a>
+    <a href="#roles">角色总览</a>
+    <a href="#chain">汇报关系</a>
+    <a href="#act">行为矩阵</a>
+    <a href="#vis">数据可见性</a>
+    <a href="#todo">待拍板</a>
+    <a href="index.html">← 返回索引</a>
+  </div>
+</nav>
+
+<!-- 1. 说明 -->
+<section class="section" id="note">
+  <div class="container">
+    <h2>1. 说明与标注体系</h2>
+    <div class="meta-grid">
+      <div class="meta-item"><div class="k">来源</div><div class="v">销管办法 V13 初稿 + flow-01~19 各页 RACI 表</div></div>
+      <div class="meta-item"><div class="k">适用范围</div><div class="v">内地业务（港新/海外本期暂缓）</div></div>
+      <div class="meta-item"><div class="k">用途</div><div class="v">CRM 一期权限模型（RBAC）功能需求输入</div></div>
+      <div class="meta-item"><div class="k">全业务参数表</div><div class="v">另行整理，本页不含</div></div>
+    </div>
+    <div class="callout">
+      <p><b>标注体系</b>：每条权限与可见性条目末尾带置灰小字标注来源章节；<span class="guess">◈ 金色小字</span> 表示「办法未明文、本表按权限模型补全的设计建议」，须拍板后才写入 CRM 需求，与办法明示内容严格区分。</p>
+      <p><b>行为五分法</b>：与各流程页 RACI 图例一致——<b>发起</b>（启动流程/提交申请）、<b>决策</b>（裁定分歧、判定走向，RACI-R）、<b>审批</b>（对申请与升级事项放行/驳回，RACI-A）、<b>执行</b>（办理具体动作，RACI-C）、<b>知会</b>（被告知结果，RACI-I）。</p>
+      <p><b>两个「上级」口径</b>：行政汇报线（谁给他下目标、考核他）与流程审批线（某事项谁有权批他）分开表述，不混用。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2. 角色总览 -->
+<section class="section" id="roles">
+  <div class="container">
+    <h2>2. 角色总览（17 类）</h2>
+    <div class="table-wrap"><table><thead><tr><th>角色</th><th>层级</th><th>行政上级</th><th>下级 / 协同</th><th>职责一句话</th><th>示例</th></tr></thead><tbody>
+      <tr><td><b>事业部负责人（总经理）</b></td><td><span class="tier t-decision">决策层</span></td><td>公司管理层（办法之外）<span class="ref">· 2.1</span></td><td>国内销售总监、业务线负责人、各区域销售负责人</td><td>对内地销售整体经营与考核目标负责；超常规事项最终审批<span class="ref">· 2.1</span></td><td>李加、肖冬明</td></tr>
+      <tr><td><b>国内销售总监</b></td><td><span class="tier t-decision">决策层</span></td><td>事业部负责人<span class="guess">◈ 公司组织口径，办法 2.1 未单列</span></td><td>各区域销售负责人</td><td>跨区域销售管理；属「销售负责人及以上管理人员」<span class="ref">· 2.2</span></td><td>霍睿</td></tr>
+      <tr><td><b>业务线负责人</b></td><td><span class="tier t-decision">决策层</span></td><td>事业部负责人<span class="ref">· 2.1</span></td><td>本业务线销售团队（经区域负责人）</td><td>归属裁定、失效投入核定、特批与延期审批、对外口径把关<span class="ref">· 3.12 / 3.4 / 3.7</span></td><td>黄国良（微软线）<span class="ref">⚑</span>　其余线待核</td></tr>
+      <tr><td><b>区域销售负责人</b>（销售经理）</td><td><span class="tier t-mgmt">管理层</span></td><td>事业部负责人或业务线负责人（汇报线）<span class="ref">· 2.1</span></td><td>本区域销售</td><td>区域目标拆解下达、商机质量审核、过程督导与结果考核<span class="ref">· 2.1 / 2.2</span></td><td>肖冬亮（华南-广州）</td></tr>
+      <tr><td><b>销售</b>（正式）</td><td><span class="tier t-front">一线</span></td><td>区域销售负责人<span class="ref">· 2.1</span></td><td>—（协同销售 / 客户责任人横向协同）</td><td>商机拓展、客户关系、合同签订与回款跟进；对商机真实性负首责<span class="ref">· 2.2 / 3.3</span></td><td>高晓龙（华北）</td></tr>
+      <tr><td><b>新人销售</b>（试用期）</td><td><span class="tier t-front">一线</span></td><td>区域销售负责人<span class="ref">· 5.4</span></td><td>—</td><td>同销售；另受 15 天报备硬指标、月度考核与转正双门槛约束<span class="ref">· 5.4</span></td><td>—（在职新人名单未入库）</td></tr>
+      <tr><td><b>导师</b>（兼任）</td><td><span class="tier t-front">一线</span></td><td>区域销售负责人（行政）<span class="guess">◈ 行政线按带教归属推定</span></td><td>带教对象：新人销售</td><td>导师带教与情景演练；新人考核未达标的追责对象之一<span class="ref">· 5.4</span></td><td>—（随带教关系指派）</td></tr>
+      <tr><td><b>运营负责人</b></td><td><span class="tier t-support">支撑·管理</span></td><td>事业部负责人<span class="ref">· 5.6 提报口径印证</span> <span class="ref">⚑ 09-16 口头确认</span></td><td>运营组、数据组</td><td>运营与数据两线最高负责人、运营一侧主流程最高负责人；统辖两线政策审批与特批决策的抄送 / 审批节点</td><td>谢崇达</td></tr>
+      <tr><td><b>运营组</b>（业务运营 / 产品线接口人）</td><td><span class="tier t-support">支撑</span></td><td>运营负责人<span class="ref">⚑ 09-16 口头确认</span></td><td>服务全部销售线</td><td>报备流转、原厂对接、台账维护、流程审查、考核统计<span class="ref">· 2.2 / 3.10</span></td><td>赵敏（AWS 账单系统）、莫舒婷·李柳芳（应收/出账单）、卢钦钦（台账·数据核算，HR 在册兼任）、卢树珍（微软业务运营表）<span class="ref">⚑ 09-15 交接邮件实证</span></td></tr>
+      <tr><td><b>数据组</b>（数据运营）</td><td><span class="tier t-support">支撑</span></td><td>运营负责人<span class="ref">⚑ 09-16 口头确认</span></td><td>—</td><td>系统数据维护、报表与看板输出、归档、数据质量核查<span class="ref">· 2.2</span></td><td>—（名单待核）</td></tr>
+      <tr><td><b>架构师 SA</b>（售前）</td><td><span class="tier t-support">支撑</span></td><td>技术线（办法之外）<span class="guess">◈</span></td><td>—</td><td>技术方案、PoC、测试执行与技术评估；不做测试决定<span class="ref">· 2.2 / 3.4</span></td><td>史刚（微软）、钱祎（睿鸿）</td></tr>
+      <tr><td><b>市场部</b></td><td><span class="tier t-support">支撑</span></td><td>（办法之外）<span class="guess">◈</span></td><td>—</td><td>活动方案对接、物料与现场执行、付款合同流程<span class="ref">· 3.11</span></td><td>—</td></tr>
+      <tr><td><b>法务</b></td><td><span class="tier t-support">支撑</span></td><td>（办法之外）<span class="guess">◈</span></td><td>—</td><td>合同条款审核；框架协议类续签前置审核<span class="ref">· 3.5 / 3.9</span></td><td>—</td></tr>
+      <tr><td><b>财务</b></td><td><span class="tier t-support">支撑</span></td><td>（办法之外）<span class="guess">◈</span></td><td>—</td><td>回款统计口径核定（与运营）、账单口径<span class="ref">· 4.1 / 5.5</span></td><td>—</td></tr>
+      <tr><td><b>人力资源部</b></td><td><span class="tier t-support">支撑</span></td><td>（办法之外）<span class="guess">◈</span></td><td>—</td><td>违纪分级处分实施、试用期转正制度、欠款核销与追偿规则<span class="ref">· 6.1 / 6.5</span></td><td>张沙沙<span class="ref">⚑ 09-11 通讯录取名</span></td></tr>
+      <tr><td><b>系统 / AI</b></td><td><span class="tier t-sys">系统</span></td><td>—</td><td>—</td><td>初筛与退回、自动流转/关闭/提醒、按角色配置审核面板<span class="ref">· 3.2.2 / 3.3 / 3.5</span></td><td>—</td></tr>
+      <tr><td><b>原厂</b>（外部）</td><td><span class="tier t-sys">外部</span></td><td>—</td><td>—</td><td>报备审核、保护期校验、流失风险名单（系统外协同）<span class="ref">· 3.2 / 3.8 / 3.9</span></td><td>—（原厂侧对接人）</td></tr>
+    </tbody></table></div>
+    <div class="callout"><p><b>示例列口径</b>：人名仅帮助理解角色分工，<b>不作为岗位任命依据</b>；标 <span class="ref">⚑</span> 者为库内文档交叉确认（如运营负责人＝谢崇达），其余取自库内已确认记载或本次口头确认；「待核」项入库名单确认后补齐。运营组分工已于 09-16 按达达《李国静客户交接变更》邮件实测补全（口径见 management/org-chart.md §4.1）。</p></div>
+    <div class="callout"><p><b>场景身份</b>（不单设岗位，挂在「销售」之下）：主销售 / 协同销售（每商机唯一主销售）<span class="ref">· 3.12.1</span>、客户责任人（客户层关系，只记关系不判归属）<span class="ref">· 3.12.1</span>、离职销售 / 承接销售（交接流程双方）<span class="ref">· 6.5</span>、活动负责人（到场销售/组织者，线索录入主体）<span class="ref">· 3.11</span>。</p></div>
+  </div>
+</section>
+
+<!-- 3. 汇报关系 -->
+<section class="section" id="chain">
+  <div class="container">
+    <h2>3. 汇报关系（行政线）</h2>
+    <div class="chain">
+      <p><b>第 1 层</b>　事业部负责人（总经理）—— 上承公司管理层</p>
+      <p><b>第 2 层</b>　国内销售总监 ｜ 业务线负责人 ｜ 事业部 CTO 兼海外销售管理负责人<span class="ref">· 3.2.5 单项报价会签方</span> <span class="guess">◈ 国内销售总监的层级位置按公司组织口径补全</span></p>
+      <p><b>第 3 层</b>　区域销售负责人（华北 / 华东 / 华南-广州 / 华南-深圳）—— 办法原文为「向事业部负责人或业务线负责人汇报」<span class="ref">· 2.1</span></p>
+      <p><b>第 4 层</b>　销售（正式 / 新人）—— 新人另受导师带教<span class="ref">· 2.1 / 5.4</span></p>
+      <p><b>横向支撑</b>　<b>运营负责人</b>（向事业部负责人汇报，统辖运营组与数据组<span class="ref">⚑ 09-16 口头确认</span>）→ 运营组 ｜ 数据组；架构师 SA ｜ 市场部 ｜ 法务 ｜ 财务 ｜ 人力资源部 按流程环节与销售协同 —— 均不构成销售行政链<span class="ref">· 2.1</span></p>
+    </div>
+    <div class="callout warn"><p><b>「销管」两义提醒</b>：考核语境的销管与基层销售同背硬指标；权限语境的「销售负责人及以上管理人员」（国内销售总监、事业部总经理）才有授权、发起、指定类权限。CRM 权限配置按<b>权限语境</b>取值。<span class="ref">· 2.2</span></p></div>
+  </div>
+</section>
+
+<!-- 4. 行为矩阵 -->
+<section class="section" id="act">
+  <div class="container">
+    <h2>4. 行为矩阵（谁能在哪里发起 / 决策 / 审批）</h2>
+
+    <h3>4.1 发起权</h3>
+    <div class="table-wrap"><table><thead><tr><th>角色</th><th>可发起事项</th><th>所在流程</th></tr></thead><tbody>
+      <tr><td rowspan="2"><b>销售</b></td><td>商机报备、线索录入、公海认领、原销售重新激活、商机关闭操作与归因复盘</td><td>采集 / 线索 / 公海 / 签约追踪 <span class="ref">· 3.2 / 3.7 / 3.8</span></td></tr>
+      <tr><td>测试资源申请、合同发起（CRM 填单+关键参数）、有效期延长申请、归属变更申请、失效上报、市场活动申请、提前转正申请、离职确认</td><td>测试 / 合同 / 追踪 / 归属 / 活动 / 转正 / 交接 <span class="ref">· 3.4 / 3.5 / 3.7 / 3.12.6 / 3.11 / 5.4 / 6.5</span></td></tr>
+      <tr><td><b>区域销售负责人</b></td><td>月度目标分解与目标沟通（下达程序发起方）、离职交接安排</td><td>目标下达 / 离职交接 <span class="ref">· 5.2.x / 6.5</span></td></tr>
+      <tr><td><b>运营组</b></td><td>原厂报备提交（五条业务线渠道）、离职内部记录与系统归属变更（运营负责人）、违规记录回填、活动线索接收分发（接口人）</td><td>采集 / 交接 / 红线 / 活动 <span class="ref">· 3.2 / 6.5 / 3.11</span></td></tr>
+      <tr><td><b>数据组</b></td><td>OA 合同审批发起（过渡期；提交权限仅限运营与 SA）、归档通知、6 周预警与自动关闭执行</td><td>合同 / 归档 / 追踪 <span class="ref">· 3.5 / 3.6 / 3.7 / 3.8</span></td></tr>
+      <tr><td><b>架构师 SA</b></td><td>OA 合同审批提交（与运营并列的提交通道）</td><td>合同 <span class="ref">· 3.5</span> <span class="guess">◈ 与「数据组统一管理」并存，见待拍板 3</span></td></tr>
+      <tr><td><b>市场部</b></td><td>付款合同流程提交（活动方案确认后）</td><td>市场活动 <span class="ref">· 3.11</span></td></tr>
+      <tr><td><b>系统 / AI</b></td><td>自动退回（不合格报备）、自动流转（技术工单）、自动关闭（3 周无进展）、自动提醒（6 周预警 / 关闭前 3 日）</td><td>采集 / 分拣 / 公海 / 追踪 <span class="ref">· 3.2.2 / 3.3 / 3.7 / 3.8</span></td></tr>
+      <tr><td><b>导师 / 法务 / 财务 / HR / 原厂</b></td><td>无流程发起权（原厂侧动作属系统外协同）</td><td>—</td></tr>
+    </tbody></table></div>
+
+    <h3>4.2 决策权（RACI-R：裁分歧、定走向）</h3>
+    <div class="table-wrap"><table><thead><tr><th>角色</th><th>决策事项</th><th>所在流程</th></tr></thead><tbody>
+      <tr><td><b>区域销售负责人</b></td><td>折扣超限升级决策；商机关闭判定；续签意向判定；离职交接确认（历史问题）</td><td>分拣 / 签约追踪 / 续签 / 交接 <span class="ref">· flow-01-2 / 01-4 / 03 / 16</span></td></tr>
+      <tr><td><b>业务线负责人</b></td><td>多项目分配与对外口径把关；真撞单判定启动</td><td>多主体归属 <span class="ref">· flow-15</span></td></tr>
+      <tr><td><b>区域 / 业务线负责人</b>（共同）</td><td>撞单最终裁定（时间不可分且无书面指定时）；市场活动出资档评审（运营+销售负责人评审委员会）</td><td>撞单 / 活动 <span class="ref">· 3.12.2 / 3.11</span></td></tr>
+      <tr><td><b>事业部负责人</b></td><td>红线违规先期管控决策（暂停资源、先行通报）</td><td>红线 <span class="ref">· 6.1 / flow-17</span></td></tr>
+      <tr><td><b>人力资源部</b></td><td>违纪分级与处分实施（禁止扣罚工资奖金提成，一律走绩效影响）</td><td>红线 <span class="ref">· 6.1 / flow-17</span></td></tr>
+      <tr><td><b>产品线运营</b></td><td>测试轮次增加决定；测试最终结论判定</td><td>测试 <span class="ref">· 3.4 / flow-11</span></td></tr>
+    </tbody></table></div>
+
+    <h3>4.3 审批权（RACI-A：对申请放行 / 驳回）</h3>
+    <div class="table-wrap"><table><thead><tr><th>角色</th><th>审批事项</th><th>所在流程</th></tr></thead><tbody>
+      <tr><td rowspan="3"><b>运营组</b></td><td>报备初审与退回、原厂报备成功确认、商机核查（最终复核）、授权内折扣放行、技术工单流转确认</td><td>采集 / 分拣 <span class="ref">· 3.2 / 3.3</span></td></tr>
+      <tr><td>测试准入审核、测试结论判定、测试轮次决定、大额测试资源之外的申请审核</td><td>测试 <span class="ref">· 3.4 / flow-11</span></td></tr>
+      <tr><td>线索资格判定、原厂保护期核验、公海认领审核、失效上报受理、续签不续签处理、关闭归因审核、活动常规审核（接口人）</td><td>线索 / 公海 / 失效 / 续签 / 签约 / 活动 <span class="ref">· 3.7 / 3.8 / 3.12.3 / 3.9 / 3.11</span></td></tr>
+      <tr><td rowspan="3"><b>区域销售负责人</b></td><td>超常规事项升级审批（特批折扣、非标交付、特殊结算的第一级）</td><td>分拣 <span class="ref">· 3.3</span></td></tr>
+      <tr><td>目标沟通、共识确认、分歧处理（以负责人分解为准）、承诺绑定；月度个人目标下发</td><td>目标下达 <span class="ref">· 5.2 / 5.2.x</span></td></tr>
+      <tr><td>新人带教考核、15 天硬指标督导、月度考核、提前转正双门槛判定；撞单确认、客户指定区域确认、归属变更审核、预警面谈督导、离职交接</td><td>转正 / 撞单 / 指定 / 归属 / 追踪 / 交接 <span class="ref">· 5.4 / 3.12.2 / 3.12.5 / 3.12.6 / 3.7 / 6.5</span></td></tr>
+      <tr><td rowspan="2"><b>业务线负责人</b></td><td>报备失效认定、原报备销售投入核定、优先归属保留决定</td><td>失效 <span class="ref">· 3.12.3</span></td></tr>
+      <tr><td>客户指定确认、归属变更审批与归期跨期切分、大额测试资源特批、商机有效期延长审批、有效商机判定</td><td>指定 / 归属 / 测试 / 追踪 <span class="ref">· 3.12.5 / 3.12.6 / 3.4 / 3.7</span></td></tr>
+      <tr><td rowspan="2"><b>事业部负责人</b></td><td>单项报价确认（与 CTO 兼海外销售管理负责人、区域负责人会签，1 个工作日）；未合作产品资源售价由 CTO 确认</td><td>报价 <span class="ref">· 3.2.5</span></td></tr>
+      <tr><td>常规活动邮件批复、临时/紧急活动 24 小时审批、特批折扣最高审批级、合同最终核价与特殊条款确认、临时活动事后报表追认</td><td>活动 / 分拣 / 合同 <span class="ref">· 3.11 / 3.3 / 3.5</span></td></tr>
+      <tr><td><b>数据组</b></td><td>合同关键参数完整性与账单系统录入审核（未录入不放行）、四方审核之参数审、归档确认、公海流转执行、看板输出</td><td>合同 / 归档 / 公海 / 看板 <span class="ref">· 3.5 / 3.6 / 3.8 / 3.7</span></td></tr>
+      <tr><td><b>法务</b></td><td>合同条款审核；框架协议类续签前置审核</td><td>合同 / 续签 <span class="ref">· 3.5 / 3.9</span></td></tr>
+      <tr><td><b>人力资源部</b></td><td>违纪处分实施（书面警告至解除劳动合同）</td><td>红线 <span class="ref">· 6.1</span></td></tr>
+      <tr><td rowspan="2"><b>运营负责人</b></td><td>离职交接第 5 步：发起内部记录、改台账与系统归属、联动账单系统变更客户归属</td><td>交接 <span class="ref">· 6.5</span></td></tr>
+      <tr><td>运营组 / 数据组<b>政策类审批与特批决策</b>的抄送或终审节点（含价格审批类：微软折扣低于 75 折的价格审批<span class="ref">· 5.2 微软红线</span>）；欠款处置、坏账清退、减免审批链中的必经审核位<span class="ref">· 5.5</span> <span class="ref">⚑ 09-16 口头确认</span></td><td>运营 / 数据两线全部流程</td></tr>
+    </tbody></table></div>
+    <div class="callout red"><p><b>审批高频红线</b>：折扣超授权未升级就放行、账单系统未录入就放行合同、商机状态获取后漏触发账单租户生成——三项为 P0 高风险操作。<span class="ref">· 6.1</span></p></div>
+
+    <h3>4.4 执行与知会（C / I 摘要）</h3>
+    <div class="table-wrap"><table><thead><tr><th>角色</th><th>主要执行</th><th>主要知会</th></tr></thead><tbody>
+      <tr><td><b>销售</b></td><td>客户测试组织与结果反馈、跟进状态更新、合同客户侧签署、活动线索录入（3 个工作日内）</td><td>报备结果、审批结论、归档通知、预警提醒、处分结果（涉己）</td></tr>
+      <tr><td><b>架构师 SA</b></td><td>技术方案 / PoC / 答疑、测试执行与技术评估、活动技术支持</td><td>工单流转、测试结论</td></tr>
+      <tr><td><b>数据组</b></td><td>测试环境开通、资源台账登记与回收、OA 结果回填、合同扫描件上传</td><td>—</td></tr>
+      <tr><td><b>导师</b></td><td>带教与情景演练</td><td>月度考核结果</td></tr>
+      <tr><td><b>销售（双方）</b></td><td>—</td><td>撞单裁定结果、主销售调整、业绩处理结论 <span class="ref">· flow-04 / 06</span></td></tr>
+      <tr><td><b>承接销售</b></td><td>签字 / OA 确认承接；欠款坏账客户书面同意承接方可放行</td><td>未决问题清单 <span class="ref">· 6.5</span></td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- 5. 数据可见性 -->
+<section class="section" id="vis">
+  <div class="container">
+    <h2>5. 数据可见性（能看到 / 看不到）</h2>
+    <p>办法对可见性有一条总原则：<b>CRM 上线后按角色配置审核面板，各角色仅查看与本职责相关的参数</b>；商机附件同样按角色分参数查看。<span class="ref">· 3.3 / 3.5</span> 下表按角色展开，<span class="guess">◈ 金色标注为办法未明文、本表补全的设计建议（待拍板）</span>。</p>
+    <div class="table-wrap"><table><thead><tr><th>角色</th><th>能看到</th><th>看不到 / 受限</th></tr></thead><tbody>
+      <tr><td><b>销售</b></td><td>本人名下商机 / 客户 / 线索全量；本人合同下载与签署状态；本人考核目标与结果；回款 / 欠款标记（只读）<span class="ref">· 3.7 / 5.2 / flow-18</span></td><td>他人商机明细 <span class="guess">◈ 依据「项目层唯一主销售 + 台账不得散落个人」推定的隔离建议</span>；合同审批中非本职责环节的参数 <span class="ref">· 3.5</span></td></tr>
+      <tr><td><b>区域销售负责人</b></td><td>本区域全部商机 / 看板 / 目标分歧记录 / 考核统计 <span class="ref">· 3.7 / 5.2.x</span></td><td>其他区域商机明细 <span class="guess">◈ 按区域分组推定</span>；合同审核面板中仅「业务管理」职责相关参数（政策合规）<span class="ref">· 3.5</span></td></tr>
+      <tr><td><b>业务线负责人</b></td><td>本业务线跨区域全量；撞单 / 失效 / 特批 / 延期等裁定与留痕 <span class="ref">· 3.12 / 3.4</span></td><td>其他业务线数据 <span class="guess">◈ 按业务线边界推定</span></td></tr>
+      <tr><td><b>国内销售总监 / 事业部负责人</b></td><td>全量经营数据；合同「主管」面板之核价与特殊条款参数 <span class="ref">· 3.5</span></td><td>—（全量）</td></tr>
+      <tr><td><b>运营组</b></td><td>全流程报备与台账数据（职责载体）<span class="ref">· 3.10</span>；合同面板仅参数完整性与账单录入相关参数 <span class="ref">· 3.5</span></td><td>线索不得代录（只能协助收集）<span class="ref">· 3.11</span>；合同法律条款细节不属其审核面板 <span class="guess">◈ 按四方分工推定</span></td></tr>
+      <tr><td><b>数据组</b></td><td>商机数据全量（核对与归档职责）、账单系统录入状态、看板数据 <span class="ref">· 3.7 / 3.10</span></td><td>合同面板仅本职责相关参数 <span class="ref">· 3.5</span></td></tr>
+      <tr><td><b>架构师 SA</b></td><td>技术工单与测试相关商机内容 <span class="ref">· 3.3 / 3.4</span></td><td>面板仅技术相关参数 <span class="ref">· 3.5</span>；测试决定权数据（仅评估意见，无决定）<span class="ref">· 3.4</span></td></tr>
+      <tr><td><b>法务</b></td><td>合同条款全文（审核所需）<span class="ref">· 3.5</span></td><td>商机考核 / 业绩 / 提成数据 <span class="guess">◈ 最小必要推定</span></td></tr>
+      <tr><td><b>财务</b></td><td>回款 / 欠款 / 账单数据（口径核定方）<span class="ref">· 4.1 / 5.5</span></td><td>商机过程明细仅在 CRM 中只读标记 <span class="ref">· flow-18</span></td></tr>
+      <tr><td><b>人力资源部</b></td><td>违规记录与处分结果（回填 CRM）、转正审批记录 <span class="ref">· 6.1 / flow-17 / 5.4</span></td><td>商机业务明细 <span class="guess">◈ 最小必要推定</span></td></tr>
+      <tr><td><b>市场部</b></td><td>活动方案、活动线索清单 <span class="ref">· 3.11</span></td><td>—</td></tr>
+      <tr><td><b>系统 / AI</b></td><td>全量数据（处理主体），按角色配置对外输出 <span class="ref">· 3.3 / 3.5</span></td><td>—</td></tr>
+    </tbody></table></div>
+    <div class="callout"><p><b>两条兜底原则</b>：① 台账与 CRM 是核心资产，商机记录不得散落个人手中；② 特批事项一律邮件发起，仅在系统外完成特批后方可在系统内补录对应审批——系统内记录不得替代系统外特批，也不因系统外结论跳过系统流程。<span class="ref">· 3.10 / 3.2.2</span></p></div>
+  </div>
+</section>
+
+<!-- 6. 待拍板 -->
+<section class="section" id="todo">
+  <div class="container">
+    <h2>6. 待拍板事项</h2>
+    <div class="table-wrap"><table><thead><tr><th>#</th><th>事项</th><th>说明</th></tr></thead><tbody>
+      <tr><td>1</td><td>可见性 ◈ 建议项是否采纳</td><td>第 5 节金色标注各条（如跨销售商机隔离、跨区域隔离、法务/HR 最小必要），采纳后才写入 CRM 功能需求</td></tr>
+      <tr><td>2</td><td>国内销售总监是否补入办法 2.1 汇报关系</td><td>现状：仅权限语境举例与考核表提及，组织章节未单列其层级位置</td></tr>
+      <tr><td>3</td><td>SA 的 OA 送审提交权是否收敛</td><td>3.5 同时存在「OA 审批提交权限仅限运营与 SA」与「合同送审由运营数据组统一管理」两种表述，CRM 里 SA 是否保留独立提交入口须定一个口径</td></tr>
+      <tr><td>4</td><td>港新 / 海外团队角色</td><td>办法适用范围内地先行，港新角色本期不建模，仅预留业务线字段 <span class="ref">· v12 适用范围</span></td></tr>
+      <tr><td>5</td><td>全业务参数表</td><td>按老徐指示另行整理，本页不含</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>VeryCloud 云端智慧事业部 · CRM 角色与权限总表 · 基于销售管理办法 V13 初稿（2026-09-14）与 flow-01~19 RACI</p>
+  </div>
+</footer>
+
+</body>
+</html>

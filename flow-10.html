@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM 流程 · 市场活动与线索归集 | 销售管理办法 V13</title>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:"Microsoft YaHei","Noto Sans SC",Arial,sans-serif;color:#333;background:#f5f6f8;line-height:1.7}
+.container{max-width:1200px;margin:0 auto;padding:0 40px}
+@media(max-width:1199px){.container{padding:0 24px}}
+@media(max-width:767px){.container{padding:0 16px}}
+.hero{background:linear-gradient(135deg,#0d3b6b,#185FA5);color:#fff;padding:56px 0 48px;text-align:center}
+.hero h1{font-size:30px;font-weight:bold;margin-bottom:10px}
+.hero p{font-size:16px;color:rgba(255,255,255,0.9);max-width:800px;margin:0 auto}
+.hero .crumb{display:inline-block;margin-top:16px;padding:4px 14px;border:1px solid rgba(255,255,255,0.5);border-radius:20px;font-size:13px;color:rgba(255,255,255,0.92)}
+@media(max-width:767px){.hero{padding:44px 0 36px}.hero h1{font-size:22px}.hero p{font-size:14px}}
+.nav{background:#0d3b6b;padding:10px 0;position:sticky;top:0;z-index:10}
+.nav .container{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center}
+.nav a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:13px;font-weight:bold}
+.nav a:hover{color:#fff;text-decoration:underline}
+@media(max-width:767px){.nav a{font-size:12px}}
+.section{padding:48px 0}
+.section:nth-child(even){background:#fff}
+.section h2{font-size:24px;font-weight:bold;margin-bottom:16px;color:#185FA5;padding-left:12px;border-left:4px solid #185FA5}
+.section h3{font-size:18px;font-weight:bold;margin:20px 0 10px;color:#444}
+.section p{font-size:15px;line-height:1.8;margin-bottom:12px;color:#555}
+@media(max-width:767px){.section{padding:32px 0}.section h2{font-size:20px}}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:8px}
+.meta-item{background:#fff;border:1px solid #e8e8e8;border-left:4px solid #185FA5;border-radius:8px;padding:14px 16px}
+.meta-item .k{font-size:13px;color:#888;margin-bottom:4px}
+.meta-item .v{font-size:15px;font-weight:bold;color:#333}
+.pill{display:inline-block;padding:2px 10px;border-radius:12px;font-size:13px;font-weight:bold;white-space:nowrap}
+.pill.line{background:#e6f4ea;color:#1e7e34}
+.pill.p0{background:#e6f4ea;color:#1e7e34}
+.pill.p1{background:#fff4d6;color:#a6790a}
+.pill.p2{background:#eef0f2;color:#5a5d61}
+.table-wrap{overflow-x:auto;margin-bottom:16px;background:#fff;border-radius:8px;border:1px solid #e8e8e8}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:680px}
+th{background:#185FA5;color:#fff;padding:10px 14px;text-align:left;font-weight:bold;white-space:nowrap}
+td{padding:10px 14px;border-bottom:1px solid #e8e8e8;color:#555;vertical-align:top}
+tr:nth-child(even) td{background:#f8f9fa}
+tr:last-child td{border-bottom:none}
+.raci{display:inline-block;min-width:26px;text-align:center;padding:1px 7px;border-radius:6px;font-size:12px;font-weight:bold}
+.raci.r{background:#fdecea;color:#c0392b}
+.raci.a{background:#fff4d6;color:#a6790a}
+.raci.c{background:#e6f4ea;color:#1e7e34}
+.raci.i{background:#eef0f2;color:#5a5d61}
+.svg-box{background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:20px;margin-bottom:16px;overflow-x:auto}
+.svg-box .fig-title{font-size:14px;font-weight:bold;color:#333;margin-bottom:12px;text-align:center}
+.svg-box svg{display:block;margin:0 auto;min-width:760px;max-width:100%}
+.card-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:8px}
+.card{background:#fff;border-radius:10px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06);border:1px solid #e8e8e8;border-top:4px solid #185FA5}
+.card h3{font-size:17px;font-weight:bold;color:#185FA5;margin:0 0 8px}
+.card p{font-size:14px;color:#555;line-height:1.6;margin-bottom:0}
+.callout{background:linear-gradient(135deg,#E6F1FB,#f0f6fd);border-left:4px solid #185FA5;border-radius:8px;padding:16px 20px;margin-bottom:16px;font-size:14px;color:#333}
+.callout.warn{background:#fff8e6;border-left-color:#e0a800}
+.callout.red{background:#fdecea;border-left-color:#c0392b}
+.callout p{margin-bottom:6px;font-size:14px;color:#333}
+.callout p:last-child{margin-bottom:0}
+.callout b{color:#185FA5}
+.ul-list{margin:8px 0;padding-left:20px}
+.ul-list li{margin-bottom:8px;font-size:14px;color:#555}
+.ul-list li b{color:#333}
+.footer{background:#0d3b6b;color:rgba(255,255,255,0.6);text-align:center;padding:22px 0;font-size:13px}</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <h1>CRM 流程 · 市场活动与线索归集</h1>
+    <p>四档审批（常规/加急/参与外部不出资/出资）· 8 步申请流程 · 线索 3 工作日录入 · 5 工作日跟进</p>
+    <span class="crumb">销售管理办法 V13 · 3.11 · P1</span>
+  </div>
+</section>
+
+<nav class="nav">
+  <div class="container">
+    <a href="#meta">元信息</a>
+    <a href="#goal">流程目标</a>
+    <a href="#io">输入输出</a>
+    <a href="#steps">详细步骤</a>
+    <a href="#flow">流程图</a>
+    <a href="#boundary">边界与断点</a>
+    <a href="#exception">异常分支</a>
+    <a href="#control">关键控制点</a>
+    <a href="index.html">← 返回索引</a>
+  </div>
+</nav>
+
+<!-- 1. 元信息 -->
+<section class="section" id="meta">
+  <div class="container">
+    <h2>1. 元信息</h2>
+    <div class="meta-grid">
+      <div class="meta-item"><div class="k">流程名称</div><div class="v">市场活动与线索归集</div></div>
+      <div class="meta-item"><div class="k">V13 条款编号</div><div class="v">3.11</div></div>
+      <div class="meta-item"><div class="k">层级</div><div class="v"><span class="pill p1">P1</span></div></div>
+      <div class="meta-item"><div class="k">是否触外部系统</div><div class="v">部分（付款走线下/OA，CRM 仅记录线索与活动归档）</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. 流程目标 -->
+<section class="section" id="goal">
+  <div class="container">
+    <h2>2. 流程目标</h2>
+    <p>市场活动与专项资金申请（SCA）用于销售拓展商机、与原厂联动共拓。本流程规定活动分档审批机制（常规/加急/参与外部不出资/出资四档）、常规活动 8 步申请流程、活动线索归集与分配规则，以及各岗位参与分工。核心目标：确保活动前合同流程完成（红线：未完成合同不得付款）、活动后线索 3 工作日内录入并 5 工作日内跟进，以线索转商机漏斗衡量效果而非加微信数量。</p>
+  </div>
+</section>
+
+<!-- 3. 输入输出 -->
+<section class="section" id="io">
+  <div class="container">
+    <h2>3. 输入输出</h2>
+    <div class="table-wrap"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody>
+      <tr><td><b>触发条件</b></td><td>销售计划举办或参与市场活动（展会/自办沙龙/原厂联合活动/受邀参会等）</td></tr>
+      <tr><td><b>上游流程</b></td><td>无（市场活动为商机来源的上游环节，线索经归集后进入线索管理 flow-07）</td></tr>
+      <tr><td><b>下游流程</b></td><td>线索管理/资格判定（flow-07）→ 录入的线索经资格判定后转商机；商机追踪看板（flow-08）→ 转商机后进入追踪</td></tr>
+      <tr><td><b>产出物</b></td><td>活动审批记录、活动方案（提报表）、付款/合同记录、线索清单、线索台账/CRM 录入记录、活动归档记录</td></tr>
+      <tr><td><b>关键字段</b></td><td>活动类型/档位、提前量、审批记录、资金确认、合同状态、线索清单（客户名称/行业/联系人/联系方式/意向需求/来源活动/负责销售）、录入时间、跟进状态</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- 4. 详细步骤 -->
+<section class="section" id="steps">
+  <div class="container">
+    <h2>4. 详细步骤</h2>
+    <h3>4a. 活动分档与审批</h3>
+    <div class="table-wrap"><table><thead><tr><th>档位</th><th>适用范围</th><th>提前量</th><th>审批方式</th></tr></thead><tbody>
+      <tr><td>常规活动</td><td>展会、自办沙龙、原厂联合活动</td><td>提前 30-60 天决策；活动开始前合同流程必须完成</td><td>8 步申请流程（邮件审批，整体不超过 1 个工作日）</td></tr>
+      <tr><td>临时/紧急活动</td><td>距开始不足 30 天，或原厂/客户临时邀约</td><td>越早越好</td><td>加急审批：标注「加急」+事由+预期产出→产品线接口人/市场部审核→事业部负责人审批，24 小时内结论；事后 3 工作日补提报表与复盘</td></tr>
+      <tr><td>参与外部活动（不出资）</td><td>受邀参会、演讲，不涉及付款</td><td>提前 5 个工作日</td><td>邮件报备产品线接口人及销售负责人，无需付款流程；活动后须提交线索清单</td></tr>
+      <tr><td>参与外部活动（出资）</td><td>以公司名义出资参与行业/外部活动（赞助、付费参会等）</td><td>参加前完成前置评审</td><td>前置评审会：参会负责人提交方案（目标/预期商机/出资额/效果衡量）→运营与销售负责人评审委员会评审→通过后方可批款与参加</td></tr>
+    </tbody></table></div>
+    <h3>4b. 常规活动 8 步申请流程</h3>
+    <div class="table-wrap"><table><thead><tr><th>步骤</th><th>内容</th><th>负责人</th></tr></thead><tbody>
+      <tr><td>1. 活动确认</td><td>销售与产品线接口人确认资金是否充足</td><td>销售 + 产品线接口人</td></tr>
+      <tr><td>2. 活动批复</td><td>资金充足后，销售发起邮件审批至事业部负责人审核</td><td>销售 → 事业部负责人</td></tr>
+      <tr><td>3. 活动方案制定</td><td>审批通过后，销售按提报表模板提交市场部对接细节，抄送接口人；接口人与市场部沟通金额</td><td>销售 + 市场部 + 接口人</td></tr>
+      <tr><td>4. 付款提交</td><td>方案确认后，市场部联系成本运营/采购提交合同流程，附活动方发票</td><td>市场部</td></tr>
+      <tr><td>5. 付款流程</td><td>合同流程完毕后，公司付款</td><td>公司财务</td></tr>
+      <tr><td>6. 活动开始</td><td>活动按计划进行</td><td>销售/市场部</td></tr>
+      <tr><td>7. 原厂资金追踪</td><td>产品线接口人跟进原厂资金到账时间</td><td>产品线接口人</td></tr>
+      <tr><td>8. 到账归档</td><td>资金到账后，接口人通知数据运营收款，记录活动细节至活动表单归档</td><td>接口人 + 数据运营</td></tr>
+    </tbody></table></div>
+    <h3>4c. 活动线索归集与分配</h3>
+    <div class="table-wrap"><table><thead><tr><th>环节</th><th>规定</th></tr></thead><tbody>
+      <tr><td>录入主体</td><td>活动负责人（到场销售/组织者）负责录入；运营与架构师协助收集线索，不代录</td></tr>
+      <tr><td>录入内容</td><td>客户名称、行业、联系人、联系方式（名片/微信）、意向需求、来源活动、负责销售</td></tr>
+      <tr><td>录入载体</td><td>CRM 上线前录入线索台账（模板由运营提供）；CRM 上线后录入 CRM 线索模块</td></tr>
+      <tr><td>录入时限</td><td>活动结束后 3 个工作日内完成录入</td></tr>
+      <tr><td>逾期责任</td><td>超过时限未录入的，该线索不计入该销售业绩归属候选；连续 2 次逾期的，按 6.1 红线违规处理提报</td></tr>
+      <tr><td>分配</td><td>线索归属已有销售的归该销售；无归属或归属冲突的，由区域销售负责人或业务线负责人判定分配并留痕；原厂提供或联合活动的线索，按原厂要求或联合约定执行</td></tr>
+      <tr><td>跟进</td><td>分配后 5 个工作日内完成首次跟进并更新状态；逾期未跟进的线索释放回公海线索池（与 3.8 公海规则衔接）</td></tr>
+      <tr><td>效果衡量</td><td>以「录入漏斗的线索数 / 转商机数」为准，不以加微信数量衡量</td></tr>
+    </tbody></table></div>
+    <h3>4d. 各岗位参与分工</h3>
+    <div class="table-wrap"><table><thead><tr><th>角色</th><th>参与环节</th><th>职责</th></tr></thead><tbody>
+      <tr><td>产品线运营（接口人）</td><td>活动前（审批、金额沟通）、活动后（线索归档）</td><td>审核活动与原厂政策是否冲突；与市场部沟通金额；跟进原厂资金到账；接收并分发线索</td></tr>
+      <tr><td>市场部</td><td>全程</td><td>活动方案对接、物料准备、现场执行、付款合同流程</td></tr>
+      <tr><td>架构师（SA）</td><td>活动前（议题/技术内容）、活动中（讲解答疑）</td><td>提供技术 Demo 与议题支持；现场技术答疑；活动后配合商机技术跟进</td></tr>
+      <tr><td>数据运营</td><td>活动后</td><td>线索录入台账/CRM，核对与归档</td></tr>
+    </tbody></table></div>
+    <p class="note">R=决策 A=审批 C=执行 I=知会</p>
+  </div>
+</section>
+
+<!-- 5. 流程图 -->
+<section class="section" id="flow">
+  <div class="container">
+    <h2>5. 流程图</h2>
+    <div class="svg-box">
+      <div class="fig-title">市场活动与线索归集</div>
+            <!-- diagram-type: LANE -->
+      <svg viewBox="0 0 1000 370" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="市场活动与线索归集">
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#5a5d61"/>
+          </marker>
+          <style>
+            .sw{fill:#f2f5f9;stroke:#cdd6e2;stroke-width:1}
+            .lane{fill:#eef2f7;stroke:#cdd6e2;stroke-width:1}
+            .lbl{font-size:13px;font-weight:bold;fill:#0d3b6b}
+            .box{fill:#fff;stroke:#185FA5;stroke-width:1.5}
+            .diamond{fill:#fff8e6;stroke:#e0a800;stroke-width:1.5}
+            .end{fill:#e6f4ea;stroke:#1e7e34;stroke-width:1.5}
+            .txt{font-size:12px;fill:#333}
+            .brl{font-size:12px;fill:#a6790a;font-weight:bold}
+            .edge{stroke:#5a5d61;stroke-width:1.5;fill:none;marker-end:url(#arrow)}
+          </style>
+        </defs>
+        <rect x="0" y="0" width="1000" height="250" class="sw"/>
+        <rect x="0" y="250" width="1000" height="120" class="lane"/>
+        <text x="20" y="32" class="lbl">审批阶段</text>
+        <text x="20" y="272" class="lbl">活动与线索</text>
+        <rect x="60" y="104" width="120" height="36" class="box"/><text x="120" y="126" class="txt" text-anchor="middle">活动发起</text>
+        <polygon points="250,102 290,122 250,142 210,122" class="diamond"/><text x="250" y="126" class="txt" text-anchor="middle">档位判定</text>
+        <rect x="420" y="20" width="200" height="36" class="box"/><text x="520" y="42" class="txt" text-anchor="middle">常规活动·8 步申请</text>
+        <rect x="420" y="76" width="200" height="36" class="box"/><text x="520" y="98" class="txt" text-anchor="middle">临时/紧急·加急审批</text>
+        <rect x="420" y="132" width="200" height="36" class="box"/><text x="520" y="154" class="txt" text-anchor="middle">参与外部·不出资（报备）</text>
+        <rect x="420" y="188" width="200" height="36" class="box"/><text x="520" y="210" class="txt" text-anchor="middle">参与外部·出资（前置评审）</text>
+        <rect x="60" y="282" width="120" height="36" class="box"/><text x="120" y="304" class="txt" text-anchor="middle">活动执行</text>
+        <rect x="230" y="282" width="140" height="36" class="box"/><text x="300" y="304" class="txt" text-anchor="middle">3日线索录入</text>
+        <rect x="420" y="282" width="140" height="36" class="box"/><text x="490" y="304" class="txt" text-anchor="middle">线索分配+留痕</text>
+        <rect x="610" y="282" width="140" height="36" class="box"/><text x="680" y="304" class="txt" text-anchor="middle">5日首次跟进</text>
+        <rect x="800" y="282" width="140" height="36" class="end"/><text x="870" y="304" class="txt" text-anchor="middle">线索转商机</text>
+        <path d="M180 122 L210 122" class="edge"/>
+        <path d="M250 102 L250 38 L420 38" class="edge"/><text x="330" y="30" class="brl">常规</text>
+        <path d="M290 122 L340 122 L340 94 L420 94" class="edge"/><text x="348" y="84" class="brl">加急</text>
+        <path d="M290 122 L340 122 L340 150 L420 150" class="edge"/><text x="348" y="170" class="brl">不出资</text>
+        <path d="M250 142 L250 206 L420 206" class="edge"/><text x="330" y="198" class="brl">出资</text>
+        <path d="M620 38 L640 38 L640 245 L120 245 L120 282" class="edge"/>
+        <path d="M620 94 L640 94 L640 245 L120 245 L120 282" class="edge"/>
+        <path d="M620 150 L640 150 L640 245 L120 245 L120 282" class="edge"/>
+        <path d="M620 206 L640 206 L640 245 L120 245 L120 282" class="edge"/>
+        <path d="M180 300 L230 300" class="edge"/>
+        <path d="M370 300 L420 300" class="edge"/>
+        <path d="M560 300 L610 300" class="edge"/>
+        <path d="M750 300 L800 300" class="edge"/>
+      </svg>
+    </div>
+    <div class="callout"><b>图注：</b>上排为四档审批路径（菱形判定档位后分支），下排为活动执行后的线索归集链路：活动执行→3 工作日录入→分配留痕→5 工作日跟进→转商机。红线：活动开始前未完成合同流程的不得付款。</div>
+  </div>
+</section>
+
+<!-- 6. 边界与断点 -->
+<section class="section" id="boundary">
+  <div class="container">
+    <h2>6. 边界与断点</h2>
+    <div class="table-wrap"><table><thead><tr><th>环节</th><th>处理方式</th><th>说明</th></tr></thead><tbody>
+      <tr><td>付款/合同流程</td><td>走线下/OA，CRM 仅记录</td><td>付款与合同审批在 OA 完成，CRM 仅记录线索与活动归档；触 OA/财务环节留线下/人工回填</td></tr>
+      <tr><td>原厂资金到账</td><td>接口人跟踪</td><td>原厂资金到账时间由产品线接口人跟进，到账后通知数据运营收款并归档</td></tr>
+      <tr><td>线索录入载体</td><td>CRM 上线前后差异</td><td>上线前录入线索台账（模板由运营提供）；上线后录入 CRM 线索模块</td></tr>
+      <tr><td>港新业务</td><td>对接港新团队</td><td>涉及港新业务的市场活动，对接港新团队对应接口人，不纳入本流程</td></tr>
+      <tr><td>必须留痕节点</td><td>系统留痕</td><td>审批记录、活动方案、付款记录、线索清单、分配记录、跟进状态、归档均须留痕</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- 7. 异常分支 -->
+<section class="section" id="exception">
+  <div class="container">
+    <h2>7. 异常分支</h2>
+    <ul class="ul-list">
+      <li><b>活动开始前合同未完成</b>：红线——不得付款。</li>
+      <li><b>线索录入超 3 工作日</b>：该线索不计入该销售业绩归属候选；连续 2 次逾期的，按 6.1 红线违规处理提报。</li>
+      <li><b>分配后 5 工作日未跟进</b>：线索释放回公海线索池（与 3.8 公海规则衔接）。</li>
+      <li><b>加急活动事后未补提报表</b>：须在事后 3 个工作日内补齐提报表与活动复盘。</li>
+      <li><b>出资参与外部活动未通过评审</b>：不得批款与参加。</li>
+      <li><b>活动与原厂政策冲突</b>：产品线接口人审核把关，冲突的不予审批。</li>
+      <li><b>线索归属冲突</b>：由区域销售负责人或业务线负责人判定分配并留痕。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 8. 关键控制点 -->
+<section class="section" id="control">
+  <div class="container">
+    <h2>8. 关键控制点</h2>
+    <div class="table-wrap"><table><thead><tr><th>类型</th><th>控制点</th><th>动作/后果</th></tr></thead><tbody>
+      <tr><td>红线</td><td>活动开始前未完成合同流程</td><td>不得付款</td></tr>
+      <tr><td>可核查</td><td>线索录入时限（3 工作日）</td><td>超时线索不计入业绩归属候选；连续 2 次逾期→红线违规提报</td></tr>
+      <tr><td>可核查</td><td>线索跟进时限（5 工作日）</td><td>逾期未跟进的线索释放回公海线索池</td></tr>
+      <tr><td>可核查</td><td>效果衡量口径</td><td>以「录入漏斗线索数/转商机数」为准，不以加微信数量衡量</td></tr>
+      <tr><td>可核查</td><td>出资活动前置评审</td><td>出资参与外部活动须经评审委员会评审通过后方可批款与参加</td></tr>
+      <tr><td>可核查</td><td>加急活动 24 小时审批</td><td>加急审批须 24 小时内给出结论，事后 3 工作日补齐提报表与复盘</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>VeryCloud 云端智慧事业部 · CRM 流程扩写 · 基于销售管理办法 V13 初稿（2026-09-14）</p>
+  </div>
+</footer>
+
+</body>
+</html>

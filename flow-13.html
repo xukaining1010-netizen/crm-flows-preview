@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM 流程 · 合同四方审核（CRM段） | 销售管理办法 V13</title>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:"Microsoft YaHei","Noto Sans SC",Arial,sans-serif;color:#333;background:#f5f6f8;line-height:1.7}
+.container{max-width:1200px;margin:0 auto;padding:0 40px}
+@media(max-width:1199px){.container{padding:0 24px}}
+@media(max-width:767px){.container{padding:0 16px}}
+.hero{background:linear-gradient(135deg,#0d3b6b,#185FA5);color:#fff;padding:56px 0 48px;text-align:center}
+.hero h1{font-size:30px;font-weight:bold;margin-bottom:10px}
+.hero p{font-size:16px;color:rgba(255,255,255,0.9);max-width:800px;margin:0 auto}
+.hero .crumb{display:inline-block;margin-top:16px;padding:4px 14px;border:1px solid rgba(255,255,255,0.5);border-radius:20px;font-size:13px;color:rgba(255,255,255,0.92)}
+@media(max-width:767px){.hero{padding:44px 0 36px}.hero h1{font-size:22px}.hero p{font-size:14px}}
+.nav{background:#0d3b6b;padding:10px 0;position:sticky;top:0;z-index:10}
+.nav .container{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center}
+.nav a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:13px;font-weight:bold}
+.nav a:hover{color:#fff;text-decoration:underline}
+@media(max-width:767px){.nav a{font-size:12px}}
+.section{padding:48px 0}
+.section:nth-child(even){background:#fff}
+.section h2{font-size:24px;font-weight:bold;margin-bottom:16px;color:#185FA5;padding-left:12px;border-left:4px solid #185FA5}
+.section h3{font-size:18px;font-weight:bold;margin:20px 0 10px;color:#444}
+.section p{font-size:15px;line-height:1.8;margin-bottom:12px;color:#555}
+@media(max-width:767px){.section{padding:32px 0}.section h2{font-size:20px}}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:8px}
+.meta-item{background:#fff;border:1px solid #e8e8e8;border-left:4px solid #185FA5;border-radius:8px;padding:14px 16px}
+.meta-item .k{font-size:13px;color:#888;margin-bottom:4px}
+.meta-item .v{font-size:15px;font-weight:bold;color:#333}
+.pill{display:inline-block;padding:2px 10px;border-radius:12px;font-size:13px;font-weight:bold;white-space:nowrap}
+.pill.line{background:#e6f4ea;color:#1e7e34}
+.pill.p0{background:#e6f4ea;color:#1e7e34}
+.pill.p1{background:#fff4d6;color:#a6790a}
+.pill.p2{background:#eef0f2;color:#5a5d61}
+.table-wrap{overflow-x:auto;margin-bottom:16px;background:#fff;border-radius:8px;border:1px solid #e8e8e8}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:680px}
+th{background:#185FA5;color:#fff;padding:10px 14px;text-align:left;font-weight:bold;white-space:nowrap}
+td{padding:10px 14px;border-bottom:1px solid #e8e8e8;color:#555;vertical-align:top}
+tr:nth-child(even) td{background:#f8f9fa}
+tr:last-child td{border-bottom:none}
+.raci{display:inline-block;min-width:26px;text-align:center;padding:1px 7px;border-radius:6px;font-size:12px;font-weight:bold}
+.raci.r{background:#fdecea;color:#c0392b}
+.raci.a{background:#fff4d6;color:#a6790a}
+.raci.c{background:#e6f4ea;color:#1e7e34}
+.raci.i{background:#eef0f2;color:#5a5d61}
+.svg-box{background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:20px;margin-bottom:16px;overflow-x:auto}
+.svg-box .fig-title{font-size:14px;font-weight:bold;color:#333;margin-bottom:12px;text-align:center}
+.svg-box svg{display:block;margin:0 auto;min-width:760px;max-width:100%}
+.card-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:8px}
+.card{background:#fff;border-radius:10px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06);border:1px solid #e8e8e8;border-top:4px solid #185FA5}
+.card h3{font-size:17px;font-weight:bold;color:#185FA5;margin:0 0 8px}
+.card p{font-size:14px;color:#555;line-height:1.6;margin-bottom:0}
+.callout{background:linear-gradient(135deg,#E6F1FB,#f0f6fd);border-left:4px solid #185FA5;border-radius:8px;padding:16px 20px;margin-bottom:16px;font-size:14px;color:#333}
+.callout.warn{background:#fff8e6;border-left-color:#e0a800}
+.callout.red{background:#fdecea;border-left-color:#c0392b}
+.callout p{margin-bottom:6px;font-size:14px;color:#333}
+.callout p:last-child{margin-bottom:0}
+.callout b{color:#185FA5}
+.ul-list{margin:8px 0;padding-left:20px}
+.ul-list li{margin-bottom:8px;font-size:14px;color:#555}
+.ul-list li b{color:#333}
+.footer{background:#0d3b6b;color:rgba(255,255,255,0.6);text-align:center;padding:22px 0;font-size:13px}</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <h1>CRM 流程 · 合同四方审核（CRM段）</h1>
+    <p>销售发起→数据组审核→业务管理→法务→主管核价 → OA 逐级审批 · CRM 记录审核面板与关键参数</p>
+    <span class="crumb">销售管理办法 V13 · 3.5 · P1</span>
+  </div>
+</section>
+
+<nav class="nav">
+  <div class="container">
+    <a href="#meta">元信息</a>
+    <a href="#goal">流程目标</a>
+    <a href="#io">输入输出</a>
+    <a href="#steps">详细步骤</a>
+    <a href="#flow">流程图</a>
+    <a href="#boundary">边界与断点</a>
+    <a href="#exception">异常分支</a>
+    <a href="#control">关键控制点</a>
+    <a href="index.html">← 返回索引</a>
+  </div>
+</nav>
+
+<!-- 1. 元信息 -->
+<section class="section" id="meta">
+  <div class="container">
+    <h2>1. 元信息</h2>
+    <div class="meta-grid">
+      <div class="meta-item"><div class="k">流程名称</div><div class="v">合同四方审核（CRM段）</div></div>
+      <div class="meta-item"><div class="k">V13 条款编号</div><div class="v">3.5</div></div>
+      <div class="meta-item"><div class="k">层级</div><div class="v"><span class="pill p1">P1</span></div></div>
+      <div class="meta-item"><div class="k">是否触外部系统</div><div class="v">部分（OA 审批留线下/人工回填；CRM 记录关键参数、审核面板与审批结果）</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. 流程目标 -->
+<section class="section" id="goal">
+  <div class="container">
+    <h2>2. 流程目标</h2>
+    <p>合同审核与审批在商机测试通过后进入。销售发起合同并提交数据组审核，CRM 上线后须将关键参数（合同折扣、预付/后付方式、套餐信息等）填写在流程中并上传合同文件，审批人无需翻查原文件。审核按四方分工拆分——数据组审核参数完整性与账单系统录入，业务管理审核政策合规，法务审核合同条款，主管最终核价并确认特殊条款。OA 逐级审批在 CRM 上线前后均在系统外完成，CRM 仅记录审核面板与审批结果回填。</p>
+  </div>
+</section>
+
+<!-- 3. 输入输出 -->
+<section class="section" id="io">
+  <div class="container">
+    <h2>3. 输入输出</h2>
+    <div class="table-wrap"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody>
+      <tr><td><b>触发条件</b></td><td>商机测试通过（YES），进入合同环节</td></tr>
+      <tr><td><b>上游流程</b></td><td>测试资源申请与回收（flow-11）→ 测试通过进入合同；商机追踪看板（flow-08）→ 阶段推进至合同</td></tr>
+      <tr><td><b>下游流程</b></td><td>归档与服务开通（3.6）→ 审批通过后归档并开通服务；签约与追踪（flow-01-4）</td></tr>
+      <tr><td><b>产出物</b></td><td>合同送审记录、关键参数记录、四方审核结论、OA 审批结果、合同扫描件上传 CRM</td></tr>
+      <tr><td><b>关键字段</b></td><td>合同折扣、预付/后付方式、套餐信息、合同文件、四方审核结论、OA 审批结果、订单状态（已签约）</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- 4. 详细步骤 -->
+<section class="section" id="steps">
+  <div class="container">
+    <h2>4. 详细步骤</h2>
+    <h3>4a. 四方审核分工</h3>
+    <div class="table-wrap"><table><thead><tr><th>审核方</th><th>审核内容</th><th>要点</th></tr></thead><tbody>
+      <tr><td>数据组</td><td>参数完整性与账单系统录入</td><td>录入是放行合同的前置必查项，未录入不放行；如遇状态缺失，回溯商机状态获取步骤排查（见 6.4）</td></tr>
+      <tr><td>业务管理（销售负责人/业务线负责人）</td><td>政策合规</td><td>审核折扣、结算方式等是否在授权范围内</td></tr>
+      <tr><td>法务</td><td>合同条款</td><td>审核合同条款合法性与风险</td></tr>
+      <tr><td>主管（销售负责人/事业部负责人）</td><td>最终核价 + 确认特殊条款</td><td>最终核价并确认特殊条款</td></tr>
+    </tbody></table></div>
+    <h3>4b. 泳道步骤（RACI）</h3>
+    <div class="table-wrap"><table><thead><tr>
+      <th>步骤</th>
+      <th>销售</th>
+      <th>数据组</th>
+      <th>业务管理</th>
+      <th>法务</th>
+      <th>主管</th>
+    </tr></thead><tbody>
+      <tr>
+        <td>1.1 销售发起合同，提交数据组</td>
+        <td><span class="raci c">C</span></td>
+        <td><span class="raci i">I</span></td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>1.2 CRM 填单：关键参数（折扣/预付后付/套餐）+ 上传合同文件</td>
+        <td><span class="raci c">C</span></td>
+        <td><span class="raci i">I</span></td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>1.3 数据组审核参数完整性+账单录入</td>
+        <td><span class="raci i">I</span></td>
+        <td><span class="raci c">C</span></td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>1.4 业务管理审核政策合规</td>
+        <td><span class="raci i">I</span></td>
+        <td>—</td>
+        <td><span class="raci c">C</span></td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>1.5 法务审核合同条款</td>
+        <td><span class="raci i">I</span></td>
+        <td>—</td>
+        <td>—</td>
+        <td><span class="raci c">C</span></td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>1.6 主管最终核价+确认特殊条款</td>
+        <td><span class="raci i">I</span></td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td><span class="raci c">C</span></td>
+      </tr>
+      <tr>
+        <td>1.7 数据组在 OA 发起审批（CRM 上线初期不自动对接）</td>
+        <td><span class="raci i">I</span></td>
+        <td><span class="raci c">C</span></td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>1.8 OA 审批完成→结果回填 CRM+合同扫描件上传</td>
+        <td><span class="raci i">I</span></td>
+        <td><span class="raci c">C</span></td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>1.9 销售下载合同→客户侧签署</td>
+        <td><span class="raci c">C</span></td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>1.10 订单状态更新为「已签约」</td>
+        <td><span class="raci i">I</span></td>
+        <td><span class="raci c">C</span></td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+    </tbody></table></div>
+    <p class="note">R=决策 A=审批 C=执行 I=知会。OA 审批提交权限仅限运营与架构师（SA），销售不直接向 OA 提交合同送审。</p>
+  </div>
+</section>
+
+<!-- 5. 流程图 -->
+<section class="section" id="flow">
+  <div class="container">
+    <h2>5. 流程图</h2>
+    <div class="svg-box">
+      <div class="fig-title">合同四方审核（CRM段）</div>
+            <!-- diagram-type: LANE -->
+      <svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="合同四方审核 CRM 段">
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#5a5d61"/>
+          </marker>
+          <style>
+            .sw{fill:#f2f5f9;stroke:#cdd6e2;stroke-width:1}
+            .lane{fill:#eef2f7;stroke:#cdd6e2;stroke-width:1}
+            .lbl{font-size:13px;font-weight:bold;fill:#0d3b6b}
+            .box{fill:#fff;stroke:#185FA5;stroke-width:1.5}
+            .diamond{fill:#fff8e6;stroke:#e0a800;stroke-width:1.5}
+            .end{fill:#e6f4ea;stroke:#1e7e34;stroke-width:1.5}
+            .txt{font-size:12px;fill:#333}
+            .brl{font-size:12px;fill:#a6790a;font-weight:bold}
+            .edge{stroke:#5a5d61;stroke-width:1.5;fill:none;marker-end:url(#arrow)}
+          </style>
+        </defs>
+        <rect x="0" y="0" width="1200" height="100" class="sw"/>
+        <rect x="0" y="100" width="1200" height="200" class="lane"/>
+        <rect x="0" y="300" width="1200" height="100" class="lane"/>
+        <rect x="0" y="400" width="1200" height="100" class="lane"/>
+        <rect x="0" y="500" width="1200" height="100" class="lane"/>
+        <text x="20" y="30" class="lbl">销售</text>
+        <text x="20" y="130" class="lbl">数据组</text>
+        <text x="20" y="330" class="lbl">业务管理</text>
+        <text x="20" y="430" class="lbl">法务</text>
+        <text x="20" y="530" class="lbl">主管</text>
+        <rect x="60" y="34" width="200" height="36" class="box"/><text x="160" y="56" class="txt" text-anchor="middle">销售发起合同，提交数据组</text>
+        <rect x="320" y="34" width="240" height="36" class="box"/><text x="440" y="56" class="txt" text-anchor="middle">CRM 填单（关键参数+上传合同）</text>
+        <rect x="320" y="136" width="240" height="36" class="box"/><text x="440" y="158" class="txt" text-anchor="middle">数据组审核参数完整性+账单录入</text>
+        <rect x="320" y="336" width="240" height="36" class="box"/><text x="440" y="358" class="txt" text-anchor="middle">业务管理审核政策合规</text>
+        <rect x="320" y="436" width="240" height="36" class="box"/><text x="440" y="458" class="txt" text-anchor="middle">法务审核合同条款</text>
+        <rect x="320" y="536" width="240" height="36" class="box"/><text x="440" y="558" class="txt" text-anchor="middle">主管最终核价+确认特殊条款</text>
+        <rect x="620" y="196" width="220" height="36" class="box"/><text x="730" y="218" class="txt" text-anchor="middle">数据组在 OA 发起审批</text>
+        <rect x="900" y="196" width="220" height="36" class="box"/><text x="1010" y="218" class="txt" text-anchor="middle">OA 审批完成→回填 CRM+扫描件</text>
+        <rect x="900" y="34" width="220" height="36" class="box"/><text x="1010" y="56" class="txt" text-anchor="middle">销售下载合同→客户侧签署</text>
+        <rect x="620" y="256" width="220" height="36" class="end"/><text x="730" y="278" class="txt" text-anchor="middle">订单状态更新为「已签约」</text>
+        <path d="M260 52 L320 52" class="edge"/>
+        <path d="M440 70 L440 136" class="edge"/>
+        <path d="M440 172 L440 336" class="edge"/>
+        <path d="M440 372 L440 436" class="edge"/>
+        <path d="M440 472 L440 536" class="edge"/>
+        <path d="M560 554 L600 554 L600 214 L620 214" class="edge"/>
+        <path d="M840 214 L900 214" class="edge"/>
+        <path d="M1010 196 L1010 70" class="edge"/>
+        <path d="M1120 52 L1140 52 L1140 274 L840 274" class="edge"/>
+      </svg>
+    </div>
+    <div class="callout"><b>图注：</b>四方审核依次进行——数据组（参数+账单录入）→ 业务管理（政策合规）→ 法务（条款）→ 主管（核价+特殊条款）。审核通过后数据组在 OA 发起审批，审批完成后结果回填 CRM 并上传合同扫描件，销售下载合同走客户签署，订单状态更新为「已签约」。OA 审批与签署在 CRM 系统外完成，本期 CRM 与 OA 暂不对接。</div>
+  </div>
+</section>
+
+<!-- 6. 边界与断点 -->
+<section class="section" id="boundary">
+  <div class="container">
+    <h2>6. 边界与断点</h2>
+    <div class="table-wrap"><table><thead><tr><th>环节</th><th>处理方式</th><th>说明</th></tr></thead><tbody>
+      <tr><td>OA 审批与签署</td><td>留线下/人工回填</td><td>OA 审批与签署在 CRM 系统外完成；CRM 上线初期与 OA 暂不对接，数据组核对关键参数后在 OA 发起审批，完成后回填 CRM</td></tr>
+      <tr><td>CRM 留存合同</td><td>唯一数据源</td><td>CRM 留存合同为唯一数据源；合同全文数字化（电子签章等）本期不做，另行立项</td></tr>
+      <tr><td>OA 提交权限</td><td>仅限运营与架构师</td><td>销售不直接向 OA 提交合同送审，由运营数据组统一管理</td></tr>
+      <tr><td>审核面板</td><td>按角色配置</td><td>CRM 上线后按角色配置审核面板，各角色仅查看与本职责相关的参数</td></tr>
+      <tr><td>账单系统</td><td>暂不对接</td><td>CRM 与账单系统暂不对接，账单系统录入由数据组人工执行</td></tr>
+      <tr><td>必须留痕节点</td><td>系统留痕</td><td>关键参数、四方审核结论、OA 审批结果、合同扫描件、订单状态均须留痕</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- 7. 异常分支 -->
+<section class="section" id="exception">
+  <div class="container">
+    <h2>7. 异常分支</h2>
+    <ul class="ul-list">
+      <li><b>账单系统未录入</b>：未录入不放行合同，为前置必查项。</li>
+      <li><b>关键参数缺失</b>：销售须在 CRM 填单时填写完整关键参数（折扣/预付后付/套餐），审批人无需翻查原文件。</li>
+      <li><b>审核不通过</b>：退回销售修改后重新提交，审核不通过的合同不得进入 OA 审批。</li>
+      <li><b>状态缺失需回溯</b>：如遇状态缺失，回溯商机状态获取步骤排查（见 6.4）。</li>
+      <li><b>超常规折扣/非标交付/特殊结算</b>：由管理层决策，按事项级别分别由区域销售负责人/业务线负责人/事业部负责人审批。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 8. 关键控制点 -->
+<section class="section" id="control">
+  <div class="container">
+    <h2>8. 关键控制点</h2>
+    <div class="table-wrap"><table><thead><tr><th>类型</th><th>控制点</th><th>动作/后果</th></tr></thead><tbody>
+      <tr><td>可核查</td><td>账单系统录入前置</td><td>录入是放行合同的前置必查项，未录入不放行</td></tr>
+      <tr><td>可核查</td><td>四方审核分工</td><td>数据组（参数+录入）→ 业务管理（合规）→ 法务（条款）→ 主管（核价+特殊条款）</td></tr>
+      <tr><td>可核查</td><td>关键参数前置</td><td>CRM 填单时须填写关键参数并上传合同文件，审批人无需翻查原文件</td></tr>
+      <tr><td>可核查</td><td>OA 提交权限</td><td>仅限运营与架构师（SA），销售不直接向 OA 提交</td></tr>
+      <tr><td>可核查</td><td>CRM 留存为唯一数据源</td><td>合同全文数字化本期不做，CRM 留存合同为唯一数据源</td></tr>
+      <tr><td>边界</td><td>OA/账单系统暂不对接</td><td>CRM 上线初期与 OA、账单系统暂不对接，人工回填</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>VeryCloud 云端智慧事业部 · CRM 流程扩写 · 基于销售管理办法 V13 初稿（2026-09-14）</p>
+  </div>
+</footer>
+
+</body>
+</html>

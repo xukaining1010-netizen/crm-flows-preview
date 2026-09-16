@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>跟进处理（测试/合同/归档） | 销售管理办法 V13</title>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:"Microsoft YaHei","Noto Sans SC",Arial,sans-serif;color:#333;background:#f5f6f8;line-height:1.7}
+.container{max-width:1200px;margin:0 auto;padding:0 40px}
+@media(max-width:1199px){.container{padding:0 24px}}
+@media(max-width:767px){.container{padding:0 16px}}
+.hero{background:linear-gradient(135deg,#0d3b6b,#185FA5);color:#fff;padding:56px 0 48px;text-align:center}
+.hero h1{font-size:30px;font-weight:bold;margin-bottom:10px}
+.hero p{font-size:16px;color:rgba(255,255,255,0.9);max-width:800px;margin:0 auto}
+.hero .crumb{display:inline-block;margin-top:16px;padding:4px 14px;border:1px solid rgba(255,255,255,0.5);border-radius:20px;font-size:13px;color:rgba(255,255,255,0.92)}
+@media(max-width:767px){.hero{padding:44px 0 36px}.hero h1{font-size:22px}.hero p{font-size:14px}}
+.nav{background:#0d3b6b;padding:10px 0;position:sticky;top:0;z-index:10}
+.nav .container{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center}
+.nav a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:13px;font-weight:bold}
+.nav a:hover{color:#fff;text-decoration:underline}
+@media(max-width:767px){.nav a{font-size:12px}}
+.section{padding:48px 0}
+.section:nth-child(even){background:#fff}
+.section h2{font-size:24px;font-weight:bold;margin-bottom:16px;color:#185FA5;padding-left:12px;border-left:4px solid #185FA5}
+.section h3{font-size:18px;font-weight:bold;margin:20px 0 10px;color:#444}
+.section p{font-size:15px;line-height:1.8;margin-bottom:12px;color:#555}
+@media(max-width:767px){.section{padding:32px 0}.section h2{font-size:20px}}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:8px}
+.meta-item{background:#fff;border:1px solid #e8e8e8;border-left:4px solid #185FA5;border-radius:8px;padding:14px 16px}
+.meta-item .k{font-size:13px;color:#888;margin-bottom:4px}
+.meta-item .v{font-size:15px;font-weight:bold;color:#333}
+.pill{display:inline-block;padding:2px 10px;border-radius:12px;font-size:13px;font-weight:bold;white-space:nowrap}
+.pill.line{background:#e6f4ea;color:#1e7e34}
+.pill.p0{background:#e6f4ea;color:#1e7e34}
+.pill.p1{background:#fff4d6;color:#a6790a}
+.pill.p2{background:#eef0f2;color:#5a5d61}
+.table-wrap{overflow-x:auto;margin-bottom:16px;background:#fff;border-radius:8px;border:1px solid #e8e8e8}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:680px}
+th{background:#185FA5;color:#fff;padding:10px 14px;text-align:left;font-weight:bold;white-space:nowrap}
+td{padding:10px 14px;border-bottom:1px solid #e8e8e8;color:#555;vertical-align:top}
+tr:nth-child(even) td{background:#f8f9fa}
+tr:last-child td{border-bottom:none}
+.raci{display:inline-block;min-width:26px;text-align:center;padding:1px 7px;border-radius:6px;font-size:12px;font-weight:bold}
+.raci.r{background:#fdecea;color:#c0392b}
+.raci.a{background:#fff4d6;color:#a6790a}
+.raci.c{background:#e6f4ea;color:#1e7e34}
+.raci.i{background:#eef0f2;color:#5a5d61}
+.svg-box{background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:20px;margin-bottom:16px;overflow-x:auto}
+.svg-box .fig-title{font-size:14px;font-weight:bold;color:#333;margin-bottom:12px;text-align:center}
+.svg-box svg{display:block;margin:0 auto;min-width:760px;max-width:100%}
+.card-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:8px}
+.card{background:#fff;border-radius:10px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06);border:1px solid #e8e8e8;border-top:4px solid #185FA5}
+.card h3{font-size:17px;font-weight:bold;color:#185FA5;margin:0 0 8px}
+.card p{font-size:14px;color:#555;line-height:1.6;margin-bottom:0}
+.callout{background:linear-gradient(135deg,#E6F1FB,#f0f6fd);border-left:4px solid #185FA5;border-radius:8px;padding:16px 20px;margin-bottom:16px;font-size:14px;color:#333}
+.callout.warn{background:#fff8e6;border-left-color:#e0a800}
+.callout.red{background:#fdecea;border-left-color:#c0392b}
+.callout p{margin-bottom:6px;font-size:14px;color:#333}
+.callout p:last-child{margin-bottom:0}
+.callout b{color:#185FA5}
+.ul-list{margin:8px 0;padding-left:20px}
+.ul-list li{margin-bottom:8px;font-size:14px;color:#555}
+.ul-list li b{color:#333}
+.footer{background:#0d3b6b;color:rgba(255,255,255,0.6);text-align:center;padding:22px 0;font-size:13px}</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <h1>CRM 流程 · 跟进处理（测试/合同/归档）</h1>
+    <p>3.4-3.6</p>
+    <span class="crumb">销售管理办法 V13 · 3.4-3.6 · 主线·子页</span>
+  </div>
+</section>
+
+<nav class="nav">
+  <div class="container">
+    <a href="#meta">元信息</a>
+    <a href="#goal">流程目标</a>
+    <a href="#io">输入输出</a>
+    <a href="#steps">详细步骤</a>
+    <a href="#flow">流程图</a>
+    <a href="#boundary">边界与断点</a>
+    <a href="#exception">异常分支</a>
+    <a href="#control">关键控制点</a>
+    <a href="index.html">← 返回索引</a>
+  </div>
+</nav>
+
+<section class="section" id="meta">
+  <div class="container">
+    <h2>1. 元信息</h2>
+    <div class="meta-grid">
+      <div class="meta-item"><div class="k">流程名称</div><div class="v">跟进处理（测试/合同/归档）</div></div>
+      <div class="meta-item"><div class="k">V13 条款编号</div><div class="v">3.4-3.6</div></div>
+      <div class="meta-item"><div class="k">层级</div><div class="v"><span class="pill line">主线·子页</span></div></div>
+      <div class="meta-item"><div class="k">是否触外部系统</div><div class="v">部分：OA 逐级审批（留线下）；账单系统录入核验（人工回填）</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="goal">
+  <div class="container">
+    <h2>2. 流程目标</h2>
+    <p>跟进处理覆盖商机审核通过后的测试与售前支持、合同审核与审批、归档与服务开通三个阶段。测试结果决定走向（YES 进合同 / NO 关闭进公海）；合同经四方审核与 OA 逐级审批后由数据组归档，归档后方可开通正式业务。</p>
+  </div>
+</section>
+
+<section class="section" id="io">
+  <div class="container">
+    <h2>3. 输入输出</h2>
+    <div class="table-wrap"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody>
+      <tr><td><b>触发条件</b></td><td>商机审核通过（flow-01-2 产出有效商机）；含技术内容工单流转至架构师</td></tr>
+      <tr><td><b>上游流程</b></td><td>分拣审核流转（flow-01-2）</td></tr>
+      <tr><td><b>下游流程</b></td><td>签约与追踪（flow-01-4）→ 服务中商机；关闭/公海（flow-02）</td></tr>
+      <tr><td><b>产出物</b></td><td>测试结论（YES/NO）、四方审核完成的合同、归档后的服务中商机</td></tr>
+      <tr><td><b>关键字段</b></td><td>测试结论、测试轮次、合同折扣/预付方式/套餐信息、归档时间、服务中状态</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<section class="section" id="steps">
+  <div class="container">
+    <h2>4. 详细步骤（泳道表 · RACI）</h2>
+    <div class="table-wrap"><table><thead><tr>
+<th>阶段</th>
+<th>步骤</th>
+<th>销售</th>
+<th>运营组</th>
+<th>架构师 SA</th>
+<th>数据组</th>
+</tr></thead><tbody>
+      <tr>
+<td>3 测试</td>
+<td>3.1 开通测试环境 + 客户测试 + 结果反馈</td>
+<td><span class="raci c">C</span></td>
+<td>—</td>
+<td><span class="raci c">C</span></td>
+<td><span class="raci c">C</span></td>
+</tr>
+      <tr>
+<td>3 测试</td>
+<td>3.2 测试结论判定（YES/NO/暂缓/超时）</td>
+<td><span class="raci c">C</span></td>
+<td><span class="raci a">A</span></td>
+<td><span class="raci i">I</span></td>
+<td>—</td>
+</tr>
+      <tr>
+<td>4 合同</td>
+<td>4.1 合同发起 + 关键参数前置填写</td>
+<td><span class="raci c">C</span></td>
+<td><span class="raci c">C</span></td>
+<td>—</td>
+<td><span class="raci a">A</span></td>
+</tr>
+      <tr>
+<td>4 合同</td>
+<td>4.2 四方审核（数据组/业务管理/法务/主管）</td>
+<td>—</td>
+<td><span class="raci c">C</span></td>
+<td>—</td>
+<td><span class="raci a">A</span></td>
+</tr>
+      <tr>
+<td>4 合同</td>
+<td>4.3 OA 逐级审批（线下）→ 回填 CRM</td>
+<td><span class="raci i">I</span></td>
+<td><span class="raci a">A</span></td>
+<td>—</td>
+<td><span class="raci c">C</span></td>
+</tr>
+      <tr>
+<td>5 归档</td>
+<td>5.1 数据组归档 + 通知销售 + 服务中</td>
+<td><span class="raci i">I</span></td>
+<td>—</td>
+<td>—</td>
+<td><span class="raci a">A</span></td>
+</tr>
+    </tbody></table></div>
+    <p class="note">R=决策 A=审批 C=执行 I=知会</p>
+  </div>
+</section>
+
+<section class="section" id="flow">
+  <div class="container">
+    <h2>5. 流程图</h2>
+    <div class="svg-box">
+      <div class="fig-title">跟进处理（测试/合同/归档）</div>
+      <svg viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="跟进处理（测试/合同/归档）">
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#5a5d61"/>
+          </marker>
+          <style>
+            .sw{fill:#f2f5f9;stroke:#cdd6e2;stroke-width:1}
+            .lane{fill:#eef2f7;stroke:#cdd6e2;stroke-width:1}
+            .lbl{font-size:13px;font-weight:bold;fill:#0d3b6b}
+            .box{fill:#fff;stroke:#185FA5;stroke-width:1.5;rx:6}
+            .diamond{fill:#fff8e6;stroke:#e0a800;stroke-width:1.5}
+            .end{fill:#e6f4ea;stroke:#1e7e34;stroke-width:1.5;rx:16}
+            .txt{font-size:12px;fill:#333}
+            .edge{stroke:#5a5d61;stroke-width:1.5;fill:none;marker-end:url(#arrow)}
+            .br{font-size:11px;font-weight:bold;fill:#c0392b}
+            .brn{font-size:11px;fill:#5a5d61}
+          </style>
+        </defs>
+        <!-- 泳道背景 -->
+        <rect x="0" y="0" width="1000" height="80" class="sw"/>
+        <rect x="0" y="80" width="1000" height="100" class="lane"/>
+        <rect x="0" y="180" width="1000" height="120" class="lane"/>
+        <rect x="0" y="300" width="1000" height="100" class="lane"/>
+        <!-- 泳道标签 -->
+        <text x="20" y="50" class="lbl">阶段</text>
+        <text x="20" y="140" class="lbl">运营组</text>
+        <text x="20" y="250" class="lbl">架构师 SA</text>
+        <text x="20" y="360" class="lbl">数据组</text>
+        <!-- 阶段标注 -->
+        <text x="300" y="18" class="lbl" fill="#888">测试</text>
+        <text x="650" y="18" class="lbl" fill="#888">合同+归档</text>
+        <!-- 节点 -->
+        <rect x="100" y="105" width="140" height="36" class="box"/><text x="170" y="127" class="txt" text-anchor="middle">开通测试环境</text>
+        <rect x="300" y="105" width="140" height="36" class="box"/><text x="370" y="127" class="txt" text-anchor="middle">客户测试+反馈</text>
+        <polygon points="520,101 575,123 520,145 465,123" class="diamond"/><text x="520" y="127" class="txt" text-anchor="middle">测试通过?</text>
+        <rect x="640" y="105" width="160" height="36" class="box"/><text x="720" y="127" class="txt" text-anchor="middle">合同发起+四方审核</text>
+        <rect x="300" y="215" width="140" height="36" class="box"/><text x="370" y="237" class="txt" text-anchor="middle">测试支持(PoC)</text>
+        <rect x="640" y="325" width="160" height="36" class="box"/><text x="720" y="347" class="txt" text-anchor="middle">OA审批(线下)→回填</text>
+        <rect x="860" y="325" width="120" height="36" class="end"/><text x="920" y="347" class="txt" text-anchor="middle">归档→服务中</text>
+        <rect x="100" y="325" width="140" height="36" class="box"/><text x="170" y="347" class="txt" text-anchor="middle">关闭/公海</text>
+        <!-- 连线 -->
+        <path d="M240 123 L300 123" class="edge"/>
+        <path d="M440 123 L465 123" class="edge"/>
+        <path d="M575 123 L640 123" class="edge"/>
+        <path d="M520 145 L520 343 L240 343" class="edge"/>
+        <path d="M370 141 L370 215" class="edge" style="stroke-dasharray:5,3"/>
+        <path d="M720 141 L720 325" class="edge"/>
+        <path d="M800 343 L860 343" class="edge"/>
+        <!-- 分支标注：判定结果（对应 3.2 六种情形） -->
+        <text x="630" y="113" class="br" text-anchor="end">是 · 测试通过</text>
+        <text x="532" y="200" class="brn" text-anchor="start">否 · 未通过/超时</text>
+        <text x="382" y="182" class="brn" text-anchor="start">如需技术支持（SA 介入）</text>
+      </svg>
+    </div>
+    <div class="callout"><b>图注：</b>矩形为步骤节点，菱形为判定节点，绿色圆角为终止节点；<b>虚线</b>为并行支持关系（不参与判定）。箭头表示流向。</div>
+    <div class="callout"><b>菱形怎么判（对应 V13 3.2）：</b>测试结论按六种情形判定——<b>客户 NO / 资源用尽 / 3 周无进展 / 6 周无实质结果 / 暂缓 / 通过</b>。<br>· <b>是</b>（结论为「通过」）→ 进入合同发起与四方审核；<br>· <b>否</b>（未通过 / 超时）→ 关闭商机，回收测试资源进公海。</div>
+  </div>
+</section>
+
+<section class="section" id="boundary">
+  <div class="container">
+    <h2>6. 边界与断点</h2>
+    <div class="table-wrap"><table><thead><tr><th>环节</th><th>处理方式</th><th>说明</th></tr></thead><tbody>
+      <tr><td>OA 逐级审批（合同）</td><td>留线下 / 人工回填</td><td>数据组核对关键参数后经 OA 发起审批，完成后回填 CRM</td></tr>
+      <tr><td>账单系统录入核验</td><td>人工回填</td><td>数据组确认账单系统已录入后放行合同，未录入不放行</td></tr>
+      <tr><td>客户侧合同签署</td><td>留线下</td><td>销售在 CRM 下载合同走客户签署流程</td></tr>
+      <tr><td>先归档后开通</td><td>系统管控</td><td>合同审批通过并归档后方可开通正式业务</td></tr>
+      <tr><td>必须留痕节点</td><td>系统留痕</td><td>测试结论、合同审核意见、归档动作均须留痕</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<section class="section" id="exception">
+  <div class="container">
+    <h2>7. 异常分支</h2>
+    <ul class="ul-list">
+      <li><b>测试不通过（NO）</b>：销售 3 工作日内手动关闭；资源用尽须重新申请并说明原因；连续 3 周无进展系统自动关闭。</li>
+      <li><b>测试额度耗尽且 6 周无实质结果</b>：限时关闭回收资源，或退回重新分配；需跟进须特批延期。</li>
+      <li><b>测试超 2 轮</b>：须提交测试说明，由产品线运营审核决定是否增加轮次。</li>
+      <li><b>商机有效期到期（3 个月）</b>：可申请延长，经事业部/业务线负责人审批。</li>
+      <li><b>合同未确认账单系统录入即放行</b>：高风险 P0 操作，录入是放行前置必查项。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="control">
+  <div class="container">
+    <h2>8. 关键控制点</h2>
+    <div class="table-wrap"><table><thead><tr><th>类型</th><th>控制点</th><th>动作/后果</th></tr></thead><tbody>
+      <tr><td>红线</td><td>合同未确认账单系统录入即放行</td><td>高风险操作（P0），一经发现严肃处理</td></tr>
+      <tr><td>红线</td><td>商机状态获取后漏触发账单系统租户生成</td><td>高风险操作（P0）</td></tr>
+      <tr><td>可核查</td><td>测试最终结论判定</td><td>六种情形判定（客户NO/资源用尽/3周无进展/6周无结果/暂缓/通过）</td></tr>
+      <tr><td>可核查</td><td>先归档后开通正式业务</td><td>防止先行开通造成欠费坏账</td></tr>
+      <tr><td>可核查</td><td>测试资源台账登记与回收</td><td>申请、开通、用量、回收均须登记留痕</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>VeryCloud 云端智慧事业部 · CRM 流程扩写 · 基于销售管理办法 V13 初稿（2026-09-14）</p>
+  </div>
+</footer>
+
+</body>
+</html>

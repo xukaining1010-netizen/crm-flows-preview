@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM 流程 · 撞单/归属争议裁决 | 销售管理办法 V13</title>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:"Microsoft YaHei","Noto Sans SC",Arial,sans-serif;color:#333;background:#f5f6f8;line-height:1.7}
+.container{max-width:1200px;margin:0 auto;padding:0 40px}
+@media(max-width:1199px){.container{padding:0 24px}}
+@media(max-width:767px){.container{padding:0 16px}}
+.hero{background:linear-gradient(135deg,#0d3b6b,#185FA5);color:#fff;padding:56px 0 48px;text-align:center}
+.hero h1{font-size:30px;font-weight:bold;margin-bottom:10px}
+.hero p{font-size:16px;color:rgba(255,255,255,0.9);max-width:800px;margin:0 auto}
+.hero .crumb{display:inline-block;margin-top:16px;padding:4px 14px;border:1px solid rgba(255,255,255,0.5);border-radius:20px;font-size:13px;color:rgba(255,255,255,0.92)}
+@media(max-width:767px){.hero{padding:44px 0 36px}.hero h1{font-size:22px}.hero p{font-size:14px}}
+.nav{background:#0d3b6b;padding:10px 0;position:sticky;top:0;z-index:10}
+.nav .container{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center}
+.nav a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:13px;font-weight:bold}
+.nav a:hover{color:#fff;text-decoration:underline}
+@media(max-width:767px){.nav a{font-size:12px}}
+.section{padding:48px 0}
+.section:nth-child(even){background:#fff}
+.section h2{font-size:24px;font-weight:bold;margin-bottom:16px;color:#185FA5;padding-left:12px;border-left:4px solid #185FA5}
+.section h3{font-size:18px;font-weight:bold;margin:20px 0 10px;color:#444}
+.section p{font-size:15px;line-height:1.8;margin-bottom:12px;color:#555}
+@media(max-width:767px){.section{padding:32px 0}.section h2{font-size:20px}}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:8px}
+.meta-item{background:#fff;border:1px solid #e8e8e8;border-left:4px solid #185FA5;border-radius:8px;padding:14px 16px}
+.meta-item .k{font-size:13px;color:#888;margin-bottom:4px}
+.meta-item .v{font-size:15px;font-weight:bold;color:#333}
+.pill{display:inline-block;padding:2px 10px;border-radius:12px;font-size:13px;font-weight:bold;white-space:nowrap}
+.pill.line{background:#e6f4ea;color:#1e7e34}
+.pill.p0{background:#e6f4ea;color:#1e7e34}
+.pill.p1{background:#fff4d6;color:#a6790a}
+.pill.p2{background:#eef0f2;color:#5a5d61}
+.table-wrap{overflow-x:auto;margin-bottom:16px;background:#fff;border-radius:8px;border:1px solid #e8e8e8}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:680px}
+th{background:#185FA5;color:#fff;padding:10px 14px;text-align:left;font-weight:bold;white-space:nowrap}
+td{padding:10px 14px;border-bottom:1px solid #e8e8e8;color:#555;vertical-align:top}
+tr:nth-child(even) td{background:#f8f9fa}
+tr:last-child td{border-bottom:none}
+.raci{display:inline-block;min-width:26px;text-align:center;padding:1px 7px;border-radius:6px;font-size:12px;font-weight:bold}
+.raci.r{background:#fdecea;color:#c0392b}
+.raci.a{background:#fff4d6;color:#a6790a}
+.raci.c{background:#e6f4ea;color:#1e7e34}
+.raci.i{background:#eef0f2;color:#5a5d61}
+.svg-box{background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:20px;margin-bottom:16px;overflow-x:auto}
+.svg-box .fig-title{font-size:14px;font-weight:bold;color:#333;margin-bottom:12px;text-align:center}
+.svg-box svg{display:block;margin:0 auto;min-width:760px;max-width:100%}
+.card-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:8px}
+.card{background:#fff;border-radius:10px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06);border:1px solid #e8e8e8;border-top:4px solid #185FA5}
+.card h3{font-size:17px;font-weight:bold;color:#185FA5;margin:0 0 8px}
+.card p{font-size:14px;color:#555;line-height:1.6;margin-bottom:0}
+.callout{background:linear-gradient(135deg,#E6F1FB,#f0f6fd);border-left:4px solid #185FA5;border-radius:8px;padding:16px 20px;margin-bottom:16px;font-size:14px;color:#333}
+.callout.warn{background:#fff8e6;border-left-color:#e0a800}
+.callout.red{background:#fdecea;border-left-color:#c0392b}
+.callout p{margin-bottom:6px;font-size:14px;color:#333}
+.callout p:last-child{margin-bottom:0}
+.callout b{color:#185FA5}
+.ul-list{margin:8px 0;padding-left:20px}
+.ul-list li{margin-bottom:8px;font-size:14px;color:#555}
+.ul-list li b{color:#333}
+.footer{background:#0d3b6b;color:rgba(255,255,255,0.6);text-align:center;padding:22px 0;font-size:13px}</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <h1>CRM 流程 · 撞单/归属争议裁决</h1>
+    <p>3.12.2</p>
+    <span class="crumb">销售管理办法 V13 · 3.12.2 · P0</span>
+  </div>
+</section>
+
+<nav class="nav">
+  <div class="container">
+    <a href="#meta">元信息</a>
+    <a href="#goal">流程目标</a>
+    <a href="#io">输入输出</a>
+    <a href="#steps">详细步骤</a>
+    <a href="#flow">流程图</a>
+    <a href="#boundary">边界与断点</a>
+    <a href="#exception">异常分支</a>
+    <a href="#control">关键控制点</a>
+    <a href="index.html">← 返回索引</a>
+  </div>
+</nav>
+
+<section class="section" id="meta">
+  <div class="container">
+    <h2>1. 元信息</h2>
+    <div class="meta-grid">
+      <div class="meta-item"><div class="k">流程名称</div><div class="v">撞单/归属争议裁决</div></div>
+      <div class="meta-item"><div class="k">V13 条款编号</div><div class="v">3.12.2</div></div>
+      <div class="meta-item"><div class="k">层级</div><div class="v"><span class="pill p0">P0</span></div></div>
+      <div class="meta-item"><div class="k">是否触外部系统</div><div class="v">否（CRM 内闭环）</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="goal">
+  <div class="container">
+    <h2>2. 流程目标</h2>
+    <p>撞单/归属争议裁决处理同一商机被两名及以上销售报备的归属冲突。判定依据以报备或首次登记时间先后为第一顺位；时间相同以客户书面指定为准；以上均无由区域销售负责人或业务线负责人裁定。判定结果须在台账或 CRM 中留痕。</p>
+  </div>
+</section>
+
+<section class="section" id="io">
+  <div class="container">
+    <h2>3. 输入输出</h2>
+    <div class="table-wrap"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody>
+      <tr><td><b>触发条件</b></td><td>同一条商机被两人报备或提交（构成撞单）</td></tr>
+      <tr><td><b>上游流程</b></td><td>商机采集/报备（flow-01-1）→ 发现重复报备</td></tr>
+      <tr><td><b>下游流程</b></td><td>归属确定 → 更新主销售记录；业绩归属变更（flow-09）</td></tr>
+      <tr><td><b>产出物</b></td><td>归属裁决记录、主销售确认、留痕记录</td></tr>
+      <tr><td><b>关键字段</b></td><td>报备时间/首次登记时间、客户书面指定凭证、裁决人、裁决结果</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<section class="section" id="steps">
+  <div class="container">
+    <h2>4. 详细步骤（泳道表 · RACI）</h2>
+    <div class="table-wrap"><table><thead><tr>
+<th>步骤</th>
+<th>销售（双方）</th>
+<th>运营组</th>
+<th>区域/业务线负责人</th>
+</tr></thead><tbody>
+      <tr>
+<td>1.1 撞单识别（系统/人工发现重复报备）</td>
+<td><span class="raci i">I</span></td>
+<td><span class="raci c">C</span></td>
+<td>—</td>
+</tr>
+      <tr>
+<td>1.2 第一顺位判定：报备/首次登记时间先后</td>
+<td>—</td>
+<td><span class="raci c">C</span></td>
+<td><span class="raci a">A</span></td>
+</tr>
+      <tr>
+<td>1.3 时间相同 → 客户书面指定</td>
+<td><span class="raci c">C</span></td>
+<td><span class="raci c">C</span></td>
+<td><span class="raci a">A</span></td>
+</tr>
+      <tr>
+<td>1.4 以上均无 → 负责人裁定</td>
+<td>—</td>
+<td><span class="raci i">I</span></td>
+<td><span class="raci a">A</span></td>
+</tr>
+      <tr>
+<td>1.5 裁决结果留痕（台账/CRM）</td>
+<td>—</td>
+<td><span class="raci c">C</span></td>
+<td><span class="raci a">A</span></td>
+</tr>
+      <tr>
+<td>1.6 更新主销售，通知双方</td>
+<td><span class="raci i">I</span></td>
+<td><span class="raci c">C</span></td>
+<td>—</td>
+</tr>
+    </tbody></table></div>
+    <p class="note">R=决策 A=审批 C=执行 I=知会</p>
+  </div>
+</section>
+
+<section class="section" id="flow">
+  <div class="container">
+    <h2>5. 流程图</h2>
+    <div class="svg-box">
+      <div class="fig-title">撞单/归属争议裁决</div>
+      <svg viewBox="0 0 1050 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="撞单/归属争议裁决">
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#5a5d61"/>
+          </marker>
+          <style>
+            .sw{fill:#f2f5f9;stroke:#cdd6e2;stroke-width:1}
+            .lane{fill:#eef2f7;stroke:#cdd6e2;stroke-width:1}
+            .lbl{font-size:13px;font-weight:bold;fill:#0d3b6b}
+            .box{fill:#fff;stroke:#185FA5;stroke-width:1.5;rx:6}
+            .diamond{fill:#fff8e6;stroke:#e0a800;stroke-width:1.5}
+            .end{fill:#e6f4ea;stroke:#1e7e34;stroke-width:1.5;rx:16}
+            .txt{font-size:12px;fill:#333}
+            .brl{font-size:12px;fill:#a6790a;font-weight:bold}
+            .edge{stroke:#5a5d61;stroke-width:1.5;fill:none;marker-end:url(#arrow)}
+          </style>
+        </defs>
+        <!-- 泳道背景 -->
+        <rect x="0" y="0" width="1050" height="120" class="lane"/>
+        <rect x="0" y="120" width="1050" height="120" class="lane"/>
+        <!-- 泳道标签 -->
+        <text x="20" y="62" class="lbl">运营组</text>
+        <text x="20" y="186" class="lbl">负责人</text>
+        <!-- 节点（裁决留痕四边各一刀：上=时间先后判定(顶绕) 左=客户书面指定 下=负责人裁定(直上) 右=更新主销售） -->
+        <rect x="90" y="32" width="140" height="36" class="box"/><text x="160" y="54" class="txt" text-anchor="middle">撞单识别</text>
+        <polygon points="290,32 328,50 290,68 252,50" class="diamond"/><text x="290" y="54" class="txt" text-anchor="middle">时间可分?</text>
+        <rect x="370" y="32" width="160" height="36" class="box"/><text x="450" y="54" class="txt" text-anchor="middle">时间先后判定</text>
+        <rect x="600" y="32" width="140" height="36" class="box"/><text x="670" y="54" class="txt" text-anchor="middle">裁决留痕</text>
+        <rect x="820" y="32" width="200" height="36" class="end"/><text x="920" y="54" class="txt" text-anchor="middle">更新主销售，通知双方</text>
+        <polygon points="290,157 328,175 290,193 252,175" class="diamond"/><text x="290" y="179" class="txt" text-anchor="middle">有书面指定?</text>
+        <rect x="380" y="157" width="160" height="36" class="box"/><text x="460" y="179" class="txt" text-anchor="middle">客户书面指定</text>
+        <rect x="610" y="157" width="120" height="36" class="box"/><text x="670" y="179" class="txt" text-anchor="middle">负责人裁定</text>
+        <!-- 连线（分支标签：是/否） -->
+        <path d="M230 50 L252 50" class="edge"/>
+        <path d="M328 50 L370 50" class="edge"/><text x="349" y="43" class="brl" text-anchor="middle">是</text>
+        <path d="M290 68 L290 157" class="edge"/><text x="298" y="116" class="brl">否</text>
+        <path d="M450 32 L450 12 L670 12 L670 32" class="edge"/>
+        <path d="M328 175 L380 175" class="edge"/><text x="354" y="168" class="brl" text-anchor="middle">是</text>
+        <path d="M290 193 L290 218 L670 218 L670 193" class="edge"/><text x="282" y="211" class="brl" text-anchor="end">否</text>
+        <path d="M540 175 L560 175 L560 50 L600 50" class="edge"/>
+        <path d="M670 157 L670 68" class="edge"/>
+        <path d="M740 50 L820 50" class="edge"/>
+      </svg>
+    </div>
+    <div class="callout"><b>图注：</b>矩形为步骤节点，菱形为判定节点，绿色圆角为终止节点。箭头表示流向。</div>
+  </div>
+</section>
+
+<section class="section" id="boundary">
+  <div class="container">
+    <h2>6. 边界与断点</h2>
+    <div class="table-wrap"><table><thead><tr><th>环节</th><th>处理方式</th><th>说明</th></tr></thead><tbody>
+      <tr><td>判定主体限制</td><td>CRM 内执行</td><td>仅限区域销售负责人或业务线负责人判定</td></tr>
+      <tr><td>必须留痕节点</td><td>系统留痕</td><td>裁决结果须在台账或 CRM 中留痕，含判定依据与裁决人</td></tr>
+      <tr><td>客户指定凭证</td><td>书面/可留痕确认</td><td>口头指定不予认定</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<section class="section" id="exception">
+  <div class="container">
+    <h2>7. 异常分支</h2>
+    <ul class="ul-list">
+      <li><b>时间相同或无法区分</b>：以客户书面指定的对接人为准。</li>
+      <li><b>以上均无</b>：由区域销售负责人或业务线负责人裁定。</li>
+      <li><b>虚构客户指定争夺商机</b>：按 6.1 红线处理。</li>
+      <li><b>客户指定仅落在项目级</b>：不决定客户整体归属（见 flow-06）。</li>
+      <li><b>同一客户不同项目</b>：不视为撞单，各项目业绩归各自主销售（见 flow-15）。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="control">
+  <div class="container">
+    <h2>8. 关键控制点</h2>
+    <div class="table-wrap"><table><thead><tr><th>类型</th><th>控制点</th><th>动作/后果</th></tr></thead><tbody>
+      <tr><td>红线</td><td>虚构客户指定争夺商机</td><td>按 6.1 红线处理</td></tr>
+      <tr><td>可核查</td><td>裁决结果留痕</td><td>判定依据、裁决人、裁决结果须在台账/CRM 留痕</td></tr>
+      <tr><td>可核查</td><td>三级判定优先级</td><td>时间先后 → 客户书面指定 → 负责人裁定</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>VeryCloud 云端智慧事业部 · CRM 流程扩写 · 基于销售管理办法 V13 初稿（2026-09-14）</p>
+  </div>
+</footer>
+
+</body>
+</html>

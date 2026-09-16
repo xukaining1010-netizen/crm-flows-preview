@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM 流程 · 业绩归属变更/跨期切分 | 销售管理办法 V13</title>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:"Microsoft YaHei","Noto Sans SC",Arial,sans-serif;color:#333;background:#f5f6f8;line-height:1.7}
+.container{max-width:1200px;margin:0 auto;padding:0 40px}
+@media(max-width:1199px){.container{padding:0 24px}}
+@media(max-width:767px){.container{padding:0 16px}}
+.hero{background:linear-gradient(135deg,#0d3b6b,#185FA5);color:#fff;padding:56px 0 48px;text-align:center}
+.hero h1{font-size:30px;font-weight:bold;margin-bottom:10px}
+.hero p{font-size:16px;color:rgba(255,255,255,0.9);max-width:800px;margin:0 auto}
+.hero .crumb{display:inline-block;margin-top:16px;padding:4px 14px;border:1px solid rgba(255,255,255,0.5);border-radius:20px;font-size:13px;color:rgba(255,255,255,0.92)}
+@media(max-width:767px){.hero{padding:44px 0 36px}.hero h1{font-size:22px}.hero p{font-size:14px}}
+.nav{background:#0d3b6b;padding:10px 0;position:sticky;top:0;z-index:10}
+.nav .container{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center}
+.nav a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:13px;font-weight:bold}
+.nav a:hover{color:#fff;text-decoration:underline}
+@media(max-width:767px){.nav a{font-size:12px}}
+.section{padding:48px 0}
+.section:nth-child(even){background:#fff}
+.section h2{font-size:24px;font-weight:bold;margin-bottom:16px;color:#185FA5;padding-left:12px;border-left:4px solid #185FA5}
+.section h3{font-size:18px;font-weight:bold;margin:20px 0 10px;color:#444}
+.section p{font-size:15px;line-height:1.8;margin-bottom:12px;color:#555}
+@media(max-width:767px){.section{padding:32px 0}.section h2{font-size:20px}}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:8px}
+.meta-item{background:#fff;border:1px solid #e8e8e8;border-left:4px solid #185FA5;border-radius:8px;padding:14px 16px}
+.meta-item .k{font-size:13px;color:#888;margin-bottom:4px}
+.meta-item .v{font-size:15px;font-weight:bold;color:#333}
+.pill{display:inline-block;padding:2px 10px;border-radius:12px;font-size:13px;font-weight:bold;white-space:nowrap}
+.pill.line{background:#e6f4ea;color:#1e7e34}
+.pill.p0{background:#e6f4ea;color:#1e7e34}
+.pill.p1{background:#fff4d6;color:#a6790a}
+.pill.p2{background:#eef0f2;color:#5a5d61}
+.table-wrap{overflow-x:auto;margin-bottom:16px;background:#fff;border-radius:8px;border:1px solid #e8e8e8}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:680px}
+th{background:#185FA5;color:#fff;padding:10px 14px;text-align:left;font-weight:bold;white-space:nowrap}
+td{padding:10px 14px;border-bottom:1px solid #e8e8e8;color:#555;vertical-align:top}
+tr:nth-child(even) td{background:#f8f9fa}
+tr:last-child td{border-bottom:none}
+.raci{display:inline-block;min-width:26px;text-align:center;padding:1px 7px;border-radius:6px;font-size:12px;font-weight:bold}
+.raci.r{background:#fdecea;color:#c0392b}
+.raci.a{background:#fff4d6;color:#a6790a}
+.raci.c{background:#e6f4ea;color:#1e7e34}
+.raci.i{background:#eef0f2;color:#5a5d61}
+.svg-box{background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:20px;margin-bottom:16px;overflow-x:auto}
+.svg-box .fig-title{font-size:14px;font-weight:bold;color:#333;margin-bottom:12px;text-align:center}
+.svg-box svg{display:block;margin:0 auto;min-width:760px;max-width:100%}
+.card-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:8px}
+.card{background:#fff;border-radius:10px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06);border:1px solid #e8e8e8;border-top:4px solid #185FA5}
+.card h3{font-size:17px;font-weight:bold;color:#185FA5;margin:0 0 8px}
+.card p{font-size:14px;color:#555;line-height:1.6;margin-bottom:0}
+.callout{background:linear-gradient(135deg,#E6F1FB,#f0f6fd);border-left:4px solid #185FA5;border-radius:8px;padding:16px 20px;margin-bottom:16px;font-size:14px;color:#333}
+.callout.warn{background:#fff8e6;border-left-color:#e0a800}
+.callout.red{background:#fdecea;border-left-color:#c0392b}
+.callout p{margin-bottom:6px;font-size:14px;color:#333}
+.callout p:last-child{margin-bottom:0}
+.callout b{color:#185FA5}
+.ul-list{margin:8px 0;padding-left:20px}
+.ul-list li{margin-bottom:8px;font-size:14px;color:#555}
+.ul-list li b{color:#333}
+.footer{background:#0d3b6b;color:rgba(255,255,255,0.6);text-align:center;padding:22px 0;font-size:13px}</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <h1>CRM 流程 · 业绩归属变更/跨期切分</h1>
+    <p>签约按签约时点 · 回款按回款时点 · 跨期按动作时点切分 · 非离职变更须双审批留痕</p>
+    <span class="crumb">销售管理办法 V13 · 3.12.6 · P1</span>
+  </div>
+</section>
+
+<nav class="nav">
+  <div class="container">
+    <a href="#meta">元信息</a>
+    <a href="#goal">流程目标</a>
+    <a href="#io">输入输出</a>
+    <a href="#steps">详细步骤</a>
+    <a href="#flow">流程图</a>
+    <a href="#boundary">边界与断点</a>
+    <a href="#exception">异常分支</a>
+    <a href="#control">关键控制点</a>
+    <a href="index.html">← 返回索引</a>
+  </div>
+</nav>
+
+<!-- 1. 元信息 -->
+<section class="section" id="meta">
+  <div class="container">
+    <h2>1. 元信息</h2>
+    <div class="meta-grid">
+      <div class="meta-item"><div class="k">流程名称</div><div class="v">业绩归属变更/跨期切分</div></div>
+      <div class="meta-item"><div class="k">V13 条款编号</div><div class="v">3.12.6</div></div>
+      <div class="meta-item"><div class="k">层级</div><div class="v"><span class="pill p1">P1</span></div></div>
+      <div class="meta-item"><div class="k">是否触外部系统</div><div class="v">否（CRM 内闭环；考核数据以 CRM 留痕为准）</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. 流程目标 -->
+<section class="section" id="goal">
+  <div class="container">
+    <h2>2. 流程目标</h2>
+    <p>业绩归期与变更程序规定业绩指标的归属时点与变更审批流程。签约类指标按签约动作发生时点归属，回款类指标按回款发生时点归属。交接或变更跨越考核期的，按动作发生时点切分。非离职场景的归属变更须提出申请，由区域负责人与业务线负责人双审批并留痕。离职场景另行按 6.5 执行。</p>
+  </div>
+</section>
+
+<!-- 3. 输入输出 -->
+<section class="section" id="io">
+  <div class="container">
+    <h2>3. 输入输出</h2>
+    <div class="table-wrap"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody>
+      <tr><td><b>触发条件</b></td><td>非离职原因的业绩归属变更需求，或交接/变更跨越考核期</td></tr>
+      <tr><td><b>上游流程</b></td><td>客户指定/主销售变更（flow-06）→ 触发业绩归属变更；撞单裁决（flow-04）→ 归属调整后需变更业绩归属</td></tr>
+      <tr><td><b>下游流程</b></td><td>考核统计（5.2）→ 按归属时点计入；离职交接（6.5）→ 离职场景另行处理</td></tr>
+      <tr><td><b>产出物</b></td><td>业绩归属变更记录、跨期切分记录、审批留痕</td></tr>
+      <tr><td><b>关键字段</b></td><td>变更类型、签约/回款时点、归属销售（变更前/后）、考核期、切分比例/金额、审批记录</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- 4. 详细步骤 -->
+<section class="section" id="steps">
+  <div class="container">
+    <h2>4. 详细步骤</h2>
+    <h3>4a. 归期口径</h3>
+    <div class="table-wrap"><table><thead><tr><th>指标类型</th><th>归属时点</th></tr></thead><tbody>
+      <tr><td>签约类指标</td><td>签约动作发生时点</td></tr>
+      <tr><td>回款类指标</td><td>回款发生时点</td></tr>
+      <tr><td>跨期交接/变更</td><td>按动作发生时点切分</td></tr>
+    </tbody></table></div>
+    <h3>4b. 泳道步骤（RACI）</h3>
+    <div class="table-wrap"><table><thead><tr>
+      <th>步骤</th>
+      <th>销售</th>
+      <th>区域负责人</th>
+      <th>业务线负责人</th>
+      <th>数据运营</th>
+    </tr></thead><tbody>
+      <tr>
+        <td>1.1 提出归属变更申请（非离职原因）</td>
+        <td><span class="raci c">C</span></td>
+        <td><span class="raci i">I</span></td>
+        <td><span class="raci i">I</span></td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>1.2 审核变更事由</td>
+        <td><span class="raci i">I</span></td>
+        <td><span class="raci a">A</span></td>
+        <td><span class="raci i">I</span></td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>1.3 审批</td>
+        <td><span class="raci i">I</span></td>
+        <td><span class="raci i">I</span></td>
+        <td><span class="raci a">A</span></td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>1.4 确定归期口径（签约按签约时点/回款按回款时点）</td>
+        <td><span class="raci i">I</span></td>
+        <td><span class="raci c">C</span></td>
+        <td><span class="raci a">A</span></td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>1.5 跨期切分（按动作发生时点）</td>
+        <td><span class="raci i">I</span></td>
+        <td><span class="raci c">C</span></td>
+        <td><span class="raci a">A</span></td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>1.6 留痕 + 更新 CRM</td>
+        <td><span class="raci i">I</span></td>
+        <td>—</td>
+        <td>—</td>
+        <td><span class="raci c">C</span></td>
+      </tr>
+    </tbody></table></div>
+    <p class="note">R=决策 A=审批 C=执行 I=知会。离职场景按 6.5 离职交接处理，不适用本流程。</p>
+  </div>
+</section>
+
+<!-- 5. 流程图 -->
+<section class="section" id="flow">
+  <div class="container">
+    <h2>5. 流程图</h2>
+    <div class="svg-box">
+      <div class="fig-title">业绩归属变更/跨期切分</div>
+            <!-- diagram-type: LANE -->
+      <svg viewBox="0 0 1000 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="业绩归属变更与跨期切分">
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#5a5d61"/>
+          </marker>
+          <style>
+            .sw{fill:#f2f5f9;stroke:#cdd6e2;stroke-width:1}
+            .lane{fill:#eef2f7;stroke:#cdd6e2;stroke-width:1}
+            .lbl{font-size:13px;font-weight:bold;fill:#0d3b6b}
+            .box{fill:#fff;stroke:#185FA5;stroke-width:1.5}
+            .diamond{fill:#fff8e6;stroke:#e0a800;stroke-width:1.5}
+            .end{fill:#e6f4ea;stroke:#1e7e34;stroke-width:1.5}
+            .txt{font-size:12px;fill:#333}
+            .brl{font-size:12px;fill:#a6790a;font-weight:bold}
+            .edge{stroke:#5a5d61;stroke-width:1.5;fill:none;marker-end:url(#arrow)}
+          </style>
+        </defs>
+        <rect x="0" y="0" width="1000" height="90" class="sw"/>
+        <rect x="0" y="90" width="1000" height="90" class="lane"/>
+        <rect x="0" y="180" width="1000" height="150" class="lane"/>
+        <rect x="0" y="330" width="1000" height="100" class="lane"/>
+        <text x="20" y="30" class="lbl">销售</text>
+        <text x="20" y="120" class="lbl">区域负责人</text>
+        <text x="20" y="210" class="lbl">业务线负责人</text>
+        <text x="20" y="360" class="lbl">数据运营</text>
+        <rect x="60" y="27" width="200" height="36" class="box"/><text x="160" y="49" class="txt" text-anchor="middle">提出归属变更申请（非离职）</text>
+        <rect x="380" y="117" width="220" height="36" class="box"/><text x="490" y="139" class="txt" text-anchor="middle">审核变更事由（双签之一）</text>
+        <polygon points="560,218 620,196 680,218 620,240" class="diamond"/><text x="620" y="222" class="txt" text-anchor="middle">审批通过?</text>
+        <rect x="500" y="270" width="200" height="36" class="end"/><text x="600" y="292" class="txt" text-anchor="middle">维持原归属（不得变更）</text>
+        <rect x="760" y="270" width="200" height="36" class="box"/><text x="860" y="292" class="txt" text-anchor="middle">确定归期口径+跨期切分</text>
+        <rect x="760" y="350" width="200" height="36" class="end"/><text x="860" y="372" class="txt" text-anchor="middle">留痕+更新 CRM</text>
+        <path d="M260 45 L320 45 L320 135 L380 135" class="edge"/>
+        <path d="M600 135 L620 135 L620 196" class="edge"/>
+        <path d="M680 218 L720 218 L720 288 L760 288" class="edge"/><text x="690" y="211" class="brl">是</text>
+        <path d="M560 218 L480 218 L480 288 L500 288" class="edge"/><text x="486" y="208" class="brl">否</text>
+        <path d="M860 306 L860 350" class="edge"/>
+      </svg>
+    </div>
+    <div class="callout"><b>图注：</b>非离职业绩归属变更须经区域负责人与业务线负责人双审批，确定归期口径（签约按签约时点、回款按回款时点）后按动作发生时点切分，最终留痕并更新 CRM。离职场景按 6.5 离职交接处理，不适用本流程。</div>
+  </div>
+</section>
+
+<!-- 6. 边界与断点 -->
+<section class="section" id="boundary">
+  <div class="container">
+    <h2>6. 边界与断点</h2>
+    <div class="table-wrap"><table><thead><tr><th>环节</th><th>处理方式</th><th>说明</th></tr></thead><tbody>
+      <tr><td>离职场景</td><td>按 6.5 执行</td><td>非离职变更适用本流程；离职场景另行按 6.5 离职交接处理</td></tr>
+      <tr><td>归期口径</td><td>固定口径</td><td>签约类按签约时点，回款类按回款时点，为 V13 规定口径，不可变更</td></tr>
+      <tr><td>跨期切分</td><td>按动作时点</td><td>交接或变更跨越考核期的，按动作发生时点切分</td></tr>
+      <tr><td>审批</td><td>双签</td><td>须经区域负责人与业务线负责人双审批</td></tr>
+      <tr><td>留痕</td><td>考核依据</td><td>变更记录与审批留痕作为考核统计依据</td></tr>
+      <tr><td>必须留痕节点</td><td>系统留痕</td><td>变更类型、归属变更前后、归期口径、切分记录、审批记录均须留痕</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- 7. 异常分支 -->
+<section class="section" id="exception">
+  <div class="container">
+    <h2>7. 异常分支</h2>
+    <ul class="ul-list">
+      <li><b>离职场景</b>：按 6.5 离职交接处理，不适用本流程。</li>
+      <li><b>归期口径争议</b>：以 V13 规定为准——签约类按签约时点，回款类按回款时点。</li>
+      <li><b>变更跨多个考核期</b>：按各动作发生时点逐期切分。</li>
+      <li><b>审批未通过</b>：不得变更归属，维持原归属。</li>
+      <li><b>变更涉及多方销售</b>：各方均须知会，审批人综合裁定。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 8. 关键控制点 -->
+<section class="section" id="control">
+  <div class="container">
+    <h2>8. 关键控制点</h2>
+    <div class="table-wrap"><table><thead><tr><th>类型</th><th>控制点</th><th>动作/后果</th></tr></thead><tbody>
+      <tr><td>可核查</td><td>归期口径</td><td>签约类按签约时点归属，回款类按回款时点归属</td></tr>
+      <tr><td>可核查</td><td>跨期切分</td><td>交接或变更跨越考核期的，按动作发生时点切分</td></tr>
+      <tr><td>可核查</td><td>双审批</td><td>区域负责人 + 业务线负责人双审批并留痕</td></tr>
+      <tr><td>可核查</td><td>留痕为考核依据</td><td>变更记录与审批留痕作为考核统计依据</td></tr>
+      <tr><td>边界</td><td>离职场景独立</td><td>离职按 6.5 处理，不适用本流程</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>VeryCloud 云端智慧事业部 · CRM 流程扩写 · 基于销售管理办法 V13 初稿（2026-09-14）</p>
+  </div>
+</footer>
+
+</body>
+</html>

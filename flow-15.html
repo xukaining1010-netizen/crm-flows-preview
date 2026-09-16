@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM 流程 15 · 多主体/多项目归属 | 销售管理办法 V13</title>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:"Microsoft YaHei","Noto Sans SC",Arial,sans-serif;color:#333;background:#f5f6f8;line-height:1.7}
+.container{max-width:1200px;margin:0 auto;padding:0 40px}
+@media(max-width:1199px){.container{padding:0 24px}}
+@media(max-width:767px){.container{padding:0 16px}}
+.hero{background:linear-gradient(135deg,#0d3b6b,#185FA5);color:#fff;padding:56px 0 48px;text-align:center}
+.hero h1{font-size:30px;font-weight:bold;margin-bottom:10px}
+.hero p{font-size:16px;color:rgba(255,255,255,0.9);max-width:800px;margin:0 auto}
+.hero .crumb{display:inline-block;margin-top:16px;padding:4px 14px;border:1px solid rgba(255,255,255,0.5);border-radius:20px;font-size:13px;color:rgba(255,255,255,0.92)}
+@media(max-width:767px){.hero{padding:44px 0 36px}.hero h1{font-size:22px}.hero p{font-size:14px}}
+.nav{background:#0d3b6b;padding:10px 0;position:sticky;top:0;z-index:10}
+.nav .container{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center}
+.nav a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:13px;font-weight:bold}
+.nav a:hover{color:#fff;text-decoration:underline}
+@media(max-width:767px){.nav a{font-size:12px}}
+.section{padding:48px 0}
+.section:nth-child(even){background:#fff}
+.section h2{font-size:24px;font-weight:bold;margin-bottom:16px;color:#185FA5;padding-left:12px;border-left:4px solid #185FA5}
+.section h3{font-size:18px;font-weight:bold;margin:20px 0 10px;color:#444}
+.section p{font-size:15px;line-height:1.8;margin-bottom:12px;color:#555}
+@media(max-width:767px){.section{padding:32px 0}.section h2{font-size:20px}}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:8px}
+.meta-item{background:#fff;border:1px solid #e8e8e8;border-left:4px solid #185FA5;border-radius:8px;padding:14px 16px}
+.meta-item .k{font-size:13px;color:#888;margin-bottom:4px}
+.meta-item .v{font-size:15px;font-weight:bold;color:#333}
+.pill{display:inline-block;padding:2px 10px;border-radius:12px;font-size:13px;font-weight:bold;white-space:nowrap}
+.pill.line{background:#e6f4ea;color:#1e7e34}
+.pill.p0{background:#e6f4ea;color:#1e7e34}
+.pill.p1{background:#fff4d6;color:#a6790a}
+.pill.p2{background:#eef0f2;color:#5a5d61}
+.table-wrap{overflow-x:auto;margin-bottom:16px;background:#fff;border-radius:8px;border:1px solid #e8e8e8}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:680px}
+th{background:#185FA5;color:#fff;padding:10px 14px;text-align:left;font-weight:bold;white-space:nowrap}
+td{padding:10px 14px;border-bottom:1px solid #e8e8e8;color:#555;vertical-align:top}
+tr:nth-child(even) td{background:#f8f9fa}
+tr:last-child td{border-bottom:none}
+.raci{display:inline-block;min-width:26px;text-align:center;padding:1px 7px;border-radius:6px;font-size:12px;font-weight:bold}
+.raci.r{background:#fdecea;color:#c0392b}
+.raci.a{background:#fff4d6;color:#a6790a}
+.raci.c{background:#e6f4ea;color:#1e7e34}
+.raci.i{background:#eef0f2;color:#5a5d61}
+.svg-box{background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:20px;margin-bottom:16px;overflow-x:auto}
+.svg-box .fig-title{font-size:14px;font-weight:bold;color:#333;margin-bottom:12px;text-align:center}
+.svg-box svg{display:block;margin:0 auto;min-width:760px;max-width:100%}
+.card-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:8px}
+.card{background:#fff;border-radius:10px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06);border:1px solid #e8e8e8;border-top:4px solid #185FA5}
+.card h3{font-size:17px;font-weight:bold;color:#185FA5;margin:0 0 8px}
+.card p{font-size:14px;color:#555;line-height:1.6;margin-bottom:0}
+.callout{background:linear-gradient(135deg,#E6F1FB,#f0f6fd);border-left:4px solid #185FA5;border-radius:8px;padding:16px 20px;margin-bottom:16px;font-size:14px;color:#333}
+.callout.warn{background:#fff8e6;border-left-color:#e0a800}
+.callout.red{background:#fdecea;border-left-color:#c0392b}
+.callout p{margin-bottom:6px;font-size:14px;color:#333}
+.callout p:last-child{margin-bottom:0}
+.callout b{color:#185FA5}
+.ul-list{margin:8px 0;padding-left:20px}
+.ul-list li{margin-bottom:8px;font-size:14px;color:#555}
+.ul-list li b{color:#333}
+.footer{background:#0d3b6b;color:rgba(255,255,255,0.6);text-align:center;padding:22px 0;font-size:13px}</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <h1>CRM 流程 · 多主体/多项目归属</h1>
+    <p>多主体：同一集团按同一归属单位管理 · 多项目：客户共享、项目唯一 · 真撞单走 3.12.2 判定</p>
+    <span class="crumb">销售管理办法 V13 · 3.12.4 / 3.12.7 · P2 · flow-15</span>
+  </div>
+</section>
+
+<nav class="nav">
+  <div class="container">
+    <a href="#meta">元信息</a>
+    <a href="#goal">流程目标</a>
+    <a href="#io">输入输出</a>
+    <a href="#steps">详细步骤</a>
+    <a href="#flow">流程图</a>
+    <a href="#boundary">边界与断点</a>
+    <a href="#exception">异常分支</a>
+    <a href="#control">关键控制点</a>
+    <a href="index.html">&#8592; 返回索引</a>
+  </div>
+</nav>
+
+
+<!-- 1. 元信息 -->
+<section class="section" id="meta">
+  <div class="container">
+    <h2>1. 元信息</h2>
+    <div class="meta-grid">
+      <div class="meta-item"><div class="k">流程名称</div><div class="v">多主体/多项目归属</div></div>
+      <div class="meta-item"><div class="k">V13 条款编号</div><div class="v">3.12.4 / 3.12.7</div></div>
+      <div class="meta-item"><div class="k">层级</div><div class="v"><span class="pill p2">P2</span></div></div>
+      <div class="meta-item"><div class="k">是否触外部系统</div><div class="v">否（数据规则，非独立流程）</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. 流程目标 -->
+<section class="section" id="goal">
+  <div class="container">
+    <h2>2. 流程目标</h2>
+    <p>多主体/多项目归属解决两类复杂归属场景：同一集团客户存在多个签约/报备主体（3.12.4），以及同一客户有多个不同项目分别由不同销售跟进（3.12.7）。核心原则为"客户共享、项目唯一"——同一集团客户按同一归属单位管理，签约主体与报备主体不一致不影响归属认定；同一客户的不同项目分别由不同销售跟进，各项目业绩归各自主销售，不视为撞单。</p>
+    <p>本页为数据规则落地说明（P2），需作为 CRM 校验规则与数据模型支撑落地。多主体规则防止通过拆分主体规避归属；多项目规则明确客户层可设客户责任人负责整体关系但不改变项目层归属。</p>
+  </div>
+</section>
+
+<!-- 3. 输入输出 -->
+<section class="section" id="io">
+  <div class="container">
+    <h2>3. 输入输出</h2>
+    <div class="table-wrap"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody>
+      <tr><td><b>触发条件</b></td><td>同一集团客户出现多个签约/报备主体；同一客户有多个不同项目需分配给不同销售</td></tr>
+      <tr><td><b>上游流程</b></td><td>客户归属分层（flow-14）→ 分层归属数据为基础；商机采集/报备（flow-01-1）→ 多主体/多项目报备触发校验</td></tr>
+      <tr><td><b>下游流程</b></td><td>撞单/归属争议裁决（flow-04）→ 多项目撞上同一采购包时走撞单判定；客户指定/主销售变更（flow-06）→ 多项目场景下主销售调整</td></tr>
+      <tr><td><b>产出物</b></td><td>集团归属映射记录、主体变更留痕日志、多项目归属记录（客户责任人 + 各项目主销售）</td></tr>
+      <tr><td><b>关键字段</b></td><td>集团标识、签约主体、报备主体、项目ID、项目主销售、客户责任人、对外报价一致性校验标记</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- 4. 详细步骤 -->
+<section class="section" id="steps">
+  <div class="container">
+    <h2>4. 详细步骤</h2>
+    <h3>多主体客户（3.12.4）</h3>
+    <div class="table-wrap"><table><thead><tr><th>步骤</th><th>动作</th><th>运营组</th><th>销售负责人</th></tr></thead><tbody>
+      <tr><td>4.1 集团归属映射</td><td>同一集团客户按同一归属单位管理，建立集团-主体映射</td><td><span class="raci a">A</span></td><td><span class="raci i">I</span></td></tr>
+      <tr><td>4.2 主体不一致处理</td><td>签约主体与报备主体不一致的，不影响归属认定</td><td><span class="raci a">A</span></td><td>&mdash;</td></tr>
+      <tr><td>4.3 主体变更登记</td><td>主体变更须在台账或 CRM 中登记留痕</td><td><span class="raci a">A</span></td><td><span class="raci i">I</span></td></tr>
+    </tbody></table></div>
+    <h3>同一客户多项目（3.12.7）</h3>
+    <div class="table-wrap"><table><thead><tr><th>步骤</th><th>动作</th><th>销售</th><th>运营组</th><th>销售负责人</th></tr></thead><tbody>
+      <tr><td>4.4 多项目分配</td><td>同一客户不同项目分别由不同销售跟进，各项目业绩归各自主销售</td><td><span class="raci c">C</span></td><td><span class="raci a">A</span></td><td><span class="raci r">R</span></td></tr>
+      <tr><td>4.5 客户责任人设置</td><td>客户层设客户责任人负责整体关系，不改变项目层归属</td><td><span class="raci c">C</span></td><td><span class="raci a">A</span></td><td><span class="raci i">I</span></td></tr>
+      <tr><td>4.6 对外口径一致</td><td>同一客户报价与商务承诺须一致，由客户责任人或业务线负责人把关</td><td><span class="raci c">C</span></td><td><span class="raci a">A</span></td><td><span class="raci r">R</span></td></tr>
+      <tr><td>4.7 真撞单判定</td><td>两个项目撞上同一采购包或同一笔预算的，按 3.12.2 撞单判定处理</td><td><span class="raci c">C</span></td><td><span class="raci a">A</span></td><td><span class="raci r">R</span></td></tr>
+    </tbody></table></div>
+    <p class="note" style="font-size:13px;color:#888">R=决策 A=审批 C=执行 I=知会</p>
+  </div>
+</section>
+
+<!-- 5. 流程图 -->
+<section class="section" id="flow">
+  <div class="container">
+    <h2>5. 流程图</h2>
+    <div class="svg-box">
+      <div class="fig-title">多主体/多项目归属判定流程</div>
+      <svg viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="多主体多项目归属判定流程">
+        <defs>
+          <marker id="arrow15" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#5a5d61"/>
+          </marker>
+          <style>
+            .box15{fill:#fff;stroke:#185FA5;stroke-width:1.5;rx:6}
+            .dia15{fill:#fff8e6;stroke:#e0a800;stroke-width:1.5}
+            .end15{fill:#e6f4ea;stroke:#1e7e34;stroke-width:1.5;rx:16}
+            .lbl15{font-size:13px;font-weight:bold;fill:#0d3b6b}
+            .txt15{font-size:12px;fill:#333}
+            .edge15{stroke:#5a5d61;stroke-width:1.5;fill:none;marker-end:url(#arrow15)}
+          </style>
+        </defs>
+        <!-- 起点 -->
+        <rect x="350" y="10" width="200" height="40" class="box15"/><text x="450" y="35" class="txt15" text-anchor="middle">同一客户出现新主体/新项目</text>
+        <!-- 判定：是新主体还是新项目 -->
+        <polygon points="450,70 540,110 450,150 360,110" class="dia15"/><text x="450" y="114" class="txt15" text-anchor="middle">新主体 or 新项目?</text>
+        <!-- 左路：多主体 -->
+        <rect x="50" y="180" width="180" height="40" class="box15"/><text x="140" y="205" class="txt15" text-anchor="middle">映射至同一集团归属单位</text>
+        <rect x="50" y="250" width="180" height="40" class="box15"/><text x="140" y="275" class="txt15" text-anchor="middle">签约主体 != 报备主体 -> 不影响</text>
+        <rect x="50" y="320" width="180" height="40" class="box15"/><text x="140" y="345" class="txt15" text-anchor="middle">主体变更登记留痕</text>
+        <rect x="50" y="390" width="180" height="40" class="end15"/><text x="140" y="415" class="txt15" text-anchor="middle">归属认定完成</text>
+        <!-- 右路：多项目 -->
+        <rect x="680" y="180" width="180" height="40" class="box15"/><text x="770" y="205" class="txt15" text-anchor="middle">分配项目主销售（各不同）</text>
+        <rect x="680" y="250" width="180" height="40" class="box15"/><text x="770" y="275" class="txt15" text-anchor="middle">客户责任人负责整体关系</text>
+        <polygon points="770,310 840,340 770,370 700,340" class="dia15"/><text x="770" y="344" class="txt15" text-anchor="middle">同一采购包?</text>
+        <rect x="680" y="390" width="180" height="40" class="end15"/><text x="770" y="415" class="txt15" text-anchor="middle">不视为撞单</text>
+        <!-- 真撞单分支 -->
+        <rect x="400" y="390" width="180" height="40" class="box15"/><text x="490" y="408" class="txt15" text-anchor="middle">按 3.12.2 撞单判定</text>
+        <text x="490" y="423" class="txt15" text-anchor="middle" fill="#c0392b">（真撞单）</text>
+        <!-- 连线 -->
+        <path d="M450 50 L450 70" class="edge15"/>
+        <path d="M360 110 L360 155 L140 155 L140 180" class="edge15"/>
+        <path d="M540 110 L540 155 L770 155 L770 180" class="edge15"/>
+        <path d="M140 220 L140 250" class="edge15"/>
+        <path d="M140 290 L140 320" class="edge15"/>
+        <path d="M140 360 L140 390" class="edge15"/>
+        <path d="M770 220 L770 250" class="edge15"/>
+        <path d="M770 290 L770 310" class="edge15"/>
+        <path d="M700 340 L490 340 L490 390" class="edge15"/>
+        <path d="M770 370 L770 390" class="edge15"/>
+        <text x="260" y="115" class="txt15" fill="#888">多主体</text>
+        <text x="580" y="115" class="txt15" fill="#888">多项目</text>
+        <text x="520" y="365" class="txt15" fill="#c0392b">YES</text>
+        <text x="800" y="365" class="txt15" fill="#1e7e34">NO</text>
+      </svg>
+    </div>
+    <div class="callout">
+      <b>图注：</b>左侧为多主体路径（同一集团按同一归属单位管理，主体变更留痕）；右侧为多项目路径（各项目主销售独立，客户责任人管整体关系）。当两个项目撞上同一采购包或同一笔预算时，触发真撞单判定（3.12.2），按时间先后、客户指定、负责人裁定处理。
+    </div>
+  </div>
+</section>
+
+<!-- 6. 边界与断点 -->
+<section class="section" id="boundary">
+  <div class="container">
+    <h2>6. 边界与断点</h2>
+    <div class="table-wrap"><table><thead><tr><th>环节</th><th>处理方式</th><th>说明</th></tr></thead><tbody>
+      <tr><td>集团多法人主体管理</td><td>CRM 内映射</td><td>同一集团客户按同一归属单位管理，建立集团-主体映射关系</td></tr>
+      <tr><td>主体变更登记</td><td>CRM/台账留痕</td><td>主体变更须登记留痕，防止通过拆分主体规避归属规则</td></tr>
+      <tr><td>对外报价一致性</td><td>人工把关</td><td>同一客户的报价与商务承诺须保持一致，由客户责任人或业务线负责人把关</td></tr>
+      <tr><td>真撞单判定</td><td>走撞单流程</td><td>两个项目撞上同一采购包或同一笔预算时，按 3.12.2 撞单判定规则处理（见 flow-04）</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- 7. 异常分支 -->
+<section class="section" id="exception">
+  <div class="container">
+    <h2>7. 异常分支</h2>
+    <ul class="ul-list">
+      <li><b>通过拆分主体规避归属规则</b>：主体变更须在台账或 CRM 中登记留痕；未经登记的主体拆分不改变归属认定结果。</li>
+      <li><b>同一客户多项目撞上同一采购包</b>：即"真撞单"，按 3.12.2 撞单判定规则处理（时间先后 / 客户指定 / 负责人裁定），不走多项目正常分配路径。</li>
+      <li><b>对外报价不一致</b>：同一客户由不同销售跟进不同项目时，如出现报价不一致，由客户责任人或业务线负责人统一把关协调。</li>
+      <li><b>客户责任人变更影响项目归属</b>：客户责任人变更仅影响客户层关系维护，不改变项目层各项目的主销售归属。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 8. 关键控制点 -->
+<section class="section" id="control">
+  <div class="container">
+    <h2>8. 关键控制点</h2>
+    <div class="table-wrap"><table><thead><tr><th>类型</th><th>控制点</th><th>动作/后果</th></tr></thead><tbody>
+      <tr><td>数据校验</td><td>集团-主体映射完整</td><td>同一集团客户的所有签约/报备主体须映射至同一归属单位</td></tr>
+      <tr><td>数据校验</td><td>多项目主销售各独立</td><td>同一客户不同项目可由不同销售跟进，各项目业绩归各自主销售</td></tr>
+      <tr><td>留痕</td><td>主体变更须登记</td><td>主体变更未登记留痕的，视为规避归属规则，归属按原认定不变</td></tr>
+      <tr><td>关联</td><td>真撞单触发判定</td><td>两个项目撞上同一采购包/同一笔预算时，自动触发 3.12.2 撞单判定流程</td></tr>
+      <tr><td>对外口径</td><td>报价一致性</td><td>同一客户报价不一致的，由客户责任人或业务线负责人协调统一</td></tr>
+    </tbody></table></div>
+    <div class="callout warn">
+      <p><b>【待 V13 定稿确认】</b>3.12.4 与 3.12.7 为 V13 初稿新增条款，集团归属映射的字段定义与真撞单判定口径须待 V13 正式定稿后同步回溯。</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>VeryCloud 云端智慧事业部 · CRM 流程扩写 · 基于《销售管理办法》V13 初稿（2026-09-14）</p>
+  </div>
+</footer>
+
+</body>
+</html>

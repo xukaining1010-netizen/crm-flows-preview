@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM 流程扩写 · 总索引 | 销售管理办法 V13</title>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:"Microsoft YaHei","Noto Sans SC",Arial,sans-serif;color:#333;background:#f5f6f8;line-height:1.7}
+.container{max-width:1200px;margin:0 auto;padding:0 40px}
+@media(max-width:1199px){.container{padding:0 24px}}
+@media(max-width:767px){.container{padding:0 16px}}
+.hero{background:linear-gradient(135deg,#0d3b6b,#185FA5);color:#fff;padding:56px 0 48px;text-align:center}
+.hero h1{font-size:30px;font-weight:bold;margin-bottom:10px}
+.hero p{font-size:16px;color:rgba(255,255,255,0.9);max-width:800px;margin:0 auto}
+.hero .crumb{display:inline-block;margin-top:16px;padding:4px 14px;border:1px solid rgba(255,255,255,0.5);border-radius:20px;font-size:13px;color:rgba(255,255,255,0.92)}
+@media(max-width:767px){.hero{padding:44px 0 36px}.hero h1{font-size:22px}.hero p{font-size:14px}}
+.nav{background:#0d3b6b;padding:10px 0;position:sticky;top:0;z-index:10}
+[id]{scroll-margin-top:60px}
+.nav .container{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center}
+.nav a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:13px;font-weight:bold}
+.nav a:hover{color:#fff;text-decoration:underline}
+@media(max-width:767px){.nav a{font-size:12px}}
+.section{padding:48px 0}
+.section:nth-child(even){background:#fff}
+.section h2{font-size:24px;font-weight:bold;margin-bottom:16px;color:#185FA5;padding-left:12px;border-left:4px solid #185FA5}
+.section h3{font-size:18px;font-weight:bold;margin:20px 0 10px;color:#444}
+.section p{font-size:15px;line-height:1.8;margin-bottom:12px;color:#555}
+@media(max-width:767px){.section{padding:32px 0}.section h2{font-size:20px}}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:8px}
+.meta-item{background:#fff;border:1px solid #e8e8e8;border-left:4px solid #185FA5;border-radius:8px;padding:14px 16px}
+.meta-item .k{font-size:13px;color:#888;margin-bottom:4px}
+.meta-item .v{font-size:15px;font-weight:bold;color:#333}
+.pill{display:inline-block;padding:2px 10px;border-radius:12px;font-size:13px;font-weight:bold;white-space:nowrap}
+.pill.line{background:#e6f4ea;color:#1e7e34}
+.pill.p0{background:#e6f4ea;color:#1e7e34}
+.pill.p1{background:#fff4d6;color:#a6790a}
+.pill.p2{background:#eef0f2;color:#5a5d61}
+.table-wrap{overflow-x:auto;margin-bottom:16px;background:#fff;border-radius:8px;border:1px solid #e8e8e8}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:680px}
+th{background:#185FA5;color:#fff;padding:10px 14px;text-align:left;font-weight:bold;white-space:nowrap}
+td{padding:10px 14px;border-bottom:1px solid #e8e8e8;color:#555;vertical-align:top}
+tr:nth-child(even) td{background:#f8f9fa}
+tr:last-child td{border-bottom:none}
+.raci{display:inline-block;min-width:26px;text-align:center;padding:1px 7px;border-radius:6px;font-size:12px;font-weight:bold}
+.raci.r{background:#fdecea;color:#c0392b}
+.raci.a{background:#fff4d6;color:#a6790a}
+.raci.c{background:#e6f4ea;color:#1e7e34}
+.raci.i{background:#eef0f2;color:#5a5d61}
+.svg-box{background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:20px;margin-bottom:16px;overflow-x:auto}
+.svg-box .fig-title{font-size:14px;font-weight:bold;color:#333;margin-bottom:12px;text-align:center}
+.svg-box svg{display:block;margin:0 auto;min-width:760px;max-width:100%}
+.card-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:8px}
+.card{background:#fff;border-radius:10px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06);border:1px solid #e8e8e8;border-top:4px solid #185FA5}
+.card h3{font-size:17px;font-weight:bold;color:#185FA5;margin:0 0 8px}
+.card p{font-size:14px;color:#555;line-height:1.6;margin-bottom:0}
+.callout{background:linear-gradient(135deg,#E6F1FB,#f0f6fd);border-left:4px solid #185FA5;border-radius:8px;padding:16px 20px;margin-bottom:16px;font-size:14px;color:#333}
+.callout.warn{background:#fff8e6;border-left-color:#e0a800}
+.callout.red{background:#fdecea;border-left-color:#c0392b}
+.callout p{margin-bottom:6px;font-size:14px;color:#333}
+.callout p:last-child{margin-bottom:0}
+.callout b{color:#185FA5}
+.ul-list{margin:8px 0;padding-left:20px}
+.ul-list li{margin-bottom:8px;font-size:14px;color:#555}
+.ul-list li b{color:#333}
+.footer{background:#0d3b6b;color:rgba(255,255,255,0.6);text-align:center;padding:22px 0;font-size:13px}</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <h1>CRM 流程扩写 · 总索引</h1>
+    <p>基于《销售管理办法》V13 初稿（2026-09-14）· 19 个流程 / 24 个页面（含角色权限总表）</p>
+    <span class="crumb">主线 + P0 + P1 + P2 + 管理主线 · 全覆盖</span>
+  </div>
+</section>
+
+<nav class="nav">
+  <div class="container">
+    <a href="#overview">说明</a>
+    <a href="#main">主线</a>
+    <a href="#p0">P0 必建主环</a>
+    <a href="#p1">P1 运营管控</a>
+    <a href="#p2">P2 数据规则</a>
+    <a href="#mgmt">管理主线</a>
+    <a href="#roles-sum">角色权限</a>
+  </div>
+</nav>
+
+<!-- 说明 -->
+<section class="section" id="overview">
+  <div class="container">
+    <h2>说明</h2>
+    <p>本索引页汇总 CRM 一期流程扩写全部产物，共覆盖 <b>19 个流程</b>、<b>24 个页面</b>（含 1 个总览页 + 4 个主线子页 + 18 个独立流程页，另含 1 张角色与权限总表）。按主线 / P0 / P1 / P2 / 管理主线五层分组，全部使用相对链接（同目录），无绝对路径与外链。</p>
+    <div class="table-wrap"><table><thead><tr><th>附属产出</th><th>说明</th><th>链接</th></tr></thead><tbody>
+      <tr id="roles-sum"><td>角色与权限总表</td><td><span class="pill p2">权限体系</span>　17 类角色 · 发起/决策/审批/执行/知会行为矩阵 · 汇报关系 · 数据可见性（CRM 权限模型输入）</td><td><a href="roles.html">roles.html</a></td></tr>
+    </tbody></table></div>
+    <div class="meta-grid">
+      <div class="meta-item"><div class="k">流程总数</div><div class="v">19 个</div></div>
+      <div class="meta-item"><div class="k">页面总数</div><div class="v">24 页</div></div>
+      <div class="meta-item"><div class="k">源依据</div><div class="v">V13 初稿（2026-09-14）</div></div>
+      <div class="meta-item"><div class="k">产物目录</div><div class="v">docs/crm-flows/</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 主线 -->
+<section class="section" id="main">
+  <div class="container">
+    <h2>主线（核心主流程）</h2>
+    <div class="table-wrap"><table><thead><tr><th>流程</th><th>V13 条款</th><th>层级</th><th>链接</th></tr></thead><tbody>
+      <tr><td>核心主流程总览</td><td>3.2-3.7</td><td><span class="pill line">主线</span></td><td><a href="flow-01-overview.html">flow-01-overview.html</a></td></tr>
+      <tr><td>商机采集（报备）</td><td>3.2</td><td><span class="pill line">主线·子页</span></td><td><a href="flow-01-1-%E9%87%87%E9%9B%86.html">flow-01-1-采集.html</a></td></tr>
+      <tr><td>分拣审核流转</td><td>3.3</td><td><span class="pill line">主线·子页</span></td><td><a href="flow-01-2-%E5%88%86%E6%8B%A3.html">flow-01-2-分拣.html</a></td></tr>
+      <tr><td>跟进处理（测试/合同/归档）</td><td>3.4-3.6</td><td><span class="pill line">主线·子页</span></td><td><a href="flow-01-3-%E8%B7%9F%E8%BF%9B.html">flow-01-3-跟进.html</a></td></tr>
+      <tr><td>签约与追踪</td><td>3.7</td><td><span class="pill line">主线·子页</span></td><td><a href="flow-01-4-%E7%AD%BE%E7%BA%A6.html">flow-01-4-签约.html</a></td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- P0 -->
+<section class="section" id="p0">
+  <div class="container">
+    <h2>P0 必建主环</h2>
+    <div class="table-wrap"><table><thead><tr><th>流程</th><th>V13 条款</th><th>层级</th><th>链接</th></tr></thead><tbody>
+      <tr><td>公海流转与认领</td><td>3.8</td><td><span class="pill p0">P0</span></td><td><a href="flow-02.html">flow-02.html</a></td></tr>
+      <tr><td>续签管理</td><td>3.9</td><td><span class="pill p0">P0</span></td><td><a href="flow-03.html">flow-03.html</a></td></tr>
+      <tr><td>撞单/归属争议裁决</td><td>3.12.2</td><td><span class="pill p0">P0</span></td><td><a href="flow-04.html">flow-04.html</a></td></tr>
+      <tr><td>报备失效处理</td><td>3.12.3</td><td><span class="pill p0">P0</span></td><td><a href="flow-05.html">flow-05.html</a></td></tr>
+      <tr><td>客户指定/主销售变更</td><td>3.12.5</td><td><span class="pill p0">P0</span></td><td><a href="flow-06.html">flow-06.html</a></td></tr>
+      <tr><td>线索管理/资格判定</td><td>3.7</td><td><span class="pill p0">P0</span></td><td><a href="flow-07.html">flow-07.html</a></td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- P1 -->
+<section class="section" id="p1">
+  <div class="container">
+    <h2>P1 运营管控</h2>
+    <div class="table-wrap"><table><thead><tr><th>流程</th><th>V13 条款</th><th>层级</th><th>链接</th></tr></thead><tbody>
+      <tr><td>商机追踪看板与预警</td><td>3.7</td><td><span class="pill p1">P1</span></td><td><a href="flow-08.html">flow-08.html</a></td></tr>
+      <tr><td>业绩归属变更/跨期切分</td><td>3.12.6</td><td><span class="pill p1">P1</span></td><td><a href="flow-09.html">flow-09.html</a></td></tr>
+      <tr><td>市场活动+线索归集</td><td>3.11</td><td><span class="pill p1">P1</span></td><td><a href="flow-10.html">flow-10.html</a></td></tr>
+      <tr><td>测试资源申请与回收</td><td>3.4</td><td><span class="pill p1">P1</span></td><td><a href="flow-11.html">flow-11.html</a></td></tr>
+      <tr><td>在职目标下达与承诺</td><td>5.2.x</td><td><span class="pill p1">P1</span></td><td><a href="flow-12.html">flow-12.html</a></td></tr>
+      <tr><td>合同四方审核（CRM段）</td><td>3.5</td><td><span class="pill p1">P1</span></td><td><a href="flow-13.html">flow-13.html</a></td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- P2 -->
+<section class="section" id="p2">
+  <div class="container">
+    <h2>P2 数据规则与接口</h2>
+    <div class="table-wrap"><table><thead><tr><th>流程</th><th>V13 条款</th><th>层级</th><th>链接</th></tr></thead><tbody>
+      <tr><td>客户归属分层</td><td>3.12.1</td><td><span class="pill p2">P2</span></td><td><a href="flow-14.html">flow-14.html</a></td></tr>
+      <tr><td>多主体/多项目归属</td><td>3.12.4 / 3.12.7</td><td><span class="pill p2">P2</span></td><td><a href="flow-15.html">flow-15.html</a></td></tr>
+      <tr><td>离职交接（CRM段）</td><td>6.5</td><td><span class="pill p2">P2</span></td><td><a href="flow-16.html">flow-16.html</a></td></tr>
+      <tr><td>行为红线触发与留痕</td><td>6.1</td><td><span class="pill p2">P2</span></td><td><a href="flow-17.html">flow-17.html</a></td></tr>
+      <tr><td>欠款/回款标记（只读）</td><td>4.x / 5.5</td><td><span class="pill p2">P2</span></td><td><a href="flow-18.html">flow-18.html</a></td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- 管理主线 -->
+<section class="section" id="mgmt">
+  <div class="container">
+    <h2>管理主线</h2>
+    <div class="table-wrap"><table><thead><tr><th>流程</th><th>V13 条款</th><th>层级</th><th>链接</th></tr></thead><tbody>
+      <tr><td>新人培训-考核-提前转正</td><td>5.4</td><td><span class="pill line">管理主线</span></td><td><a href="flow-19.html">flow-19.html</a></td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>VeryCloud 云端智慧事业部 · CRM 流程扩写总索引 · 基于《销售管理办法》V13 初稿（2026-09-14）· 19 流程 / 24 页</p>
+  </div>
+</footer>
+
+</body>
+</html>

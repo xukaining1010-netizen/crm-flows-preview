@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM 流程 14 · 客户归属分层 | 销售管理办法 V13</title>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:"Microsoft YaHei","Noto Sans SC",Arial,sans-serif;color:#333;background:#f5f6f8;line-height:1.7}
+.container{max-width:1200px;margin:0 auto;padding:0 40px}
+@media(max-width:1199px){.container{padding:0 24px}}
+@media(max-width:767px){.container{padding:0 16px}}
+.hero{background:linear-gradient(135deg,#0d3b6b,#185FA5);color:#fff;padding:56px 0 48px;text-align:center}
+.hero h1{font-size:30px;font-weight:bold;margin-bottom:10px}
+.hero p{font-size:16px;color:rgba(255,255,255,0.9);max-width:800px;margin:0 auto}
+.hero .crumb{display:inline-block;margin-top:16px;padding:4px 14px;border:1px solid rgba(255,255,255,0.5);border-radius:20px;font-size:13px;color:rgba(255,255,255,0.92)}
+@media(max-width:767px){.hero{padding:44px 0 36px}.hero h1{font-size:22px}.hero p{font-size:14px}}
+.nav{background:#0d3b6b;padding:10px 0;position:sticky;top:0;z-index:10}
+.nav .container{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center}
+.nav a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:13px;font-weight:bold}
+.nav a:hover{color:#fff;text-decoration:underline}
+@media(max-width:767px){.nav a{font-size:12px}}
+.section{padding:48px 0}
+.section:nth-child(even){background:#fff}
+.section h2{font-size:24px;font-weight:bold;margin-bottom:16px;color:#185FA5;padding-left:12px;border-left:4px solid #185FA5}
+.section h3{font-size:18px;font-weight:bold;margin:20px 0 10px;color:#444}
+.section p{font-size:15px;line-height:1.8;margin-bottom:12px;color:#555}
+@media(max-width:767px){.section{padding:32px 0}.section h2{font-size:20px}}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:8px}
+.meta-item{background:#fff;border:1px solid #e8e8e8;border-left:4px solid #185FA5;border-radius:8px;padding:14px 16px}
+.meta-item .k{font-size:13px;color:#888;margin-bottom:4px}
+.meta-item .v{font-size:15px;font-weight:bold;color:#333}
+.pill{display:inline-block;padding:2px 10px;border-radius:12px;font-size:13px;font-weight:bold;white-space:nowrap}
+.pill.line{background:#e6f4ea;color:#1e7e34}
+.pill.p0{background:#e6f4ea;color:#1e7e34}
+.pill.p1{background:#fff4d6;color:#a6790a}
+.pill.p2{background:#eef0f2;color:#5a5d61}
+.table-wrap{overflow-x:auto;margin-bottom:16px;background:#fff;border-radius:8px;border:1px solid #e8e8e8}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:680px}
+th{background:#185FA5;color:#fff;padding:10px 14px;text-align:left;font-weight:bold;white-space:nowrap}
+td{padding:10px 14px;border-bottom:1px solid #e8e8e8;color:#555;vertical-align:top}
+tr:nth-child(even) td{background:#f8f9fa}
+tr:last-child td{border-bottom:none}
+.raci{display:inline-block;min-width:26px;text-align:center;padding:1px 7px;border-radius:6px;font-size:12px;font-weight:bold}
+.raci.r{background:#fdecea;color:#c0392b}
+.raci.a{background:#fff4d6;color:#a6790a}
+.raci.c{background:#e6f4ea;color:#1e7e34}
+.raci.i{background:#eef0f2;color:#5a5d61}
+.svg-box{background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:20px;margin-bottom:16px;overflow-x:auto}
+.svg-box .fig-title{font-size:14px;font-weight:bold;color:#333;margin-bottom:12px;text-align:center}
+.svg-box svg{display:block;margin:0 auto;min-width:760px;max-width:100%}
+.card-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:8px}
+.card{background:#fff;border-radius:10px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06);border:1px solid #e8e8e8;border-top:4px solid #185FA5}
+.card h3{font-size:17px;font-weight:bold;color:#185FA5;margin:0 0 8px}
+.card p{font-size:14px;color:#555;line-height:1.6;margin-bottom:0}
+.callout{background:linear-gradient(135deg,#E6F1FB,#f0f6fd);border-left:4px solid #185FA5;border-radius:8px;padding:16px 20px;margin-bottom:16px;font-size:14px;color:#333}
+.callout.warn{background:#fff8e6;border-left-color:#e0a800}
+.callout.red{background:#fdecea;border-left-color:#c0392b}
+.callout p{margin-bottom:6px;font-size:14px;color:#333}
+.callout p:last-child{margin-bottom:0}
+.callout b{color:#185FA5}
+.ul-list{margin:8px 0;padding-left:20px}
+.ul-list li{margin-bottom:8px;font-size:14px;color:#555}
+.ul-list li b{color:#333}
+.footer{background:#0d3b6b;color:rgba(255,255,255,0.6);text-align:center;padding:22px 0;font-size:13px}</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <h1>CRM 流程 · 客户归属分层</h1>
+    <p>客户层多人维护（责任人 + 参与人）· 项目层唯一主销售 · 分层归属不视为撞单</p>
+    <span class="crumb">销售管理办法 V13 · 3.12.1 · P2 · flow-14</span>
+  </div>
+</section>
+
+<nav class="nav">
+  <div class="container">
+    <a href="#meta">元信息</a>
+    <a href="#goal">流程目标</a>
+    <a href="#io">输入输出</a>
+    <a href="#steps">详细步骤</a>
+    <a href="#flow">流程图</a>
+    <a href="#boundary">边界与断点</a>
+    <a href="#exception">异常分支</a>
+    <a href="#control">关键控制点</a>
+    <a href="index.html">&#8592; 返回索引</a>
+  </div>
+</nav>
+
+
+<!-- 1. 元信息 -->
+<section class="section" id="meta">
+  <div class="container">
+    <h2>1. 元信息</h2>
+    <div class="meta-grid">
+      <div class="meta-item"><div class="k">流程名称</div><div class="v">客户归属分层</div></div>
+      <div class="meta-item"><div class="k">V13 条款编号</div><div class="v">3.12.1</div></div>
+      <div class="meta-item"><div class="k">层级</div><div class="v"><span class="pill p2">P2</span></div></div>
+      <div class="meta-item"><div class="k">是否触外部系统</div><div class="v">否（数据规则，非独立流程）</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. 流程目标 -->
+<section class="section" id="goal">
+  <div class="container">
+    <h2>2. 流程目标</h2>
+    <p>客户归属分层解决"一个客户能否被多名销售共同维护"的核心问题。V13 第 3.12.1 条将归属分为两个层级——客户层与项目（商机）层，二者规则不同但互为支撑：客户层允许多人共同维护（客户责任人 + 参与人），只记关系、不判归属、不视为撞单；项目层必须唯一主销售，每条商机在报备时确定主销售，多名销售参与的标注主销售与协同销售，作为业绩与统计依据。</p>
+    <p>本页为数据规则落地说明（P2），不构成独立业务流程，需作为 CRM 数据模型字段与校验规则落地。归属分层是撞单判定（3.12.2）、多主体归属（3.12.4）、同一客户多项目（3.12.7）等后续规则的基础数据基座。</p>
+  </div>
+</section>
+
+<!-- 3. 输入输出 -->
+<section class="section" id="io">
+  <div class="container">
+    <h2>3. 输入输出</h2>
+    <div class="table-wrap"><table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody>
+      <tr><td><b>触发条件</b></td><td>商机报备时确定主销售（项目层）；客户首次录入或维护关系变更时设置客户责任人与参与人（客户层）</td></tr>
+      <tr><td><b>上游流程</b></td><td>商机采集/报备（flow-01-1）→ 报备时确定项目层主销售；线索管理/资格判定（flow-07）→ 线索转商机时关联客户层归属</td></tr>
+      <tr><td><b>下游流程</b></td><td>撞单/归属争议裁决（flow-04）→ 依据归属分层判定；多主体/多项目归属（flow-15）→ 在分层基础上处理复杂归属；业绩归属变更（flow-09）→ 归属记录变更须分层登记</td></tr>
+      <tr><td><b>产出物</b></td><td>客户层归属记录（客户责任人 + 参与人）、项目层归属记录（主销售 + 协同销售）、归属变更留痕日志</td></tr>
+      <tr><td><b>关键字段</b></td><td>客户名称、客户责任人、参与人、商机ID、主销售、协同销售、报备时间、归属变更记录</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- 4. 详细步骤 -->
+<section class="section" id="steps">
+  <div class="container">
+    <h2>4. 详细步骤</h2>
+    <div class="table-wrap"><table><thead><tr><th>层级</th><th>步骤</th><th>销售</th><th>运营组</th><th>销售负责人</th></tr></thead><tbody>
+      <tr><td rowspan="2">客户层</td><td>4.1 客户首次录入时设置客户责任人</td><td><span class="raci c">C</span></td><td><span class="raci a">A</span></td><td>&mdash;</td></tr>
+      <tr><td>4.2 变更/增补参与人（只记关系，不判归属）</td><td><span class="raci c">C</span></td><td><span class="raci a">A</span></td><td><span class="raci i">I</span></td></tr>
+      <tr><td rowspan="2">项目层</td><td>4.3 商机报备时确定唯一主销售</td><td><span class="raci r">R</span></td><td><span class="raci a">A</span></td><td>&mdash;</td></tr>
+      <tr><td>4.4 多人参与时标注主销售与协同销售（业绩与统计依据）</td><td><span class="raci c">C</span></td><td><span class="raci a">A</span></td><td><span class="raci i">I</span></td></tr>
+    </tbody></table></div>
+    <p class="note" style="font-size:13px;color:#888">R=决策 A=审批 C=执行 I=知会</p>
+  </div>
+</section>
+
+<!-- 5. 流程图 -->
+<section class="section" id="flow">
+  <div class="container">
+    <h2>5. 流程图</h2>
+    <div class="svg-box">
+      <div class="fig-title">客户归属分层数据模型示意图</div>
+            <!-- diagram-type: ARCH -->
+      <svg viewBox="0 0 1000 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="客户归属分层数据模型">
+        <defs>
+          <marker id="arrow14" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#5a5d61"/>
+          </marker>
+          <style>
+            .box14{fill:#fff;stroke:#185FA5;stroke-width:1.5;rx:6}
+            .lbl14{font-size:14px;font-weight:bold;fill:#0d3b6b}
+            .txt14{font-size:12px;fill:#333}
+            .note14{font-size:12px;fill:#888}
+            .edge14{stroke:#5a5d61;stroke-width:1.5;fill:none;marker-end:url(#arrow14)}
+            .sub14{fill:#eef2f7;stroke:#cdd6e2;stroke-width:1;rx:4}
+            .pill14{fill:#e6f4ea;stroke:#1e7e34;stroke-width:1;rx:12}
+          </style>
+        </defs>
+        <!-- 客户层：允许多人共同维护，只记关系 / 不判归属（列宽 170，三列 x=220/450/680） -->
+        <rect x="30" y="20" width="940" height="150" class="sub14"/>
+        <text x="50" y="48" class="lbl14">客户层（允许多人共同维护）</text>
+        <text x="950" y="78" class="note14" text-anchor="end">只记关系</text>
+        <text x="950" y="96" class="note14" text-anchor="end">不判归属</text>
+        <text x="950" y="114" class="note14" text-anchor="end">不视为撞单</text>
+        <rect x="220" y="66" width="170" height="48" class="box14"/><text x="305" y="95" class="txt14" text-anchor="middle">客户责任人</text>
+        <rect x="450" y="66" width="170" height="48" class="box14"/><text x="535" y="95" class="txt14" text-anchor="middle">参与人 A</text>
+        <rect x="680" y="66" width="170" height="48" class="box14"/><text x="765" y="95" class="txt14" text-anchor="middle">参与人 B</text>
+        <!-- 项目（商机）层：每条商机必须唯一主销售（同上三列：220/450/680，与上层严格对齐） -->
+        <rect x="30" y="210" width="940" height="150" class="sub14"/>
+        <text x="50" y="238" class="lbl14">项目（商机）层（必须唯一主销售）</text>
+        <text x="950" y="285" class="note14" text-anchor="end">业绩与统计依据</text>
+        <rect x="220" y="256" width="170" height="48" class="box14"/><text x="305" y="285" class="txt14" text-anchor="middle">主销售（唯一）</text>
+        <rect x="450" y="256" width="170" height="48" class="box14"/><text x="535" y="285" class="txt14" text-anchor="middle">协同销售（可选）</text>
+        <rect x="680" y="256" width="170" height="48" class="box14"/><text x="765" y="285" class="txt14" text-anchor="middle">报备时间</text>
+        <!-- 分层归属映射：上下两层列位严格对齐，故三条连线均为垂直直线（零折点，段长 142px） -->
+        <path d="M305 114 L305 256" class="edge14"/>
+        <path d="M535 114 L535 256" class="edge14"/>
+        <path d="M765 114 L765 256" class="edge14"/>
+      </svg>
+    </div>
+    <div class="callout">
+      <b>图注：</b>上层为客户层，允许多人共同维护（客户责任人 + 参与人），仅记关系不判归属；下层为项目层，每条商机必须唯一主销售。客户层参与人可关联到项目层协同销售，但项目层归属以主销售为准。
+    </div>
+  </div>
+</section>
+
+<!-- 6. 边界与断点 -->
+<section class="section" id="boundary">
+  <div class="container">
+    <h2>6. 边界与断点</h2>
+    <div class="table-wrap"><table><thead><tr><th>环节</th><th>处理方式</th><th>说明</th></tr></thead><tbody>
+      <tr><td>客户层归属变更</td><td>CRM 内登记留痕</td><td>参与人增减、客户责任人变更须在台账或 CRM 中登记，防止通过拆分主体规避归属规则</td></tr>
+      <tr><td>项目层主销售确定</td><td>报备时确定</td><td>每条商机在报备时确定主销售，报备后不可随意变更（变更须走 3.12.5 客户指定或 6.5 离职交接流程）</td></tr>
+      <tr><td>协同销售标注</td><td>CRM 内标注</td><td>多人参与时标注主销售与协同销售，作为业绩与统计依据；协同销售不改变主销售唯一性</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<!-- 7. 异常分支 -->
+<section class="section" id="exception">
+  <div class="container">
+    <h2>7. 异常分支</h2>
+    <ul class="ul-list">
+      <li><b>客户层归属与项目层归属冲突</b>：客户层有多名参与人，但项目层主销售唯一；参与人不自动获得项目归属，以项目层主销售为准。</li>
+      <li><b>通过拆分主体规避归属规则</b>：主体变更须在台账或 CRM 中登记留痕（见 3.12.4 多主体客户），防止通过主体拆分规避归属。</li>
+      <li><b>虚构指定争夺商机</b>：按 6.1 红线处理（见 3.12.5 客户指定条款）。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 8. 关键控制点 -->
+<section class="section" id="control">
+  <div class="container">
+    <h2>8. 关键控制点</h2>
+    <div class="table-wrap"><table><thead><tr><th>类型</th><th>控制点</th><th>动作/后果</th></tr></thead><tbody>
+      <tr><td>数据校验</td><td>项目层主销售必填且唯一</td><td>商机报备时校验：主销售不可为空，每条商机仅一个主销售</td></tr>
+      <tr><td>数据校验</td><td>客户层允许多参与人</td><td>客户层"责任人 + 参与人"为多对多关系，不触发撞单判定</td></tr>
+      <tr><td>留痕</td><td>归属变更须留痕</td><td>客户责任人变更、参与人增减、主销售变更均须在 CRM/台账中登记留痕</td></tr>
+      <tr><td>关联</td><td>归属分层为撞单判定基础</td><td>撞单判定（3.12.2）以项目层报备时间为第一顺位，客户层归属不影响项目层判定</td></tr>
+    </tbody></table></div>
+    <div class="callout warn">
+      <p><b>【待 V13 定稿确认】</b>3.12.1 为 V13 初稿新增条款，归属分层的字段定义与校验规则细节须待 V13 正式定稿后同步回溯。</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>VeryCloud 云端智慧事业部 · CRM 流程扩写 · 基于《销售管理办法》V13 初稿（2026-09-14）</p>
+  </div>
+</footer>
+
+</body>
+</html>
